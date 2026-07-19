@@ -1,0 +1,405 @@
+{
+  "general": [
+    {
+      "question": "What is Toolzary?",
+      "answer": "Toolzary is a completely free online platform offering professional tools including calculators, converters, and utilities. All tools work directly in your browser with no sign-up required."
+    },
+    {
+      "question": "Is Toolzary really free?",
+      "answer": "Yes! Toolzary is 100% free forever. No hidden charges, no premium plans, and no credit card required."
+    },
+    {
+      "question": "Do I need to create an account?",
+      "answer": "No sign-up or registration is required. Simply visit our website and start using any tool instantly."
+    },
+    {
+      "question": "Who is Toolzary for?",
+      "answer": "Toolzary is for students, developers, teachers, finance professionals, designers, and anyone who needs quick and reliable online tools."
+    }
+  ],
+
+  "privacy": [
+    {
+      "question": "Are my calculations private?",
+      "answer": "Yes. All calculations and processing happen directly in your browser. We never see, store, or share your data."
+    },
+    {
+      "question": "Is my data stored anywhere?",
+      "answer": "No. Your data stays in your browser only. We do not collect, store, or transmit any personal information."
+    },
+    {
+      "question": "Does Toolzary use cookies?",
+      "answer": "We only use minimal cookies for essential preferences like theme (light/dark mode)."
+    }
+  ],
+
+  "account": [
+    {
+      "question": "Do I need to register to use Toolzary?",
+      "answer": "No registration is required. All tools are available instantly without creating an account."
+    },
+    {
+      "question": "Can I save my calculations?",
+      "answer": "Some tools store history locally in your browser for convenience, but nothing is saved on our servers."
+    },
+    {
+      "question": "Will Toolzary ever require login?",
+      "answer": "No. Toolzary will always remain free and accessible without registration."
+    }
+  ],
+
+  "technical": [
+    {
+      "question": "What browsers are supported?",
+      "answer": "Toolzary works on all modern browsers including Chrome, Firefox, Safari, Edge, and Opera."
+    },
+    {
+      "question": "Does Toolzary work offline?",
+      "answer": "Most tools work after loading once, but initial access requires an internet connection."
+    },
+    {
+      "question": "Is there a mobile app?",
+      "answer": "Toolzary is currently web-based but fully responsive. A mobile app is planned for the future."
+    },
+    {
+      "question": "How do I report a bug?",
+      "answer": "You can report issues via the Contact page using the 'Report a Bug' option."
+    }
+  ],
+
+  "tools": [
+    {
+      "toolId": "age",
+      "toolName": "Age Calculator",
+      "category": "basic",
+      "faqs": [
+        {
+          "question": "How does the age calculator work?",
+          "answer": "It calculates the exact difference between your birth date and today's date in years, months, and days."
+        },
+        {
+          "question": "What date format should I use?",
+          "answer": "Use YYYY-MM-DD format, for example 1990-05-15."
+        },
+        {
+          "question": "Does it account for leap years?",
+          "answer": "Yes. It automatically handles leap years and different month lengths for accurate results."
+        }
+      ]
+    },
+
+    {
+      "toolId": "attendance",
+      "toolName": "Attendance Calculator",
+      "category": "student",
+      "faqs": [
+        {
+          "question": "How is attendance percentage calculated?",
+          "answer": "Attendance percentage = (Classes Attended ÷ Total Classes) × 100."
+        },
+        {
+          "question": "What is minimum required attendance?",
+          "answer": "Most institutions require 75% attendance, but it may vary."
+        },
+        {
+          "question": "What does 'Classes Needed' mean?",
+          "answer": "It shows how many more classes you must attend to reach your target percentage."
+        }
+      ]
+    },
+
+    {
+      "toolId": "average",
+      "toolName": "Average Calculator",
+      "category": "basic",
+      "faqs": [
+        {
+          "question": "What is average (mean)?",
+          "answer": "Average is the sum of all numbers divided by the total count of numbers."
+        },
+        {
+          "question": "What is median?",
+          "answer": "Median is the middle value when numbers are sorted."
+        }
+      ]
+    },
+
+    {
+      "toolId": "bmi",
+      "toolName": "BMI Calculator",
+      "category": "health",
+      "faqs": [
+        {
+          "question": "What is BMI?",
+          "answer": "BMI (Body Mass Index) estimates body fat using height and weight."
+        },
+        {
+          "question": "How is BMI calculated?",
+          "answer": "BMI = weight (kg) ÷ height² (m²)."
+        },
+        {
+          "question": "What are BMI categories?",
+          "answer": "Underweight: <18.5, Normal: 18.5–24.9, Overweight: 25–29.9, Obese: 30+"
+        }
+      ]
+    },
+
+    {
+      "toolId": "case-converter",
+      "toolName": "Case Converter",
+      "category": "text",
+      "faqs": [
+        {
+          "question": "What is Title Case?",
+          "answer": "Title Case capitalizes major words in a sentence."
+        },
+        {
+          "question": "What is Sentence Case?",
+          "answer": "Sentence Case capitalizes only the first letter of a sentence."
+        },
+        {
+          "question": "Does it preserve formatting?",
+          "answer": "Yes. Spaces, punctuation, and symbols remain unchanged."
+        }
+      ]
+    },
+
+    {
+      "toolId": "character-counter",
+      "toolName": "Character Counter",
+      "category": "text",
+      "faqs": [
+        {
+          "question": "What characters are counted?",
+          "answer": "All letters, numbers, spaces, punctuation, symbols, emojis, and line breaks are counted."
+        },
+        {
+          "question": "Does it count emojis?",
+          "answer": "Yes. Emojis and special characters are included in the count."
+        },
+        {
+          "question": "Is sentence splitting accurate?",
+          "answer": "Yes. It handles abbreviations and decimals to avoid incorrect splits."
+        }
+      ]
+    },
+
+    {
+      "toolId": "code-minifier",
+      "toolName": "Code Minifier",
+      "category": "dev",
+      "faqs": [
+        {
+          "question": "What is code minification?",
+          "answer": "It removes unnecessary spaces, comments, and formatting to reduce file size."
+        },
+        {
+          "question": "Which languages are supported?",
+          "answer": "HTML, CSS, JavaScript, JSON, XML, and SQL."
+        },
+        {
+          "question": "Is my code stored?",
+          "answer": "No. All processing happens locally in your browser."
+        }
+      ]
+    },
+
+    {
+      "toolId": "color-tools",
+      "toolName": "Color Tools",
+      "category": "design",
+      "faqs": [
+        {
+          "question": "What is HEX color?",
+          "answer": "HEX is a 6-digit code representing colors, like #4F46E5."
+        },
+        {
+          "question": "What is RGB?",
+          "answer": "RGB uses Red, Green, Blue values from 0 to 255."
+        },
+        {
+          "question": "What is HSL?",
+          "answer": "HSL stands for Hue, Saturation, and Lightness."
+        }
+      ]
+    },
+
+    {
+      "toolId": "discount",
+      "toolName": "Discount Calculator",
+      "category": "finance",
+      "faqs": [
+        {
+          "question": "How do I calculate discount?",
+          "answer": "Discount = (Percentage × Original Price) ÷ 100."
+        },
+        {
+          "question": "Difference between percentage and amount off?",
+          "answer": "Percentage off is relative, while amount off is a fixed reduction."
+        }
+      ]
+    },
+
+    {
+      "toolId": "exam-countdown",
+      "toolName": "Exam Countdown",
+      "category": "student",
+      "faqs": [
+        {
+          "question": "How does exam countdown work?",
+          "answer": "It calculates time remaining until your exam in real-time."
+        },
+        {
+          "question": "What happens at zero?",
+          "answer": "It shows a celebration message when the countdown ends."
+        }
+      ]
+    },
+
+    {
+      "toolId": "gpa",
+      "toolName": "GPA Calculator",
+      "category": "student",
+      "faqs": [
+        {
+          "question": "What is GPA?",
+          "answer": "GPA is the average of your grades on a standard scale (usually 4.0)."
+        },
+        {
+          "question": "How is GPA calculated?",
+          "answer": "GPA = total grade points ÷ total credit hours."
+        }
+      ]
+    },
+
+    {
+      "toolId": "json-format",
+      "toolName": "JSON Formatter",
+      "category": "dev",
+      "faqs": [
+        {
+          "question": "What is JSON?",
+          "answer": "JSON is a lightweight data format used for storing and exchanging data."
+        },
+        {
+          "question": "What does validation do?",
+          "answer": "It checks if your JSON syntax is correct."
+        },
+        {
+          "question": "Is my data stored?",
+          "answer": "No. All processing happens locally in your browser."
+        }
+      ]
+    },
+
+    {
+      "toolId": "lorem-ipsum",
+      "toolName": "Lorem Ipsum Generator",
+      "category": "text",
+      "faqs": [
+        {
+          "question": "What is Lorem Ipsum?",
+          "answer": "Placeholder text used in design and publishing."
+        },
+        {
+          "question": "What formats are available?",
+          "answer": "Plain text, HTML, and Markdown."
+        }
+      ]
+    },
+
+    {
+      "toolId": "percentage",
+      "toolName": "Percentage Calculator",
+      "category": "basic",
+      "faqs": [
+        {
+          "question": "How do I calculate percentage?",
+          "answer": "Percentage = (Part ÷ Whole) × 100."
+        },
+        {
+          "question": "What is percentage change?",
+          "answer": "((Final - Initial) ÷ Initial) × 100."
+        }
+      ]
+    },
+
+    {
+      "toolId": "random-number",
+      "toolName": "Random Number Generator",
+      "category": "utility",
+      "faqs": [
+        {
+          "question": "How does it work?",
+          "answer": "It generates pseudo-random numbers using JavaScript Math.random() within your range."
+        },
+        {
+          "question": "Can numbers repeat?",
+          "answer": "Yes. Each number is independently generated."
+        },
+        {
+          "question": "Can I generate decimals?",
+          "answer": "Yes. You can choose decimal precision up to 15 places."
+        }
+      ]
+    },
+
+    {
+      "toolId": "sentence-counter",
+      "toolName": "Sentence Counter",
+      "category": "text",
+      "faqs": [
+        {
+          "question": "How does sentence counting work?",
+          "answer": "It detects sentence endings using ., !, and ?, while handling abbreviations and decimals."
+        },
+        {
+          "question": "What is average words per sentence?",
+          "answer": "It shows how many words are in each sentence on average."
+        },
+        {
+          "question": "What do sentence breakdown numbers show?",
+          "answer": "They show the word count of each individual sentence."
+        }
+      ]
+    },
+
+    {
+      "toolId": "word-counter",
+      "toolName": "Word Counter",
+      "category": "text",
+      "faqs": [
+        {
+          "question": "How does word counting work?",
+          "answer": "It detects words using whitespace and punctuation rules while handling emojis and Unicode text."
+        },
+        {
+          "question": "What is unique words?",
+          "answer": "Unique words count distinct words ignoring duplicates and case differences."
+        },
+        {
+          "question": "How is reading time calculated?",
+          "answer": "Reading time is estimated at 200 words per minute."
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

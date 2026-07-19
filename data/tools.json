@@ -1,0 +1,405 @@
+{
+    "tools":  [
+                  {
+                      "id":  "age",
+                      "name":  "Age Calculator",
+                      "icon":  "/assets/icons/age-calculator.svg",
+                      "cat":  "basic",
+                      "desc":  "Calculate your exact age in years, months, and days",
+                      "link":  "/tools/age-calculator",
+                      "keywords":  [
+                                       "age calculator",
+                                       "how old am i",
+                                       "birthday calculator",
+                                       "calculate age",
+                                       "age in years",
+                                       "date of birth calculator"
+                                   ],
+                      "related":  [
+                                      "datediff",
+                                      "timeconv",
+                                      "sleep"
+                                  ]
+                  },
+                  {
+                      "id":  "percentage",
+                      "name":  "Percentage Calculator",
+                      "icon":  "/assets/icons/percentage-calculator.svg",
+                      "cat":  "basic",
+                      "desc":  "Find the percentage of any number instantly",
+                      "link":  "/tools/percentage-calculator",
+                      "keywords":  [
+                                       "percentage calculator",
+                                       "percent of a number",
+                                       "calculate percentage",
+                                       "percentage finder",
+                                       "percentage formula"
+                                   ],
+                      "related":  [
+                                      "discount",
+                                      "tip",
+                                      "profitloss",
+                                      "margin",
+                                      "vat"
+                                  ]
+                  },
+                  {
+                      "id":  "discount",
+                      "name":  "Discount Calculator",
+                      "icon":  "/assets/icons/discount-calculator.svg",
+                      "cat":  "basic",
+                      "desc":  "Calculate the final price after any discount",
+                      "link":  "/tools/discount-calculator",
+                      "keywords":  [
+                                       "discount calculator",
+                                       "sale price",
+                                       "percentage off",
+                                       "savings calculator",
+                                       "price after discount"
+                                   ],
+                      "related":  [
+                                      "percentage",
+                                      "tip",
+                                      "profitloss",
+                                      "margin",
+                                      "vat"
+                                  ]
+                  },
+                  {
+                      "id":  "random",
+                      "name":  "Random Number Generator",
+                      "icon":  "/assets/icons/random-number-generator.svg",
+                      "cat":  "basic",
+                      "desc":  "Generate random numbers within your specified range",
+                      "link":  "/tools/random-number-generator",
+                      "keywords":  [
+                                       "random number",
+                                       "random generator",
+                                       "pick a number",
+                                       "lottery number",
+                                       "dice roller"
+                                   ],
+                      "related":  [
+                                      "password",
+                                      "quiztimer"
+                                  ]
+                  },
+                  {
+                      "id":  "wordcount",
+                      "name":  "Word Counter",
+                      "icon":  "/assets/icons/word-counter.svg",
+                      "cat":  "basic",
+                      "desc":  "Count words, characters, and paragraphs in any text",
+                      "link":  "/tools/word-counter",
+                      "keywords":  [
+                                       "word counter",
+                                       "count words",
+                                       "essay counter",
+                                       "text analyzer",
+                                       "paragraph counter"
+                                   ],
+                      "related":  [
+                                      "charcount",
+                                      "sentencecount",
+                                      "caseconv"
+                                  ]
+                  },
+                  {
+                      "id":  "charcount",
+                      "name":  "Character Counter",
+                      "icon":  "/assets/icons/character-counter.svg",
+                      "cat":  "basic",
+                      "desc":  "Count characters, letters, and spaces in your text",
+                      "link":  "/tools/character-counter",
+                      "keywords":  [
+                                       "character counter",
+                                       "char count",
+                                       "text length",
+                                       "letter counter",
+                                       "twitter counter"
+                                   ],
+                      "related":  [
+                                      "wordcount",
+                                      "sentencecount",
+                                      "caseconv"
+                                  ]
+                  },
+                  {
+                      "id":  "sentencecount",
+                      "name":  "Sentence Counter",
+                      "icon":  "/assets/icons/sentence-counter.svg",
+                      "cat":  "basic",
+                      "desc":  "Count sentences and analyze your text structure",
+                      "link":  "/tools/sentence-counter",
+                      "keywords":  [
+                                       "sentence counter",
+                                       "count sentences",
+                                       "paragraph counter",
+                                       "text analyzer"
+                                   ],
+                      "related":  [
+                                      "wordcount",
+                                      "charcount"
+                                  ]
+                  },
+                  {
+                      "id":  "caseconv",
+                      "name":  "Case Converter",
+                      "icon":  "/assets/icons/case-converter.svg",
+                      "cat":  "basic",
+                      "desc":  "Transform text to UPPER, lower, Title, or Sentence case",
+                      "link":  "/tools/case-converter",
+                      "keywords":  [
+                                       "case converter",
+                                       "uppercase",
+                                       "lowercase",
+                                       "title case",
+                                       "capitalize text"
+                                   ],
+                      "related":  [
+                                      "wordcount",
+                                      "charcount"
+                                  ]
+                  },
+                  {
+                      "id":  "average",
+                      "name":  "Average Calculator",
+                      "icon":  "/assets/icons/average-calculator.svg",
+                      "cat":  "basic",
+                      "desc":  "Calculate the mean, median, and mode of any numbers",
+                      "link":  "/tools/average-calculator",
+                      "keywords":  [
+                                       "average calculator",
+                                       "calculate mean",
+                                       "average of numbers",
+                                       "mean calculator",
+                                       "number average"
+                                   ],
+                      "related":  [
+                                      "percentage",
+                                      "profitloss",
+                                      "margin"
+                                  ]
+                  },
+                  {
+                      "id":  "bmi",
+                      "name":  "BMI Calculator",
+                      "icon":  "/assets/icons/bmi-calculator.svg",
+                      "cat":  "health",
+                      "desc":  "Calculate your Body Mass Index and weight category",
+                      "link":  "/tools/bmi-calculator",
+                      "keywords":  [
+                                       "bmi calculator",
+                                       "bmi",
+                                       "body mass index",
+                                       "check bmi",
+                                       "healthy weight"
+                                   ],
+                      "related":  [
+                                      "idealweight",
+                                      "calorie",
+                                      "water",
+                                      "sleep"
+                                  ]
+                  },
+                  {
+                      "id":  "grade",
+                      "name":  "Grade Calculator",
+                      "icon":  "/assets/icons/grade-calculator.svg",
+                      "cat":  "student",
+                      "desc":  "Convert percentage scores to letter grades instantly",
+                      "link":  "/tools/grade-calculator",
+                      "keywords":  [
+                                       "grade calculator",
+                                       "letter grade",
+                                       "percentage to grade",
+                                       "test grade",
+                                       "exam grade"
+                                   ],
+                      "related":  [
+                                      "gpa",
+                                      "average",
+                                      "attendance"
+                                  ]
+                  },
+                  {
+                      "id":  "examcount",
+                      "name":  "Exam Countdown",
+                      "icon":  "/assets/icons/exam-countdown.svg",
+                      "cat":  "student",
+                      "desc":  "Track the days, hours, and minutes until your exam",
+                      "link":  "/tools/exam-countdown",
+                      "keywords":  [
+                                       "exam countdown",
+                                       "days until exam",
+                                       "countdown timer",
+                                       "exam date",
+                                       "test countdown"
+                                   ],
+                      "related":  [
+                                      "studytime",
+                                      "datediff",
+                                      "quiztimer"
+                                  ]
+                  },
+                  {
+                      "id":  "attendance",
+                      "name":  "Attendance Calculator",
+                      "icon":  "/assets/icons/attendance-calculator.svg",
+                      "cat":  "student",
+                      "desc":  "Calculate your attendance percentage accurately",
+                      "link":  "/tools/attendance-calculator",
+                      "keywords":  [
+                                       "attendance calculator",
+                                       "attendance percentage",
+                                       "class attendance",
+                                       "student attendance",
+                                       "present percentage"
+                                   ],
+                      "related":  [
+                                      "gpa",
+                                      "grade",
+                                      "schedule"
+                                  ]
+                  },
+                  {
+                      "id":  "json-format",
+                      "name":  "JSON Formatter",
+                      "icon":  "/assets/icons/json-formatter.svg",
+                      "cat":  "dev",
+                      "desc":  "Format, validate, and beautify your JSON data",
+                      "link":  "/tools/json-formatter",
+                      "keywords":  [
+                                       "json formatter",
+                                       "json beautifier",
+                                       "validate json",
+                                       "pretty json",
+                                       "json validator"
+                                   ],
+                      "related":  [
+                                      "base64",
+                                      "urlenc",
+                                      "minifier"
+                                  ]
+                  },
+                  {
+                      "id":  "colorpicker",
+                      "name":  "Color Picker \u0026 Converter",
+                      "icon":  "/assets/icons/color-picker.svg",
+                      "cat":  "dev",
+                      "desc":  "Pick colors and convert between HEX, RGB, and HSL",
+                      "link":  "/tools/color-picker",
+                      "keywords":  [
+                                       "color picker",
+                                       "hex to rgb",
+                                       "rgb to hex",
+                                       "color converter",
+                                       "hex color"
+                                   ],
+                      "related":  [
+                                      "palette",
+                                      "imageResize"
+                                  ]
+                  },
+                  {
+                      "id":  "lorem",
+                      "name":  "Lorem Ipsum Generator",
+                      "icon":  "/assets/icons/lorem-ipsum-generator.svg",
+                      "cat":  "dev",
+                      "desc":  "Generate placeholder text in various lengths and formats",
+                      "link":  "/tools/lorem-ipsum-generator",
+                      "keywords":  [
+                                       "lorem ipsum",
+                                       "placeholder text",
+                                       "dummy text",
+                                       "filler text",
+                                       "lorem generator"
+                                   ],
+                      "related":  [
+                                      "wordcount",
+                                      "caseconv"
+                                  ]
+                  },
+                  {
+                      "id":  "minifier",
+                      "name":  "Code Minifier",
+                      "icon":  "/assets/icons/code-minifier.svg",
+                      "cat":  "dev",
+                      "desc":  "Minify HTML, CSS, and JavaScript code to reduce size",
+                      "link":  "/tools/code-minifier",
+                      "keywords":  [
+                                       "code minifier",
+                                       "minify html",
+                                       "minify css",
+                                       "minify javascript",
+                                       "compress code"
+                                   ],
+                      "related":  [
+                                      "json-format",
+                                      "regex"
+                                  ]
+                  },
+                  {
+                      "id":  "imageResize",
+                      "name":  "Image Resizer",
+                      "icon":  "/assets/icons/image-resizer.svg",
+                      "cat":  "media",
+                      "desc":  "Resize images to any dimensions while maintaining quality",
+                      "link":  "/tools/image-resizer",
+                      "keywords":  [
+                                       "image resizer",
+                                       "resize image",
+                                       "photo resize",
+                                       "image dimensions",
+                                       "resize photo"
+                                   ],
+                      "related":  [
+                                      "meme",
+                                      "colorpicker",
+                                      "palette"
+                                  ]
+                  },
+                  {
+                      "id":  "palette",
+                      "name":  "Color Palette Generator",
+                      "icon":  "/assets/icons/color-palette-generator.svg",
+                      "cat":  "dev",
+                      "desc":  "Generate beautiful color palettes for your design projects",
+                      "link":  "/tools/color-palette-generator",
+                      "keywords":  [
+                                       "color palette",
+                                       "palette generator",
+                                       "color scheme",
+                                       "hex palette",
+                                       "color combos"
+                                   ],
+                      "related":  [
+                                      "colorpicker",
+                                      "imageResize"
+                                  ]
+                  }
+              ],
+    "categories":  {
+                       "all":  {
+                                   "name":  "All"
+                               },
+                       "basic":  {
+                                     "name":  "Basic"
+                                 },
+                       "health":  {
+                                      "name":  "Health"
+                                  },
+                       "student":  {
+                                       "name":  "Student"
+                                   },
+                       "finance":  {
+                                       "name":  "Finance"
+                                   },
+                       "dev":  {
+                                   "name":  "Dev"
+                               },
+                       "media":  {
+                                     "name":  "Media"
+                                 }
+                   }
+}

@@ -1,0 +1,41 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  
+  <!-- Background -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#grad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="120" cy="100" r="300" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="1080" cy="530" r="350" fill="rgba(255,255,255,0.04)"/>
+  
+  <!-- Logo -->
+  <g transform="translate(280, 290)">
+    <circle cx="0" cy="0" r="160" fill="rgba(255,255,255,0.05)"/>
+    <circle cx="0" cy="0" r="120" fill="rgba(255,255,255,0.08)"/>
+    <circle cx="0" cy="0" r="80" fill="rgba(255,255,255,0.12)"/>
+    
+    <!-- T Logo -->
+    <rect x="-75" y="-38" width="150" height="38" rx="19" fill="white"/>
+    <rect x="-19" y="-38" width="38" height="140" rx="19" fill="white"/>
+  </g>
+  
+  <text x="480" y="240" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="start" letter-spacing="1">
+    <tspan fill="#FCD34D">Compound</tspan> Interest Calculator
+  </text>
+  
+  <!-- Tool Description -->
+  <text x="480" y="310" font-family="Inter, Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.9)" text-anchor="start">Calculate compound interest and investment growth</text>
+  
+  <!-- Brand -->
+  <text x="480" y="380" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600" fill="#FCD34D" text-anchor="start">by Toolzary</text>
+  
+  <!-- URL Footer -->
+  <text x="1150" y="610" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.25)" text-anchor="end">toolzary.com</text>
+  
+</svg>

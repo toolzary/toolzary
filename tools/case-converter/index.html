@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+  <title>Case Converter | Toolzary | Free Online Tools</title>
+  <meta name="description" content="Convert text to UPPER CASE, lower case, Title Case, Sentence case, and more instantly." />
+  <meta name="author" content="Toolzary">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Local styles -->
+  <link rel="stylesheet" href="/assets/css/case-converter.css">
+  <link rel="icon" href="/assets/icons/logo.svg">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+   <a href="/" class="logo logo-text">
+  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
+  Toolzary
+</a>
+    <div class="search-wrapper">
+      <label for="globalSearch" class="sr-only">Search Tools</label>
+      <span class="search-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </span>
+      <input type="text" id="globalSearch" placeholder="Search tools..." />
+    </div>
+    <div class="header-actions">
+      <a href="/Contact" class="nav-link">Contact Us</a>
+      <a href="/faq" class="nav-link">FAQs</a>
+      <a href="/about" class="nav-link">About Toolzary</a>
+      <button id="darkToggle" class="outline">Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container tool-split-layout">
+    <!-- Tool Workspace -->
+    <section class="tool-workspace">
+      <div class="unified-tool-container">
+
+        <!-- Tool Title & Icon -->
+        <div class="tool-title-wrap" data-active-tool-id="caseconv">
+          <div class="tool-main-icon-large" id="toolMainIcon">
+            <!-- Icon injected by JS -->
+          </div>
+          <h1 class="tool-main-title-blue" id="toolMainTitle">Case Converter</h1>
+          <div>
+            <span class="tool-category-badge" id="toolCategoryBadge">Basic</span>
+          </div>
+        </div>
+
+        <hr class="tool-divider" />
+
+        <!-- ===== TOOL INTERFACE ===== -->
+        <div class="tool-custom-interface">
+          <!-- Text input -->
+          <div class="form-group">
+            <label for="textInput" class="input-label">Enter your text below *</label>
+            <textarea id="textInput" class="data-input-field textarea-input" rows="6" placeholder="Type or paste your text here"></textarea>
+          </div>
+
+          <!-- Case Buttons -->
+          <div class="case-button-group">
+            <button class="secondary-btn primary" data-case="uppercase">UPPER CASE</button>
+            <button class="secondary-btn" data-case="lowercase">lower case</button>
+            <button class="secondary-btn" data-case="titlecase">Title Case</button>
+            <button class="secondary-btn" data-case="sentencecase">Sentence case</button>
+            <button class="secondary-btn" data-case="capitalize">Capitalize</button>
+            <button class="secondary-btn" data-case="alternating">aLtErNaTiNg</button>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-button-group">
+            <button id="clearBtn" class="secondary-btn">Clear</button>
+            <button id="sampleBtn" class="secondary-btn">Load Sample</button>
+            <button id="copyBtn" class="secondary-btn">Copy Result</button>
+            <button id="historyToggleBtn" class="secondary-btn">History</button>
+          </div>
+
+          <!-- Result -->
+          <div id="caseResultBox" class="result-box-card hidden">
+            <h3 class="result-box-title">Converted Text</h3>
+            <div id="convertedOutput" class="converted-output"></div>
+          </div>
+
+          <!-- Live counter bar -->
+          <div class="live-counter-bar">
+            <span id="liveCharCount">Characters: 0</span>
+            <span id="liveWordCount">Words: 0</span>
+          </div>
+
+          <!-- Error Box -->
+          <div id="toolLocalError" class="local-error-alert hidden"></div>
+        </div>
+
+        <!-- History Section -->
+        <div id="historySection" class="history-section hidden">
+          <div class="history-header">
+            <h3 class="history-title">Conversion History</h3>
+            <button id="clearHistoryBtn" class="secondary-btn small">Clear All</button>
+          </div>
+          <div id="historyList" class="history-list">
+            <p class="empty-history">No conversion history yet.</p>
+          </div>
+        </div>
+
+        <hr class="tool-divider" />
+
+        <!-- About Section -->
+        <div class="about-tool-section">
+          <h2 class="about-tool-title">About Case Converter</h2>
+          <p class="tool-main-desc">
+            Convert your text between different cases instantly. Supports UPPER CASE, lower case, Title Case, Sentence case, Capitalize, and alternating case. Perfect for writers, editors, and content creators. All processing is done locally in your browser, your text never leaves your device.
+          </p>
+          <p class="tool-main-desc">
+            <strong>UPPER CASE:</strong> ALL LETTERS CAPITALIZED<br>
+            <strong>lower case:</strong> all letters lowercase<br>
+            <strong>Title Case:</strong> Each Word Capitalized<br>
+            <strong>Sentence case:</strong> First letter of each sentence capitalized<br>
+            <strong>Capitalize:</strong> First letter of each word capitalized<br>
+            <strong>aLtErNaTiNg:</strong> Alternating case pattern
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="tool-sidebar">
+      <h3 class="sidebar-title">Related Tools</h3>
+      <div class="related-tools-vertical-grid" id="relatedToolsGrid"></div>
+    </aside>
+  </main>
+
+ <!-- ===== FAQ SECTION ===== -->
+<section class="container" id="faq">
+    <div class="faq-section-wrapper">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about case conversion</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is Title Case?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Title Case capitalizes the first letter of every major word in a sentence. For example: "The Quick Brown Fox".</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is Sentence Case?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Sentence Case capitalizes only the first letter of the first word in each sentence. For example: "The quick brown fox. The dog slept."</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Does it preserve formatting?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! The tool preserves your original text formatting, including spaces, punctuation, and special characters. Only the letters are converted.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is my text stored or sent anywhere?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No. All conversions are performed entirely in your browser. Your text never leaves your device. History is stored in your browser's local storage for convenience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Scripts -->
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/case-converter.js"></script>
+   <script src="/assets/js/footer.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

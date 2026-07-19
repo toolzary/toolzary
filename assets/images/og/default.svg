@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  
+  <!-- Background -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="600" fill="url(#grad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="150" cy="500" r="350" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="1050" cy="100" r="380" fill="rgba(255,255,255,0.04)"/>
+  
+  <!-- ULTRA MASSIVE LOGO -->
+  <g transform="translate(600, 270)">
+    <circle cx="0" cy="0" r="220" fill="rgba(255,255,255,0.05)"/>
+    <circle cx="0" cy="0" r="170" fill="rgba(255,255,255,0.08)"/>
+    <circle cx="0" cy="0" r="120" fill="rgba(255,255,255,0.12)"/>
+    
+    <!-- T Logo -->
+    <rect x="-115" y="-55" width="230" height="55" rx="28" fill="white"/>
+    <rect x="-28" y="-55" width="56" height="210" rx="28" fill="white"/>
+  </g>
+  
+  <!-- Brand Name -->
+  <text x="600" y="490" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" fill="white" text-anchor="middle" letter-spacing="3">Toolzary</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="545" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#FCD34D" text-anchor="middle">Free Online Tools</text>
+  
+  <!-- URL Footer -->
+  <text x="1150" y="580" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.25)" text-anchor="end">toolzary.com</text>
+  
+</svg>

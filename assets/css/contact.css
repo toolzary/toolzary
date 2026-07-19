@@ -1,0 +1,1536 @@
+/* ============================================
+   CONTACT PAGE - MODERN UI
+   ============================================ */
+
+/* ============================================
+   1. HERO SECTION
+   ============================================ */
+.contact-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.contact-hero-badge {
+    display: inline-block;
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.contact-hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.contact-hero-title .highlight {
+    background: linear-gradient(135deg, var(--primary), #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-hero-subtitle {
+    font-size: 20px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* ---------- Hero Stats ---------- */
+.contact-hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    min-width: 140px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-stat:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+    border-color: var(--primary);
+}
+
+.hero-stat-number {
+  font-size: 36px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.hero-stat-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 4px;
+}
+
+.hero-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+}
+
+/* ============================================
+   2. CONTACT SECTION
+   ============================================ */
+.contact-section {
+    padding: 40px 0 60px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ---------- Form ---------- */
+.contact-form-wrapper {
+    background: var(--surface);
+    padding: 40px 44px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s;
+}
+
+.contact-form-wrapper:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+.form-header {
+    margin-bottom: 32px;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 4px;
+}
+
+.form-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.form-group label .required {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    pointer-events: none;
+    transition: color 0.2s;
+    z-index: 1;
+}
+
+.textarea-wrapper .input-icon {
+    top: 16px;
+    transform: none;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 14px 16px 14px 44px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.25s;
+    outline: none;
+}
+
+.input-wrapper textarea {
+    padding-top: 16px;
+    resize: vertical;
+    min-height: 140px;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    border-color: var(--primary);
+    background: var(--surface);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
+}
+
+.input-wrapper input:focus ~ .input-icon,
+.input-wrapper textarea:focus ~ .input-icon {
+    color: var(--primary);
+}
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 16px;
+}
+
+.form-footer-text svg {
+    color: #22c55e;
+}
+
+/* ---------- Contact Info Cards ---------- */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 24px;
+    background: var(--surface);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.info-card:hover {
+    transform: translateX(6px);
+    border-color: var(--primary);
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.08);
+}
+
+.info-card:hover::after {
+    background: var(--primary);
+}
+.info-icon {
+  width: 16px;
+  height: 16px;
+}
+.info-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--primary);
+    transition: all 0.3s;
+}
+
+.info-card:hover .info-icon-wrapper {
+    background: rgba(79, 70, 229, 0.15);
+    transform: scale(1.05);
+}
+
+.info-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.info-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 2px;
+}
+
+.info-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.info-action {
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: block;
+    margin-top: 2px;
+}
+
+.info-card:hover .info-action {
+    opacity: 1;
+}
+
+/* Email card special */
+.info-card.email-card {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.04), rgba(124, 58, 237, 0.04));
+    border-color: rgba(79, 70, 229, 0.15);
+}
+
+.info-card.email-card:hover {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 237, 0.08));
+}
+
+/* ============================================
+   3. TRUST BADGES
+   ============================================ */
+.contact-trust {
+    padding: 40px 0 20px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.trust-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.trust-item svg {
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.trust-item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 4px;
+}
+
+.trust-item p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ============================================
+   4. SOCIAL PROOF / TESTIMONIALS
+   ============================================ */
+.contact-testimonials {
+    padding: 40px 0 20px;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.testimonials-badge {
+    display: inline-block;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--primary);
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.testimonials-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    background: var(--surface);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: var(--primary);
+}
+
+.testimonial-stars {
+    color: #f59e0b;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.testimonial-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0 0 12px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ============================================
+   5. CONTACT STATS
+   ============================================ */
+.contact-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-stat-item {
+    text-align: center;
+    padding: 24px;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+}
+
+.contact-stat-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: var(--primary);
+}
+
+.contact-stat-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.contact-stat-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 4px;
+}
+
+/* ============================================
+   6. CTA SECTION
+   ============================================ */
+.contact-cta {
+    padding: 40px 0 60px;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 48px;
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.cta-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+}
+
+.cta-content p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 0 0 24px;
+}
+
+.cta-tool-count {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* ============================================
+   DARK MODE OVERRIDES
+   ============================================ */
+
+/* Form & Cards */
+body.dark .contact-form-wrapper,
+body.dark .hero-stat,
+body.dark .info-card,
+body.dark .testimonial-item,
+body.dark .cta-content,
+body.dark .contact-stat-item {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+/* Inputs */
+body.dark .input-wrapper input,
+body.dark .input-wrapper textarea {
+    background: var(--bg);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+body.dark .input-wrapper input:focus,
+body.dark .input-wrapper textarea:focus {
+    background: var(--surface);
+    border-color: var(--primary);
+}
+
+/* Text Colors */
+body.dark .hero-stat-label,
+body.dark .form-title,
+body.dark .form-group label,
+body.dark .info-content h4,
+body.dark .trust-item h4,
+body.dark .testimonials-title,
+body.dark .cta-content h2,
+body.dark .contact-stat-label,
+body.dark .testimonial-item p {
+    color: var(--text);
+}
+
+body.dark .contact-hero-subtitle,
+body.dark .form-subtitle,
+body.dark .info-content p,
+body.dark .trust-item p,
+body.dark .cta-content p,
+body.dark .testimonial-author,
+body.dark .form-footer-text {
+    color: var(--text-secondary);
+}
+body.dark .info-card:hover{
+    border-color: var(--primary);
+}
+/* Hero Stats */
+body.dark .hero-stat:hover {
+    border-color: var(--primary);
+}
+body.dark .contact-stat-item:hover{
+    border-color: var(--primary);
+}
+body.dark .hero-stat-number {
+    color: var(--primary);
+}
+
+body.dark .hero-stat-divider {
+    background: var(--border);
+}
+
+/* Email Card */
+body.dark .info-card.email-card {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 237, 0.08));
+}
+
+body.dark .info-card.response-card {
+    background: rgba(34, 197, 94, 0.06);
+}
+
+/* Gradient Text */
+body.dark .contact-hero-title .highlight {
+    background: linear-gradient(135deg, #818cf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Badges */
+body.dark .contact-hero-badge,
+body.dark .testimonials-badge {
+    background: rgba(79, 70, 229, 0.15);
+}
+
+body.dark .testimonials-badge {
+    color: var(--primary);
+}
+
+/* Buttons - Outline */
+body.dark .btn-outline {
+    border-color: var(--border);
+    color: var(--text);
+}
+
+body.dark .btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Icons */
+body.dark .input-icon {
+    color: var(--text-secondary);
+}
+
+body.dark .trust-item svg {
+    color: var(--primary);
+}
+
+/* Stars */
+body.dark .testimonial-stars {
+    color: #f59e0b;
+}
+
+/* Footer social links */
+body.dark .footer-social a {
+    color: var(--text-secondary);
+}
+
+body.dark .footer-social a:hover {
+    color: var(--primary);
+}
+body.dark .testimonial-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: var(--primary);
+}
+
+/* ============================================
+   UTILITY OVERRIDES
+   ============================================ */
+.cta-actions .btn-primary,
+.contact-hero-actions .btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-actions .btn-primary:hover,
+.contact-hero-actions .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.cta-actions .btn-outline,
+.contact-hero-actions .btn-outline {
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.cta-actions .btn-outline:hover,
+.contact-hero-actions .btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+/* ============================================
+   1. ULTRA SMALL DEVICES (Smartwatches, Tiny Screens)
+   Width: < 375px
+   ============================================ */
+@media (max-width: 374px) {
+  /* --- HERO --- */
+  .contact-hero {
+    padding: 30px 12px 20px;
+  }
+  .contact-hero-title {
+    font-size: 28px;
+  }
+  .contact-hero-subtitle {
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .contact-hero-stats {
+    gap: 12px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-stat {
+    padding: 16px 20px;
+    min-width: auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+  .hero-stat-number {
+    font-size: 24px;
+  }
+  .hero-stat-label {
+    font-size: 13px;
+  }
+  .hero-stat-divider {
+    display: none;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-section {
+    padding: 20px 12px 40px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .contact-form-wrapper {
+    padding: 20px 16px;
+  }
+  .form-title {
+    font-size: 22px;
+  }
+  .form-subtitle {
+    font-size: 14px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .input-wrapper input,
+  .input-wrapper textarea {
+    padding: 12px 14px 12px 40px;
+    font-size: 14px;
+  }
+  .input-wrapper textarea {
+    min-height: 120px;
+  }
+  .form-footer-text {
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  .submit-btn {
+    padding: 14px 24px;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  /* --- INFO CARDS --- */
+  .contact-info {
+    gap: 12px;
+  }
+  .info-card {
+    padding: 16px 18px;
+    gap: 14px;
+  }
+  .info-icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+  .info-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+  .info-content h4 {
+    font-size: 14px;
+  }
+  .info-content p {
+    font-size: 13px;
+  }
+  .info-action {
+    font-size: 12px;
+    opacity: 1;
+  }
+
+  /* --- TRUST BADGES --- */
+  .contact-trust {
+    padding: 20px 12px 10px;
+  }
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .trust-item {
+    padding: 16px 12px;
+  }
+  .trust-item svg {
+    width: 28px;
+    height: 28px;
+  }
+  .trust-item h4 {
+    font-size: 13px;
+  }
+  .trust-item p {
+    font-size: 12px;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .contact-testimonials {
+    padding: 20px 12px 10px;
+  }
+  .testimonials-title {
+    font-size: 22px;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .testimonial-item {
+    padding: 18px 16px;
+  }
+  .testimonial-item p {
+    font-size: 13px;
+  }
+  .testimonial-author {
+    font-size: 12px;
+  }
+
+  /* --- STATS --- */
+  .contact-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 12px;
+  }
+  .contact-stat-item {
+    padding: 16px;
+  }
+  .contact-stat-number {
+    font-size: 24px;
+  }
+  .contact-stat-label {
+    font-size: 13px;
+  }
+
+  /* --- CTA --- */
+  .contact-cta {
+    padding: 20px 12px 40px;
+  }
+  .cta-content {
+    padding: 24px 16px;
+  }
+  .cta-content h2 {
+    font-size: 24px;
+  }
+  .cta-content p {
+    font-size: 14px;
+  }
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   2. SMALL DEVICES (Phones - Portrait)
+   Width: 375px - 575px
+   ============================================ */
+@media (min-width: 375px) and (max-width: 575px) {
+  /* --- HERO --- */
+  .contact-hero {
+    padding: 35px 16px 25px;
+  }
+  .contact-hero-title {
+    font-size: 32px;
+  }
+  .contact-hero-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .contact-hero-stats {
+    gap: 12px;
+  }
+  .hero-stat {
+    padding: 16px 24px;
+    min-width: 120px;
+  }
+  .hero-stat-number {
+    font-size: 26px;
+  }
+  .hero-stat-divider {
+    height: 30px;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-section {
+    padding: 24px 16px 40px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .contact-form-wrapper {
+    padding: 24px 20px;
+  }
+  .form-title {
+    font-size: 24px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .form-group {
+    margin-bottom: 18px;
+  }
+  .input-wrapper input,
+  .input-wrapper textarea {
+    padding: 13px 16px 13px 42px;
+    font-size: 15px;
+  }
+  .submit-btn {
+    width: 100%;
+  }
+
+  /* --- INFO CARDS --- */
+  .info-card {
+    padding: 18px 20px;
+  }
+  .info-action {
+    opacity: 1;
+  }
+
+  /* --- TRUST BADGES --- */
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .testimonials-title {
+    font-size: 24px;
+  }
+
+  /* --- STATS --- */
+  .contact-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 0 16px;
+  }
+  .contact-stat-number {
+    font-size: 28px;
+  }
+
+  /* --- CTA --- */
+  .contact-cta {
+    padding: 24px 16px 40px;
+  }
+  .cta-content {
+    padding: 28px 20px;
+  }
+  .cta-content h2 {
+    font-size: 26px;
+  }
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   3. MEDIUM DEVICES (Large Phones & Small Tablets)
+   Width: 576px - 767px
+   ============================================ */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* --- HERO --- */
+  .contact-hero-title {
+    font-size: 36px;
+  }
+  .contact-hero-subtitle {
+    font-size: 17px;
+  }
+  .contact-hero-stats {
+    gap: 16px;
+  }
+  .hero-stat {
+    padding: 18px 32px;
+    min-width: 140px;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-section {
+    padding: 30px 20px 50px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .contact-form-wrapper {
+    padding: 32px 28px;
+  }
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-title {
+    font-size: 26px;
+  }
+
+  /* --- INFO CARDS --- */
+  .info-card {
+    padding: 20px 22px;
+  }
+  .info-action {
+    opacity: 1;
+  }
+
+  /* --- TRUST BADGES --- */
+  .trust-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .testimonials-title {
+    font-size: 26px;
+  }
+
+  /* --- STATS --- */
+  .contact-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .contact-stat-number {
+    font-size: 30px;
+  }
+
+  /* --- CTA --- */
+  .contact-cta {
+    padding: 30px 20px 50px;
+  }
+  .cta-content {
+    padding: 32px 28px;
+  }
+  .cta-content h2 {
+    font-size: 28px;
+  }
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    padding: 11px 24px;
+    font-size: 15px;
+  }
+}
+
+/* ============================================
+   4. LARGE DEVICES (Tablets & Small Laptops)
+   Width: 768px - 991px
+   ============================================ */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* --- HERO --- */
+  .contact-hero {
+    padding: 50px 24px 35px;
+  }
+  .contact-hero-title {
+    font-size: 40px;
+  }
+  .contact-hero-stats {
+    gap: 20px;
+  }
+  .hero-stat {
+    padding: 20px 36px;
+    min-width: 150px;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-section {
+    padding: 36px 24px 60px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .contact-form-wrapper {
+    padding: 36px 32px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .form-title {
+    font-size: 28px;
+  }
+
+  /* --- INFO CARDS --- */
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .info-card {
+    padding: 20px 22px;
+  }
+  .info-action {
+    opacity: 1;
+  }
+
+  /* --- TRUST BADGES --- */
+  .trust-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* --- STATS --- */
+  .contact-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* --- CTA --- */
+  .contact-cta {
+    padding: 36px 24px 60px;
+  }
+  .cta-content {
+    padding: 40px 32px;
+  }
+  .cta-content h2 {
+    font-size: 30px;
+  }
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    padding: 12px 28px;
+  }
+}
+
+/* ============================================
+   5. EXTRA LARGE (Laptops & Standard Desktops)
+   Width: 992px - 1199px
+   ============================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* --- HERO --- */
+  .contact-hero-title {
+    font-size: 44px;
+  }
+  .contact-hero-stats {
+    gap: 24px;
+  }
+  .hero-stat {
+    padding: 22px 40px;
+    min-width: 160px;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 36px;
+  }
+  .contact-form-wrapper {
+    padding: 36px 40px;
+  }
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* --- INFO CARDS --- */
+  .info-card {
+    padding: 20px 22px;
+  }
+
+  /* --- TRUST BADGES --- */
+  .trust-grid {
+    max-width: 800px;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonials-grid {
+    max-width: 800px;
+  }
+
+  /* --- STATS --- */
+  .contact-stats-grid {
+    max-width: 800px;
+    gap: 24px;
+  }
+
+  /* --- CTA --- */
+  .cta-content {
+    padding: 44px 40px;
+  }
+}
+
+/* ============================================
+   6. EXTRA EXTRA LARGE (Large Desktops & 4K)
+   Width: 1200px - 1399px
+   ============================================ */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  /* --- HERO --- */
+  .contact-hero-title {
+    font-size: 48px;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-grid {
+    gap: 40px;
+  }
+  .contact-form-wrapper {
+    padding: 40px 44px;
+  }
+
+  /* --- STATS --- */
+  .contact-stats-grid {
+    max-width: 900px;
+    gap: 28px;
+  }
+
+  /* --- CTA --- */
+  .cta-content {
+    padding: 48px;
+  }
+}
+
+/* ============================================
+   7. ULTRA LARGE (Ultrawide & 4K+ Monitors)
+   Width: 1400px+
+   ============================================ */
+@media (min-width: 1400px) {
+  /* --- HERO --- */
+  .contact-hero {
+    padding: 80px 40px 50px;
+  }
+  .contact-hero-title {
+    font-size: 56px;
+  }
+  .contact-hero-subtitle {
+    font-size: 22px;
+    max-width: 700px;
+  }
+  .contact-hero-stats {
+    gap: 30px;
+  }
+  .hero-stat {
+    padding: 28px 48px;
+    min-width: 180px;
+    border-radius: 20px;
+  }
+  .hero-stat-number {
+    font-size: 38px;
+  }
+  .hero-stat-label {
+    font-size: 16px;
+  }
+  .hero-stat-divider {
+    height: 50px;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-section {
+    padding: 50px 40px 80px;
+  }
+  .contact-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 48px;
+  }
+  .contact-form-wrapper {
+    padding: 48px 52px;
+    border-radius: 20px;
+  }
+  .form-title {
+    font-size: 32px;
+  }
+  .form-subtitle {
+    font-size: 17px;
+  }
+  .form-row {
+    gap: 24px;
+  }
+  .form-group {
+    margin-bottom: 24px;
+  }
+  .form-group label {
+    font-size: 15px;
+  }
+  .input-wrapper input,
+  .input-wrapper textarea {
+    padding: 16px 20px 16px 48px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  .input-icon {
+    left: 18px;
+  }
+  .input-wrapper textarea {
+    min-height: 160px;
+  }
+  .submit-btn {
+    padding: 16px 32px;
+    font-size: 17px;
+    border-radius: 12px;
+  }
+  .form-footer-text {
+    font-size: 14px;
+  }
+
+  /* --- INFO CARDS --- */
+  .contact-info {
+    gap: 20px;
+  }
+  .info-card {
+    padding: 24px 28px;
+    gap: 20px;
+    border-radius: 16px;
+  }
+  .info-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+  .info-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+  }
+  .info-content h4 {
+    font-size: 18px;
+  }
+  .info-content p {
+    font-size: 15px;
+  }
+  .info-action {
+    font-size: 14px;
+  }
+
+  /* --- TRUST BADGES --- */
+  .contact-trust {
+    padding: 50px 40px 30px;
+  }
+  .trust-grid {
+    max-width: 1000px;
+    gap: 28px;
+  }
+  .trust-item {
+    padding: 24px;
+  }
+  .trust-item svg {
+    width: 36px;
+    height: 36px;
+  }
+  .trust-item h4 {
+    font-size: 16px;
+  }
+  .trust-item p {
+    font-size: 14px;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .contact-testimonials {
+    padding: 50px 40px 30px;
+  }
+  .testimonials-title {
+    font-size: 32px;
+  }
+  .testimonials-grid {
+    max-width: 1000px;
+    gap: 28px;
+  }
+  .testimonial-item {
+    padding: 28px 24px;
+    border-radius: 14px;
+  }
+  .testimonial-stars {
+    font-size: 18px;
+  }
+  .testimonial-item p {
+    font-size: 15px;
+  }
+  .testimonial-author {
+    font-size: 14px;
+  }
+
+  /* --- STATS --- */
+  .contact-stats-grid {
+    max-width: 1000px;
+    gap: 30px;
+  }
+  .contact-stat-item {
+    padding: 28px;
+    border-radius: 14px;
+  }
+  .contact-stat-number {
+    font-size: 42px;
+  }
+  .contact-stat-label {
+    font-size: 18px;
+  }
+
+  /* --- CTA --- */
+  .contact-cta {
+    padding: 50px 40px 80px;
+  }
+  .cta-content {
+    max-width: 700px;
+    padding: 56px 48px;
+    border-radius: 20px;
+  }
+  .cta-content h2 {
+    font-size: 36px;
+  }
+  .cta-content p {
+    font-size: 18px;
+  }
+  .cta-actions {
+    gap: 16px;
+  }
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    padding: 14px 36px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+
+/* ============================================
+   8. SPECIAL: REDUCED MOTION (Accessibility)
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .hero-stat,
+  .info-card,
+  .trust-item,
+  .testimonial-item,
+  .contact-stat-item,
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  
+  .hero-stat:hover,
+  .info-card:hover,
+  .testimonial-item:hover,
+  .contact-stat-item:hover {
+    transform: none !important;
+  }
+  
+  .info-card::after {
+    transition-duration: 0.01ms !important;
+  }
+  
+  .info-action {
+    opacity: 1 !important;
+  }
+  
+  .cta-actions .btn-primary:hover,
+  .cta-actions .btn-outline:hover {
+    transform: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

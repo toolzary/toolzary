@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /assets/
+Disallow: /tools/*/temp/
+
+Sitemap: https://toolzary.com/sitemap.xml

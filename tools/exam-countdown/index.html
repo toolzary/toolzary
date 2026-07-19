@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+  <title>Exam Countdown | Toolzary | Free Online Tools</title>
+  <meta name="description" content="Count down the days, hours, minutes, and seconds until your next exam. Stay prepared and never miss an exam date." />
+  <meta name="author" content="Toolzary">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Local styles -->
+  <link rel="stylesheet" href="/assets/css/exam-countdown.css">
+  <link rel="icon" href="/assets/icons/logo.svg">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <a href="/" class="logo logo-text">
+  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
+  Toolzary
+</a>
+    <div class="search-wrapper">
+      <label for="globalSearch" class="sr-only">Search Tools</label>
+      <span class="search-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </span>
+      <input type="text" id="globalSearch" placeholder="Search tools..." />
+    </div>
+    <div class="header-actions">
+      <a href="/Contact" class="nav-link">Contact Us</a>
+      <a href="/faq" class="nav-link">FAQs</a>
+      <a href="/about" class="nav-link">About Toolzary</a>
+      <button id="darkToggle" class="outline">Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container tool-split-layout">
+    <section class="tool-workspace">
+      <div class="unified-tool-container">
+
+        <div class="tool-title-wrap" data-active-tool-id="examcount">
+          <div class="tool-main-icon-large" id="toolMainIcon">
+            <!-- Icon injected by JS -->
+          </div>
+          <h1 class="tool-main-title-blue" id="toolMainTitle">Exam Countdown</h1>
+          <div>
+            <span class="tool-category-badge" id="toolCategoryBadge">Student</span>
+          </div>
+        </div>
+
+        <hr class="tool-divider" />
+
+        <div class="tool-custom-interface">
+
+          <!-- Exam Name -->
+          <div class="form-group">
+            <label for="examName" class="input-label">Exam Name</label>
+            <input type="text" id="examName" class="data-input-field" placeholder="e.g., Final Exam, Math Test, SAT" value="Final Exam">
+          </div>
+
+          <!-- Exam Date -->
+          <div class="form-group">
+            <label for="examDate" class="input-label">Exam Date & Time</label>
+            <input type="datetime-local" id="examDate" class="data-input-field">
+          </div>
+
+          <!-- Exam Color -->
+          <div class="form-group">
+            <label class="input-label">Countdown Color</label>
+            <div class="color-options">
+              <button class="color-btn active" data-color="#4f46e5" style="background:#4f46e5;"></button>
+              <button class="color-btn" data-color="#ef4444" style="background:#ef4444;"></button>
+              <button class="color-btn" data-color="#22c55e" style="background:#22c55e;"></button>
+              <button class="color-btn" data-color="#f59e0b" style="background:#f59e0b;"></button>
+              <button class="color-btn" data-color="#8b5cf6" style="background:#8b5cf6;"></button>
+              <button class="color-btn" data-color="#ec4899" style="background:#ec4899;"></button>
+              <button class="color-btn" data-color="#14b8a6" style="background:#14b8a6;"></button>
+              <button class="color-btn" data-color="#f97316" style="background:#f97316;"></button>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-button-group">
+            <button id="startBtn" class="submit-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
+                <polyline points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              Start Countdown
+            </button>
+            <button id="stopBtn" class="secondary-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
+                <rect x="6" y="6" width="12" height="12"/>
+              </svg>
+              Stop
+            </button>
+            <button id="clearBtn" class="secondary-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Clear
+            </button>
+            <button id="historyToggleBtn" class="secondary-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              History
+            </button>
+          </div>
+
+          <!-- Countdown Display -->
+          <div id="countdownDisplay" class="countdown-box hidden">
+            <div class="countdown-header">
+              <h3 id="displayExamName" class="countdown-exam-name">Final Exam</h3>
+              <span id="displayExamDate" class="countdown-exam-date">December 15, 2024</span>
+            </div>
+            <div class="countdown-grid" id="countdownGrid">
+              <div class="countdown-block">
+                <div class="countdown-number" id="countdownDays">0</div>
+                <div class="countdown-label">Days</div>
+              </div>
+              <div class="countdown-block">
+                <div class="countdown-number" id="countdownHours">0</div>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-block">
+                <div class="countdown-number" id="countdownMinutes">0</div>
+                <div class="countdown-label">Minutes</div>
+              </div>
+              <div class="countdown-block">
+                <div class="countdown-number" id="countdownSeconds">0</div>
+                <div class="countdown-label">Seconds</div>
+              </div>
+            </div>
+            <div class="countdown-status" id="countdownStatus">â³ Time Remaining</div>
+          </div>
+
+          <!-- Error Box -->
+          <div id="toolLocalError" class="local-error-alert hidden"></div>
+        </div>
+
+        <!-- History Section -->
+        <div id="historySection" class="history-section hidden">
+          <div class="history-header">
+            <h3 class="history-title">Countdown History</h3>
+            <button id="clearHistoryBtn" class="secondary-btn small">Clear All</button>
+          </div>
+          <div id="historyList" class="history-list">
+            <p class="empty-history">No countdown history yet.</p>
+          </div>
+        </div>
+
+        <hr class="tool-divider" />
+
+        <div class="about-tool-section">
+          <h2 class="about-tool-title">About Exam Countdown</h2>
+          <p class="tool-main-desc">
+            Never miss an exam date! Set your exam name and date, and watch the countdown tick down in real-time. Perfect for students who want to stay prepared and motivated.
+          </p>
+          <p class="tool-main-desc">
+            <strong>Features:</strong> Real-time countdown, Custom colors, Exam name, History, Stop/Resume
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <aside class="tool-sidebar">
+      <h3 class="sidebar-title">Related Tools</h3>
+      <div class="related-tools-vertical-grid" id="relatedToolsGrid"></div>
+    </aside>
+  </main>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="container" id="faq">
+    <div class="faq-section-wrapper">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about the exam countdown</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the exam countdown work?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Set your exam name and date, and the tool will calculate the exact time remaining in days, hours, minutes, and seconds. The countdown updates in real-time.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What happens when the countdown reaches zero?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>When the countdown reaches zero, it displays "ðŸŽ‰ Exam Day!" with a celebratory message. You can stop and restart the countdown anytime.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I save multiple exams?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Each countdown is saved in your history. You can restore any previous exam countdown from the history section.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my data stored or sent anywhere?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>No. All data is stored locally in your browser's local storage. Your exam data never leaves your device.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/exam-countdown.js"></script>
+   <script src="/assets/js/footer.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

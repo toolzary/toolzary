@@ -1,0 +1,79 @@
+{
+  "name": "Toolzary - 56+ Free Online Tools",
+  "short_name": "Toolzary",
+  "description": "free online calculators, converters, health, student, finance, and developer tools",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4f46e5",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait",
+  "categories": ["utilities", "productivity", "reference", "tools"],
+  "lang": "en-US",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/icons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-1.png",
+      "sizes": "720x1280",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/screenshot-2.png",
+      "sizes": "1242x2208",
+      "type": "image/png"
+    }
+  ],
+  "display_override": ["standalone", "window-controls-overlay"]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

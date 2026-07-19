@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <title>Percentage Calculator | Toolzary | Free Online Tools</title>
+  <meta name="description" content="Calculate percentages, find percentage increase/decrease, and solve percentage problems instantly.">
+  <meta name="author" content="Toolzary">
+  <meta name="theme-color" content="#4f46e5">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/percentage-calculator.css">
+  <link rel="icon" href="/assets/icons/logo.svg">
+</head>
+<body>
+
+  <header>
+   <a href="/" class="logo logo-text">
+  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
+  Toolzary
+</a>
+    <div class="search-wrapper">
+      <label for="globalSearch" class="sr-only">Search Tools</label>
+      <span class="search-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </span>
+      <input type="text" id="globalSearch" placeholder="Search tools...">
+    </div>
+    <div class="header-actions">
+      <a href="/Contact" class="nav-link">Contact Us</a>
+      <a href="/faq" class="nav-link">FAQs</a>
+      <a href="/about" class="nav-link">About Toolzary</a>
+      <button id="darkToggle" class="outline">Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="container tool-split-layout">
+    
+    <section class="tool-workspace">
+      <div class="unified-tool-container">
+        
+        <div class="tool-title-wrap" data-active-tool-id="percentage">
+          <div class="tool-main-icon-large" id="toolMainIcon">
+            <!-- Icon injected by JS -->
+          </div>
+          <h1 class="tool-main-title-blue" id="toolMainTitle">Percentage Calculator</h1>
+          <div>
+            <span class="tool-category-badge" id="toolCategoryBadge">Basic</span>
+          </div>
+        </div>
+        
+        <hr class="tool-divider">
+
+        <div class="tool-custom-interface">
+          
+          <!-- Dropdown Selector -->
+          <div class="form-group">
+            <label for="calcType" class="input-label">Select Calculation Type</label>
+            <select id="calcType" class="data-input-field select-field">
+              <option value="find-percent">What is X% of Y?</option>
+              <option value="find-value">X is what % of Y?</option>
+              <option value="change">Percentage Increase/Decrease</option>
+              <option value="add-percent">Add Percentage to Number</option>
+              <option value="subtract-percent">Subtract Percentage from Number</option>
+            </select>
+          </div>
+
+          <!-- Dynamic Input Fields -->
+          <div id="inputFields" class="input-fields-container">
+            <!-- Inputs will be rendered by JS -->
+          </div>
+
+          <!-- Result Display -->
+          <div class="percent-result-row">
+            <span class="result-label">Result:</span>
+            <span class="result-value" id="resultDisplay"></span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-button-group">
+            <button id="calculateBtn" class="submit-btn">Calculate</button>
+          </div>
+
+          <!-- Error Box -->
+          <div id="toolLocalError" class="local-error-alert hidden"></div>
+        </div>
+        <hr class="tool-divider">
+
+        <div class="about-tool-section">
+          <h2 class="about-tool-title">About Percentage Calculator</h2>
+          <p class="tool-main-desc">Calculate percentages, find what percentage one number is of another, calculate percentage increase/decrease, and add or subtract percentages from numbers. All calculations are accurate and done locally in your browser.</p>
+          <p class="tool-main-desc">
+            <strong>Five Modes:</strong> Find Percentage, Find Value, Percentage Change, Add Percentage, Subtract Percentage.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <aside class="tool-sidebar">
+      <h3 class="sidebar-title">Related Tools</h3>
+      <div class="related-tools-vertical-grid" id="relatedToolsGrid"></div>
+    </aside>
+
+  </main>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="container" id="faq">
+    <div class="faq-section-wrapper">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about percentage calculations</p>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I calculate a percentage?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>To find X% of Y, multiply Y by X and divide by 100. For example, 25% of 200 = (25 Ã— 200) Ã· 100 = 50.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I calculate percentage change?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Percentage change = ((Final - Initial) Ã· Initial) Ã— 100. A positive result means increase, negative means decrease.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What's the difference between percentage and percentage point?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Percentage is relative (10% of 100 = 10), while percentage point is absolute. If something increases from 10% to 15%, it's a 5 percentage point increase but a 50% relative increase.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my data stored or shared?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>No! All calculations happen locally in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/percentage-calculator.js"></script>
+  <script src="/assets/js/footer.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

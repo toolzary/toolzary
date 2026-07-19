@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <title>Message Sent • Toolzary</title>
+  <meta name="description" content="Your message has been sent successfully. We'll get back to you soon!">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/icons/logo.svg">
+  <style>
+    .success-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .success-icon-wrapper {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(79, 70, 229, 0.1);
+      border-radius: 50%;
+      margin-bottom: 2rem;
+      border: 3px solid rgba(79, 70, 229, 0.2);
+      animation: scaleIn 0.5s ease-out;
+    }
+
+    .success-icon-wrapper svg {
+      width: 64px;
+      height: 64px;
+    }
+
+    /* Animated Checkmark SVG */
+    .check-primary {
+      stroke-dasharray: 40;
+      stroke-dashoffset: 40;
+      animation: drawCheck 0.8s ease-in-out 0.3s forwards;
+    }
+
+    .check-secondary {
+      stroke-dasharray: 30;
+      stroke-dashoffset: 30;
+      animation: drawCheck 0.6s ease-in-out 0.6s forwards;
+    }
+
+    @keyframes drawCheck {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .success-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+      animation: fadeUp 0.6s ease-out 0.5s both;
+    }
+
+    .success-message {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.6s ease-out 0.7s both;
+    }
+
+    .back-home-btn {
+      background: linear-gradient(135deg, var(--primary), #a855f7);
+      color: white;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      animation: fadeUp 0.6s ease-out 0.9s both;
+    }
+
+    .back-home-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+    }
+
+    /* Dark mode adjustments */
+    body.dark .success-icon-wrapper {
+      background: rgba(79, 70, 229, 0.15);
+      border-color: rgba(79, 70, 229, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="logo logo-text">
+  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
+  Toolzary
+</a>
+    <div class="header-actions">
+      <a href="/Contact" class="nav-link">Contact Us</a>
+       <a href="/faq" class="nav-link">FAQs</a>
+      <a href="/about" class="nav-link">About Toolzary</a>
+      <button id="darkToggle" class="outline">Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="success-page">
+      <!-- Animated Checkmark SVG -->
+      <div class="success-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="check-primary" d="M18 6 7 17l-5-5"/>
+          <path class="check-secondary" d="m22 10-7.5 7.5L13 16"/>
+        </svg>
+      </div>
+
+      <h1 class="success-title">Message Sent Successfully!</h1>
+      <p class="success-message">Thank you for reaching out! We've received your message and will get back to you as soon as possible.</p>
+      
+      <a href="/" class="back-home-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Back to Home
+      </a>
+       <div class="success-actions">
+                <a href="/tools" class="btn-primary">Browse Tools</a>
+                <a href="/Contact" class="btn-outline">Send Another</a>
+            </div>
+    </div>
+  </main>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/footer.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
