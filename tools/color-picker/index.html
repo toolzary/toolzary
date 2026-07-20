@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
-  <title>Color Picker | Toolzary | Free Online Tools</title>
+  <title>Color Picker | Toolzary – Free Online Tools</title>
   <meta name="description" content="Pick colors, convert between HEX, RGB, and HSL formats, and copy values instantly." />
   <meta name="author" content="Toolzary">
   <meta name="theme-color" content="#4f46e5">
@@ -115,13 +115,6 @@
 </div>
           <!-- Action Buttons -->
           <div class="action-button-group">
-            <button id="copyHexBtn" class="submit-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-              </svg>
-              Copy HEX
-            </button>
             <button id="clearBtn" class="secondary-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
                 <line x1="18" y1="6" x2="6" y2="18"/>
@@ -129,28 +122,17 @@
               </svg>
               Reset
             </button>
-            <button id="historyToggleBtn" class="secondary-btn">
+            <button id="copyHexBtn" class="submit-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
               </svg>
-              History
+              Copy HEX
             </button>
           </div>
 
           <!-- Error Box -->
           <div id="toolLocalError" class="local-error-alert hidden"></div>
-        </div>
-
-        <!-- History Section -->
-        <div id="historySection" class="history-section hidden">
-          <div class="history-header">
-            <h3 class="history-title">Color History</h3>
-            <button id="clearHistoryBtn" class="secondary-btn small">Clear All</button>
-          </div>
-          <div id="historyList" class="history-list">
-            <p class="empty-history">No color history yet.</p>
-          </div>
         </div>
 
         <hr class="tool-divider" />
@@ -227,8 +209,7 @@
             </svg>
           </button>
           <div class="faq-answer">
-            <p>No. All processing is performed entirely in your browser. History is stored in your browser's local storage for convenience.</p>
-          </div>
+            <p>No. All processing is performed entirely in your browser.</p>
         </div>
       </div>
     </div>

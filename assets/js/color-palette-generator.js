@@ -1,6 +1,6 @@
 /**
  * Color Palette Generator - Complete Implementation
- * With dropdown selector and history
+ * With dropdown selector
  * Integrates with Toolzary template
  */
 // ============================================================
@@ -86,6 +86,8 @@ function hslToRgb(h, s, l) {
  */
 function generateMonochromatic(baseColor) {
   const rgb = hexToRgb(baseColor);
+
+if (!rgb) return [];
   const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
   const colors = [];
   // 5 shades from light to dark
@@ -105,6 +107,8 @@ function generateMonochromatic(baseColor) {
  */
 function generateAnalogous(baseColor) {
   const rgb = hexToRgb(baseColor);
+
+if (!rgb) return [];
   const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
   const colors = [];
   // 5 colors: -40°, -20°, 0°, 20°, 40°
@@ -124,6 +128,7 @@ function generateAnalogous(baseColor) {
  */
 function generateComplementary(baseColor) {
   const rgb = hexToRgb(baseColor);
+  if (!rgb) return [];
   const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
   const colors = [];
   
@@ -151,6 +156,7 @@ function generateComplementary(baseColor) {
  */
 function generateTriadic(baseColor) {
   const rgb = hexToRgb(baseColor);
+  if (!rgb) return [];
   const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
   const colors = [];
   
@@ -171,6 +177,7 @@ function generateTriadic(baseColor) {
  */
 function generateTetradic(baseColor) {
   const rgb = hexToRgb(baseColor);
+  if (!rgb) return [];
   const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
   const colors = [];
   
@@ -244,7 +251,7 @@ function showSuccess(message) {
   }, 2000);
 }
 
-function displayPalette(colors, type) {
+function displayPalette(colors, type, shouldScroll = false) {
   const paletteDisplay = getCachedElement('paletteDisplay');
   const resultBox = getCachedElement('paletteResultBox');
   
@@ -266,11 +273,17 @@ function displayPalette(colors, type) {
   `).join('');
   
   if (resultBox) {
-    resultBox.classList.remove('hidden');
+  resultBox.classList.remove('hidden');
+
+  if (shouldScroll) {
     setTimeout(() => {
-      resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      resultBox.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }, 150);
   }
+}
   
   // Store colors for copy/download
   window._currentPalette = colors;
@@ -365,115 +378,10 @@ ${colors.map((color, i) => `  --color-${i + 1}: ${color};`).join('\n')}
 }
 
 // ============================================================
-// 6. HISTORY MANAGEMENT
-// ============================================================
-
-function getHistory() {
-  try {
-    const data = localStorage.getItem('paletteHistory');
-    return data ? JSON.parse(data) : [];
-  } catch (e) {
-    return [];
-  }
-}
-
-function saveHistoryItem(entry) {
-  const history = getHistory();
-  history.unshift({
-    id: Date.now(),
-    timestamp: new Date().toISOString(),
-    ...entry
-  });
-  if (history.length > 50) history.length = 50;
-  localStorage.setItem('paletteHistory', JSON.stringify(history));
-  renderHistory();
-}
-
-function clearHistory() {
-  localStorage.removeItem('paletteHistory');
-  renderHistory();
-}
-
-function deleteHistoryItem(id) {
-  const history = getHistory();
-  const filtered = history.filter(item => item.id !== id);
-  localStorage.setItem('paletteHistory', JSON.stringify(filtered));
-  renderHistory();
-}
-
-function renderHistory() {
-  const list = getCachedElement('historyList');
-  if (!list) return;
-  
-  const history = getHistory();
-  
-  if (history.length === 0) {
-    list.innerHTML = '<p class="empty-history">No palette history yet.</p>';
-    return;
-  }
-  
-  list.innerHTML = history.map(item => `
-    <div class="history-item">
-      <div class="history-item-info">
-        <span class="history-item-type">${item.type}</span>
-        <div class="history-item-colors">
-          ${item.colors.slice(0, 5).map(c => `
-            <span class="history-color-swatch" style="background: ${c};" title="${c}"></span>
-          `).join('')}
-          ${item.colors.length > 5 ? `<span style="font-size:0.7rem;color:var(--text-secondary);">+${item.colors.length - 5}</span>` : ''}
-        </div>
-        <span class="history-item-time">${new Date(item.timestamp).toLocaleString()}</span>
-      </div>
-      <div>
-        <button class="history-btn" onclick="restoreHistoryItem(${item.id})">↻ Restore</button>
-        <button class="history-btn danger" onclick="deleteHistoryItemUI(${item.id})">✕</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-// Global functions for history buttons
-window.restoreHistoryItem = function(id) {
-  const history = getHistory();
-  const item = history.find(h => h.id === id);
-  if (item) {
-    // Restore the palette
-    const hexInput = getCachedElement('hexInput');
-    const colorPicker = getCachedElement('colorPicker');
-    const paletteType = getCachedElement('paletteType');
-    
-    if (hexInput && item.baseColor) {
-      const baseHex = item.baseColor.replace('#', '');
-      hexInput.value = baseHex;
-      if (colorPicker) colorPicker.value = item.baseColor;
-    }
-    
-    if (paletteType && item.type) {
-      const typeMap = {
-        'Monochromatic': 'monochromatic',
-        'Analogous': 'analogous',
-        'Complementary': 'complementary',
-        'Triadic': 'triadic',
-        'Tetradic': 'tetradic'
-      };
-      paletteType.value = typeMap[item.type] || 'monochromatic';
-    }
-    
-    // Generate the palette
-    generatePaletteFromInput();
-    showSuccess('Palette restored from history!');
-  }
-};
-
-window.deleteHistoryItemUI = function(id) {
-  deleteHistoryItem(id);
-};
-
-// ============================================================
 // 7. MAIN TOOL INITIALIZATION
 // ============================================================
 
-function generatePaletteFromInput() {
+function generatePaletteFromInput(shouldScroll = true) {
   const hexInput = getCachedElement('hexInput');
   const paletteType = getCachedElement('paletteType');
   
@@ -485,31 +393,16 @@ function generatePaletteFromInput() {
     return;
   }
   
-  if (hex.length !== 6) {
-    showError('Please enter a 6-digit HEX code (e.g., 4f46e5).');
-    return;
-  }
+  if (!/^[0-9A-Fa-f]{6}$/.test(hex)) {
+  showError('Please enter a valid 6-digit HEX code (e.g., 4f46e5).');
+  return;
+}
   
   const color = '#' + hex;
   const type = paletteType.value;
   const colors = generatePalette(color, type);
-  displayPalette(colors, type);
+  displayPalette(colors, type, shouldScroll);
   
-  // Save to history
-  const typeNames = {
-    monochromatic: 'Monochromatic',
-    analogous: 'Analogous',
-    complementary: 'Complementary',
-    triadic: 'Triadic',
-    tetradic: 'Tetradic'
-  };
-  
-  saveHistoryItem({
-    type: typeNames[type] || type,
-    baseColor: color,
-    colors: colors,
-    preview: colors.join(', ')
-  });
 }
 
 function initTool() {
@@ -518,12 +411,7 @@ function initTool() {
   const generateBtn = getCachedElement('generateBtn');
   const copyPaletteBtn = getCachedElement('copyPaletteBtn');
   const downloadPaletteBtn = getCachedElement('downloadPaletteBtn');
-  const historyToggleBtn = getCachedElement('historyToggleBtn');
-  const clearHistoryBtn = getCachedElement('clearHistoryBtn');
-  const historySection = getCachedElement('historySection');
   const paletteType = getCachedElement('paletteType');
-
-  let historyVisible = false;
 
   if (!colorPicker || !hexInput || !generateBtn) {
     console.error('[Color Palette] Elements not found');
@@ -558,7 +446,7 @@ function initTool() {
   hexInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      generatePaletteFromInput();
+      generatePaletteFromInput(false);
     }
   });
 
@@ -574,47 +462,15 @@ function initTool() {
     downloadPaletteBtn.addEventListener('click', downloadPalette);
   }
 
-  // ===== History Toggle =====
-
-  if (historyToggleBtn) {
-    historyToggleBtn.addEventListener('click', () => {
-      historyVisible = !historyVisible;
-      if (historySection) {
-        historySection.classList.toggle('hidden');
-      }
-      if (historyVisible) {
-        renderHistory();
-      }
-    });
-  }
-
-  // ===== Clear History =====
-
-  if (clearHistoryBtn) {
-    clearHistoryBtn.addEventListener('click', () => {
-      if (confirm('Are you sure you want to clear all history?')) {
-        clearHistory();
-        showSuccess('History cleared!');
-      }
-    });
-  }
-
   // ===== Auto-generate on palette type change =====
 
   if (paletteType) {
     paletteType.addEventListener('change', () => {
       if (hexInput.value.length === 6) {
-        generatePaletteFromInput();
+       generatePaletteFromInput(false);
       }
     });
   }
-
-  // ===== Initial Generation =====
-
-  setTimeout(() => {
-    generatePaletteFromInput();
-  }, 200);
-
   console.log('[Color Palette] ✅ Initialized successfully');
 }
 // ============================================================
@@ -640,13 +496,6 @@ function runSelfTest() {
   const rgb = hexToRgb('#4f46e5');
   if (!rgb || rgb.r !== 79 || rgb.g !== 70 || rgb.b !== 229) {
     console.error('[Self-Test] Failed: Hex to RGB conversion');
-    passed = false;
-  }
-  
-  // Test history functions
-  const history = getHistory();
-  if (!Array.isArray(history)) {
-    console.error('[Self-Test] Failed: History should be an array');
     passed = false;
   }
   

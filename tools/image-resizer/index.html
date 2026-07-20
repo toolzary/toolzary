@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
-  <title>Image Resizer | Toolzary | Free Online Tools</title>
-  <meta name="description" content="Professional image resizer with social media templates, real-time preview, and multiple format support." />
+  <title>Image Resizer | Toolzary – Free Online Tools</title>
+  <meta name="description" content="Professional image resizer with social media templates, real-time preview, and support for JPG, PNG, WEBP, GIF, SVG and AVIF formats." />
   <meta name="author" content="Toolzary">
   <meta name="theme-color" content="#4f46e5">
 
@@ -56,15 +56,30 @@
           <!-- Upload Section -->
           <div class="upload-section" id="uploadSection">
             <div id="dropZone" class="drop-zone">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="1.5">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="17 8 12 3 7 8"/>
-                <line x1="12" y1="3" x2="12" y2="15"/>
-              </svg>
-              <p class="drop-text">Drop your image here or click to browse</p>
-              <p class="drop-subtext">Supports JPG, PNG, WEBP, SVG, GIF, AVIF</p>
-              <input type="file" id="imageInput" accept="image/*" hidden>
-            </div>
+
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+       stroke="var(--text-secondary)" stroke-width="1.5">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="17 8 12 3 7 8"/>
+    <line x1="12" y1="3" x2="12" y2="15"/>
+  </svg>
+
+  <p class="drop-text">
+    Drop your image here or click to browse
+  </p>
+
+  <p class="drop-subtext">
+    Supports JPG, PNG, WEBP, GIF, SVG, AVIF
+  </p>
+
+  <input 
+    type="file"
+    id="imageInput"
+    accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml,image/avif"
+    hidden
+  >
+
+</div>
           </div>
 
           <!-- Main Content -->
@@ -156,7 +171,15 @@
                   <div class="template-group">
                     <label class="input-label">Width</label>
                     <div class="input-with-unit">
-                      <input type="number" id="customWidth" class="data-input-field" placeholder="1920" min="1" value="1920" step="any">
+                      <input 
+type="number"
+id="customWidth"
+class="data-input-field"
+placeholder="1920"
+min="1"
+max="20000"
+value="1920"
+step="any">
                       <select id="customWidthUnit" class="unit-select">
                         <option value="px">px</option>
                         <option value="in">in</option>
@@ -168,7 +191,15 @@
                   <div class="template-group">
                     <label class="input-label">Height</label>
                     <div class="input-with-unit">
-                      <input type="number" id="customHeight" class="data-input-field" placeholder="1080" min="1" value="1080" step="any">
+                     <input 
+type="number"
+id="customHeight"
+class="data-input-field"
+placeholder="1080"
+min="1"
+max="20000"
+value="1080"
+step="any">
                       <select id="customHeightUnit" class="unit-select">
                         <option value="px">px</option>
                         <option value="in">in</option>
@@ -202,18 +233,32 @@
               <div class="option-group">
                 <label class="input-label">Output Format</label>
                 <select id="formatSelect" class="data-input-field select-field">
-                  <option value="image/png">PNG</option>
-                  <option value="image/jpeg">JPG</option>
-                  <option value="image/webp">WEBP</option>
-                  <option value="image/avif">AVIF</option>
-                  <option value="image/bmp">BMP</option>
-                  <option value="image/tiff">TIFF</option>
-                  <option value="image/gif">GIF</option>
-                  <option value="image/svg+xml">SVG</option>
-                  <option value="image/ico">ICO</option>
-                  <option value="image/psd">PSD</option>
-                  <option value="application/pdf">PDF</option>
-                </select>
+
+<option value="image/png">
+PNG
+</option>
+
+<option value="image/jpeg">
+JPG
+</option>
+
+<option value="image/webp">
+WEBP
+</option>
+
+<option value="image/avif">
+AVIF
+</option>
+
+<option value="image/svg+xml">
+SVG
+</option>
+
+<option value="application/pdf">
+PDF
+</option>
+
+</select>
               </div>
               <div class="option-group">
                 <label class="input-label">Resize Mode</label>
@@ -233,14 +278,6 @@
                   <polyline points="8 6 2 12 8 18"/>
                 </svg>
                 Apply Resize
-              </button>
-              <button id="historyToggleBtn" class="primary-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;margin-right:6px;vertical-align:middle;">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-                History
-              </button>
             </div>
 
             <!-- Resized Preview -->
@@ -269,18 +306,6 @@
 
           <div id="toolLocalError" class="local-error-alert hidden"></div>
         </div>
-
-        <!-- History Section -->
-        <div id="historySection" class="history-section hidden">
-          <div class="history-header">
-            <h3 class="history-title">History</h3>
-            <button id="clearHistoryBtn" class="secondary-btn small">Clear All</button>
-          </div>
-          <div id="historyList" class="history-list">
-            <p class="empty-history">No history yet.</p>
-          </div>
-        </div>
-
         <hr class="tool-divider" />
 
         <div class="about-tool-section">
@@ -325,9 +350,15 @@
             </svg>
           </button>
           <div class="faq-answer">
-            <p><strong>Input Formats:</strong> JPG, PNG, WEBP, SVG, GIF and AVIF.</p>
-           <p><strong>Output Formats:</strong>JPG, PNG, WEBP, SVG, GIF, AVIF, BMP, TIFF, PSD, PDF, and ICO.</p>
-          </div>
+<p>
+<strong>Input Formats:</strong>
+JPG, PNG, WEBP, GIF, SVG and AVIF.
+</p>
+
+<p>
+<strong>Output Formats:</strong>
+PNG, JPG, WEBP, AVIF, SVG and PDF.
+</p>          </div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
@@ -346,12 +377,6 @@
 
 <!-- jsPDF -->
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
-
-<!-- TIFF -->
-<script src="https://cdn.jsdelivr.net/npm/utif@3.1.0/UTIF.js"></script>
-
-<!-- PSD -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/psd.js/3.4.0/psd.min.js"></script>
   <!-- ============================================================ -->
   <!-- TOOL SCRIPTS -->
   <!-- ============================================================ -->
@@ -360,24 +385,3 @@
   <script src="/assets/js/footer.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

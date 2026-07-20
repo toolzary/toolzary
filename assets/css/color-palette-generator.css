@@ -249,128 +249,6 @@ body.dark .select-field {
   font-size: 0.75rem;
 }
 
-/* ===== History Section ===== */
-.history-section {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-.history-section.hidden {
-  display: none;
-}
-
-.history-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.history-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text);
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.history-list {
-  max-height: 250px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.history-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 1rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.history-item:hover {
-  border-color: var(--primary);
-}
-
-.history-item-info {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 0.85rem;
-}
-
-.history-item-type {
-  font-weight: 600;
-  color: var(--primary);
-  padding: 0.15rem 0.6rem;
-  background: rgba(79, 70, 229, 0.1);
-  border-radius: 12px;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-}
-
-.history-item-colors {
-  display: flex;
-  gap: 0.3rem;
-  align-items: center;
-}
-
-.history-color-swatch {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  border: 1px solid var(--border);
-  flex-shrink: 0;
-}
-
-.history-item-time {
-  font-size: 0.7rem;
-  color: var(--text-secondary);
-}
-
-.history-btn {
-  padding: 0.2rem 0.6rem;
-  font-size: 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--surface);
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.history-btn:hover {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
-
-.history-btn.danger:hover {
-  background: #ef4444;
-  border-color: #ef4444;
-}
-
-.empty-history {
-  color: var(--text-secondary);
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-}
-
 /* ===== Error Alert ===== */
 .local-error-alert {
   background: rgba(239, 68, 68, 0.1);
@@ -385,7 +263,7 @@ body.dark .select-field {
 }
 
 .hidden {
-  display: none !important;
+  display: none ;
 }
 
 /* ===== Animations ===== */

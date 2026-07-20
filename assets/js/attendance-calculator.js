@@ -119,11 +119,15 @@ function initAttendanceLogic() {
     }
 
     if (maxAbsences) {
-      const absencesTaken = total - attended;
-      const absencesLeft = maxAllowedAbsences - absencesTaken;
-      maxAbsences.textContent = maxAllowedAbsences > 0 ? maxAllowedAbsences : '0';
-      maxAbsences.className = `metric-display-val ${statusData.colorClass}`;
-    }
+  const absencesTaken = total - attended;
+  const absencesLeft = maxAllowedAbsences - absencesTaken;
+
+  maxAbsences.textContent =
+    absencesLeft > 0 ? absencesLeft : '0';
+
+  maxAbsences.className =
+    `metric-display-val ${statusData.colorClass}`;
+}
 
     // Update progress bar
     if (progressBar) {
@@ -176,36 +180,40 @@ function initAttendanceLogic() {
     }
   }
 
-  /**
-   * Get Status Based on Percentage
-   */
   function getStatus(percentage, target) {
-    if (percentage >= 90) {
-      return {
-        status: 'Excellent',
-        colorClass: 'status-excellent',
-        progressClass: 'excellent'
-      };
-    } else if (percentage >= 75) {
-      return {
-        status: 'Good',
-        colorClass: 'status-good',
-        progressClass: 'good'
-      };
-    } else if (percentage >= 60) {
-      return {
-        status: 'Average',
-        colorClass: 'status-average',
-        progressClass: 'average'
-      };
-    } else {
-      return {
-        status: 'Low',
-        colorClass: 'status-low',
-        progressClass: 'low'
-      };
-    }
+
+  if (percentage >= target + 10) {
+    return {
+      status:'Excellent',
+      colorClass:'status-excellent',
+      progressClass:'excellent'
+    };
   }
+
+  else if (percentage >= target) {
+    return {
+      status:'Good',
+      colorClass:'status-good',
+      progressClass:'good'
+    };
+  }
+
+  else if (percentage >= target - 15) {
+    return {
+      status:'Average',
+      colorClass:'status-average',
+      progressClass:'average'
+    };
+  }
+
+  else {
+    return {
+      status:'Low',
+      colorClass:'status-low',
+      progressClass:'low'
+    };
+  }
+}
 
   /**
    * Show Error

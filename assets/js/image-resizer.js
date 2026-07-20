@@ -92,31 +92,55 @@ const PRINT_PRESETS = {
 // 3. COMPLETE FORMAT CONFIGURATION
 // ============================================================
 
-const FORMAT_CONFIG = {
-  inputFormats: [
-    'image/jpeg', 'image/jpg', 'image/png', 'image/webp', 
-    'image/svg+xml', 'image/gif', 'image/bmp', 'image/tiff',
-    'image/avif', 'image/heic', 'image/heif', 'image/ico',
-    'image/psd', 'image/jp2', 'image/jxl', 'image/raw'
-  ],
-  
-  outputFormats: {
-    'image/png': { extension: 'png', mimeType: 'image/png', supportsQuality: false, label: 'PNG' },
-    'image/jpeg': { extension: 'jpg', mimeType: 'image/jpeg', supportsQuality: true, label: 'JPG' },
-    'image/webp': { extension: 'webp', mimeType: 'image/webp', supportsQuality: true, label: 'WEBP' },
-    'image/avif': { extension: 'avif', mimeType: 'image/avif', supportsQuality: true, label: 'AVIF' },
-    'image/bmp': { extension: 'bmp', mimeType: 'image/bmp', supportsQuality: false, label: 'BMP' },
-    'image/tiff': { extension: 'tiff', mimeType: 'image/tiff', supportsQuality: false, label: 'TIFF' },
-    'image/gif': { extension: 'gif', mimeType: 'image/gif', supportsQuality: false, label: 'GIF' },
-    'image/svg+xml': { extension: 'svg', mimeType: 'image/svg+xml', supportsQuality: false, label: 'SVG' },
-    'image/ico': { extension: 'ico', mimeType: 'image/ico', supportsQuality: false, label: 'ICO' },
-    'image/psd': { extension: 'psd', mimeType: 'image/psd', supportsQuality: false, label: 'PSD' },
-    'image/heic': { extension: 'heic', mimeType: 'image/heic', supportsQuality: true, label: 'HEIC' },
-    'image/heif': { extension: 'heif', mimeType: 'image/heif', supportsQuality: true, label: 'HEIF' },
-    'image/jp2': { extension: 'jp2', mimeType: 'image/jp2', supportsQuality: true, label: 'JPEG 2000' },
-    'image/jxl': { extension: 'jxl', mimeType: 'image/jxl', supportsQuality: true, label: 'JPEG XL' },
-    'application/pdf': { extension: 'pdf', mimeType: 'application/pdf', supportsQuality: false, label: 'PDF' }
-  }
+const FORMAT_CONFIG={
+inputFormats:[
+"image/jpeg",
+"image/jpg",
+"image/png",
+"image/webp",
+"image/gif",
+"image/bmp",
+"image/svg+xml",
+"image/avif"
+],
+outputFormats:{
+"image/png":{
+extension:"png",
+mimeType:"image/png",
+supportsQuality:false,
+label:"PNG"
+},
+"image/jpeg":{
+extension:"jpg",
+mimeType:"image/jpeg",
+supportsQuality:true,
+label:"JPG"
+},
+"image/webp":{
+extension:"webp",
+mimeType:"image/webp",
+supportsQuality:true,
+label:"WEBP"
+},
+"image/avif":{
+extension:"avif",
+mimeType:"image/avif",
+supportsQuality:true,
+label:"AVIF"
+},
+"image/svg+xml":{
+extension:"svg",
+mimeType:"image/svg+xml",
+supportsQuality:false,
+label:"SVG"
+},
+"application/pdf":{
+extension:"pdf",
+mimeType:"application/pdf",
+supportsQuality:false,
+label:"PDF"
+}
+}
 };
 
 // ============================================================
@@ -128,7 +152,6 @@ let originalImageData = null;
 let resizedImageData = null;
 let elementCache = {};
 let resizeTimeout = null;
-let historyVisible = false;
 let isDownloading = false;
 
 // ============================================================
@@ -188,17 +211,19 @@ function scrollToElement(element, offset = 20) {
   window.scrollTo({ top: scrollTop, behavior: 'smooth' });
 }
 
-function detectImageFormat(file) {
-  const extension = file.name.split('.').pop().toLowerCase();
-  const formatMap = {
-    'jpg': 'image/jpeg', 'jpeg': 'image/jpeg', 'png': 'image/png',
-    'gif': 'image/gif', 'webp': 'image/webp', 'svg': 'image/svg+xml',
-    'bmp': 'image/bmp', 'tiff': 'image/tiff', 'tif': 'image/tiff',
-    'avif': 'image/avif', 'heic': 'image/heic', 'heif': 'image/heif',
-    'ico': 'image/ico', 'psd': 'image/psd', 'jp2': 'image/jp2',
-    'jxl': 'image/jxl', 'raw': 'image/raw'
-  };
-  return formatMap[extension] || file.type;
+function detectImageFormat(e){
+const ext=e.name.split(".").pop().toLowerCase();
+
+return {
+jpg:"image/jpeg",
+jpeg:"image/jpeg",
+png:"image/png",
+webp:"image/webp",
+gif:"image/gif",
+bmp:"image/bmp",
+svg:"image/svg+xml",
+avif:"image/avif"
+}[ext] || e.type;
 }
 
 // ============================================================
@@ -306,301 +331,111 @@ function canvasToSVG(canvas) {
 }
 
 // ============================================================
-// 8. HEIC/HEIF HANDLING
-// ============================================================
-
-function loadHEIC(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const image = new Image();
-      image.onload = function() {
-        resolve({ img: image, width: image.width, height: image.height });
-      };
-      image.onerror = function() {
-        reject(new Error('HEIC decoding failed. Try using Safari or a compatible browser.'));
-      };
-      image.src = e.target.result;
-    };
-    reader.onerror = function() {
-      reject(new Error('Failed to read HEIC file'));
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-// ============================================================
-// 9. BMP HANDLING (using bmp-js library)
-// ============================================================
-
-function loadBMP(file) {
-  return new Promise((resolve, reject) => {
-    if (typeof bmp === 'undefined') {
-      reject(new Error('BMP library not loaded. Please include bmp-js.'));
-      return;
-    }
-    
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      try {
-        const buffer = e.target.result;
-        const bmpData = bmp.decode(buffer);
-        
-        const canvas = document.createElement('canvas');
-        canvas.width = bmpData.width;
-        canvas.height = bmpData.height;
-        const ctx = canvas.getContext('2d');
-        
-        const imageData = ctx.createImageData(bmpData.width, bmpData.height);
-        imageData.data.set(bmpData.data);
-        ctx.putImageData(imageData, 0, 0);
-        
-        const img = new Image();
-        img.src = canvas.toDataURL('image/png');
-        img.onload = function() {
-          resolve({ img: img, width: bmpData.width, height: bmpData.height });
-        };
-        img.onerror = function() {
-          reject(new Error('Failed to load BMP data'));
-        };
-      } catch (error) {
-        reject(error);
-      }
-    };
-    reader.onerror = function() {
-      reject(new Error('Failed to read BMP file'));
-    };
-    reader.readAsArrayBuffer(file);
-  });
-}
-
-// ============================================================
-// 10. TIFF HANDLING (using UTIF library)
-// ============================================================
-
-function loadTIFF(file) {
-  return new Promise((resolve, reject) => {
-    if (typeof UTIF === 'undefined') {
-      reject(new Error('TIFF library not loaded. Please include UTIF.'));
-      return;
-    }
-    
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      try {
-        const buffer = e.target.result;
-        const ifds = UTIF.decode(buffer);
-        if (!ifds || ifds.length === 0) {
-          reject(new Error('No TIFF data found'));
-          return;
-        }
-        
-        const data = UTIF.toRGBA8(ifds[0]);
-        const width = ifds[0].width;
-        const height = ifds[0].height;
-        
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
-        
-        const imageData = ctx.createImageData(width, height);
-        imageData.data.set(data);
-        ctx.putImageData(imageData, 0, 0);
-        
-        const img = new Image();
-        img.src = canvas.toDataURL('image/png');
-        img.onload = function() {
-          resolve({ img: img, width: width, height: height });
-        };
-        img.onerror = function() {
-          reject(new Error('Failed to load TIFF data'));
-        };
-      } catch (error) {
-        reject(error);
-      }
-    };
-    reader.onerror = function() {
-      reject(new Error('Failed to read TIFF file'));
-    };
-    reader.readAsArrayBuffer(file);
-  });
-}
-
-// ============================================================
-// 11. ICO HANDLING (using icojs library)
-// ============================================================
-
-function loadICO(file) {
-  return new Promise((resolve, reject) => {
-    if (typeof ICO === 'undefined') {
-      reject(new Error('ICO library not loaded. Please include icojs.'));
-      return;
-    }
-    
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      try {
-        const buffer = e.target.result;
-        const icoData = ICO.parse(buffer);
-        
-        if (!icoData || icoData.length === 0) {
-          reject(new Error('No ICO data found'));
-          return;
-        }
-        
-        // Use the largest image
-        const largest = icoData.reduce((a, b) => (a.width * a.height > b.width * b.height) ? a : b);
-        
-        const canvas = document.createElement('canvas');
-        canvas.width = largest.width;
-        canvas.height = largest.height;
-        const ctx = canvas.getContext('2d');
-        
-        const imageData = ctx.createImageData(largest.width, largest.height);
-        imageData.data.set(largest.buffer);
-        ctx.putImageData(imageData, 0, 0);
-        
-        const img = new Image();
-        img.src = canvas.toDataURL('image/png');
-        img.onload = function() {
-          resolve({ img: img, width: largest.width, height: largest.height });
-        };
-        img.onerror = function() {
-          reject(new Error('Failed to load ICO data'));
-        };
-      } catch (error) {
-        reject(error);
-      }
-    };
-    reader.onerror = function() {
-      reject(new Error('Failed to read ICO file'));
-    };
-    reader.readAsArrayBuffer(file);
-  });
-}
-
-// ============================================================
-// 12. PSD HANDLING (using psd.js library)
-// ============================================================
-
-function loadPSD(file) {
-  return new Promise((resolve, reject) => {
-    if (typeof PSD === 'undefined') {
-      reject(new Error('PSD library not loaded. Please include psd.js.'));
-      return;
-    }
-    
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      try {
-        const buffer = e.target.result;
-        const psd = PSD.fromArrayBuffer(buffer);
-        const psdData = psd.toImageData();
-        
-        const canvas = document.createElement('canvas');
-        canvas.width = psdData.width;
-        canvas.height = psdData.height;
-        const ctx = canvas.getContext('2d');
-        
-        const imageData = ctx.createImageData(psdData.width, psdData.height);
-        imageData.data.set(psdData.data);
-        ctx.putImageData(imageData, 0, 0);
-        
-        const img = new Image();
-        img.src = canvas.toDataURL('image/png');
-        img.onload = function() {
-          resolve({ img: img, width: psdData.width, height: psdData.height });
-        };
-        img.onerror = function() {
-          reject(new Error('Failed to load PSD data'));
-        };
-      } catch (error) {
-        reject(error);
-      }
-    };
-    reader.onerror = function() {
-      reject(new Error('Failed to read PSD file'));
-    };
-    reader.readAsArrayBuffer(file);
-  });
-}
-
-// ============================================================
-// 13. ENHANCED IMAGE LOADING WITH ALL FORMATS
+// 13. IMAGE LOADING (SUPPORTED FORMATS ONLY)
 // ============================================================
 
 function loadImage(file) {
-  if (!file) {
-    showError('Please select a valid image file.');
-    return;
-  }
 
-  const fileType = file.type || detectImageFormat(file);
-  const extension = file.name.split('.').pop().toLowerCase();
-  
-  // Handle different formats with library support
-  switch (extension) {
-    case 'bmp':
-      loadBMP(file)
-        .then(({ img, width, height }) => processLoadedImage(img, file, width, height))
-        .catch(err => showError('Failed to load BMP: ' + err.message));
-      return;
-      
-    case 'tiff':
-    case 'tif':
-      loadTIFF(file)
-        .then(({ img, width, height }) => processLoadedImage(img, file, width, height))
-        .catch(err => showError('Failed to load TIFF: ' + err.message));
-      return;
-      
-    case 'ico':
-      loadICO(file)
-        .then(({ img, width, height }) => processLoadedImage(img, file, width, height))
-        .catch(err => showError('Failed to load ICO: ' + err.message));
-      return;
-      
-    case 'psd':
-      loadPSD(file)
-        .then(({ img, width, height }) => processLoadedImage(img, file, width, height))
-        .catch(err => showError('Failed to load PSD: ' + err.message));
-      return;
-      
-    case 'svg':
-      loadSVG(file)
-        .then(({ img, width, height }) => processLoadedImage(img, file, width, height))
-        .catch(err => showError('Failed to load SVG: ' + err.message));
-      return;
-      
-    case 'heic':
-    case 'heif':
-      loadHEIC(file)
-        .then(({ img, width, height }) => processLoadedImage(img, file, width, height))
-        .catch(err => showError('Failed to load HEIC: ' + err.message));
-      return;
-      
-    default:
-      // Standard image formats (jpg, png, webp, gif, avif)
-      if (FORMAT_CONFIG.inputFormats.includes(fileType)) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const img = new Image();
-          img.onload = function() {
-            processLoadedImage(img, file, img.width, img.height);
-          };
-          img.onerror = function() {
-            showError('Failed to load image. Please try another file.');
-          };
-          img.src = e.target.result;
+    if (!file) {
+        showError('Please select a valid image file.');
+        return;
+    }
+
+    const fileType = file.type || detectImageFormat(file);
+    const extension = file.name.split('.').pop().toLowerCase();
+
+
+    // SVG requires special handling
+    if (extension === 'svg' || fileType === 'image/svg+xml') {
+
+        loadSVG(file)
+        .then(({img, width, height}) => {
+
+            processLoadedImage(
+                img,
+                file,
+                width,
+                height
+            );
+
+        })
+        .catch(err => {
+
+            showError(
+                'Failed to load SVG: ' + err.message
+            );
+
+        });
+
+        return;
+    }
+
+
+    // Supported browser formats
+    if (!FORMAT_CONFIG.inputFormats.includes(fileType)) {
+
+        showError(
+            `Format ${fileType} is not supported.`
+        );
+
+        return;
+    }
+
+
+    const reader = new FileReader();
+
+
+    reader.onload = function(e) {
+
+        const img = new Image();
+
+
+        img.onload = function() {
+
+            if (!img.width || !img.height) {
+
+                showError(
+                    'Invalid image dimensions.'
+                );
+
+                return;
+            }
+
+
+            processLoadedImage(
+                img,
+                file,
+                img.width,
+                img.height
+            );
+
         };
-        reader.onerror = function() {
-          showError('Failed to read file. Please try again.');
+
+
+        img.onerror = function() {
+
+            showError(
+                'Browser cannot decode this image.'
+            );
+
         };
-        reader.readAsDataURL(file);
-      } else {
-        showError(`Format ${fileType} is not supported.`);
-      }
-  }
+
+
+        img.src = e.target.result;
+
+    };
+
+
+    reader.onerror = function() {
+
+        showError(
+            'Failed to read image file.'
+        );
+
+    };
+
+
+    reader.readAsDataURL(file);
 }
 
 function processLoadedImage(img, file, width, height) {
@@ -646,24 +481,55 @@ function processLoadedImage(img, file, width, height) {
   if (customWidth) customWidth.value = width;
   if (customHeight) customHeight.value = height;
   
-  saveHistory({
-    name: file.name,
-    original: `${width}×${height}`,
-    resized: 'Original',
-    size: formatFileSize(file.size),
-    imageData: img.src
-  });
-  
   setTimeout(performResize, 300);
   showSuccess('Image loaded successfully!');
 }
+function isValidImage(img){
+return img &&
+img.width>0 &&
+img.height>0;
+}
+// ============================================================
+// PIXEL SIZE VALIDATION
+// ============================================================
 
+function validateResizeDimensions(width, height) {
+    const MAX_WIDTH = 10000;
+    const MAX_HEIGHT = 10000;
+    const MAX_PIXELS = 40000000; // 40 megapixels
+
+    if (!Number.isFinite(width) || !Number.isFinite(height)) {
+        showError("Invalid dimensions.");
+        return false;
+    }
+
+    if (width < 1 || height < 1) {
+        showError("Width and height must be greater than zero.");
+        return false;
+    }
+
+    if (width > MAX_WIDTH || height > MAX_HEIGHT) {
+        showError(
+            `Image size too large. Maximum allowed size is ${MAX_WIDTH} × ${MAX_HEIGHT}px.`
+        );
+        return false;
+    }
+
+    if ((width * height) > MAX_PIXELS) {
+        showError(
+            `Image resolution too large (${Math.round(width * height / 1000000)}MP). Please use a smaller size.`
+        );
+        return false;
+    }
+
+    return true;
+}
 // ============================================================
 // 14. REAL-TIME RESIZE
 // ============================================================
 
 function performResize() {
-  if (!currentImage) return;
+  if(!isValidImage(currentImage)) return;
   
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
@@ -815,10 +681,9 @@ function performResize() {
       const resizedDimensions = getCachedElement('resizedDimensions');
       const resizedSize = getCachedElement('resizedSize');
       if (resizedDimensions) resizedDimensions.textContent = `${targetWidth} × ${targetHeight}`;
-      
-      const dataURL = canvas.toDataURL('image/png');
-      const sizeInBytes = Math.round((dataURL.length * 3) / 4);
-      if (resizedSize) resizedSize.textContent = formatFileSize(sizeInBytes);
+     if (resizedSize) {
+    resizedSize.textContent = 'Ready';
+}
       
     } catch (e) {
       console.warn('Resize error:', e);
@@ -856,7 +721,7 @@ function applyResize() {
         });
       }
     }
-  }, 500);
+  }, 350);
 }
 
 // ============================================================
@@ -864,7 +729,7 @@ function applyResize() {
 // ============================================================
 
 function updateHeightFromWidth() {
-  if (!currentImage) return;
+  if(!isValidImage(currentImage)) return;
   
   const customAspect = getCachedElement('customAspect');
   if (!customAspect || !customAspect.checked) return;
@@ -902,7 +767,7 @@ function updateHeightFromWidth() {
 }
 
 function updateWidthFromHeight() {
-  if (!currentImage) return;
+  if(!isValidImage(currentImage)) return;
   
   const customAspect = getCachedElement('customAspect');
   if (!customAspect || !customAspect.checked) return;
@@ -1027,37 +892,6 @@ function downloadImage() {
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
             
-            saveHistory({
-                name: originalImageData?.name || 'image',
-                original: originalImageData ? `${originalImageData.width}×${originalImageData.height}` : '',
-                resized: `${canvas.width}×${canvas.height}`,
-                size: formatFileSize(blob.size),
-                imageData: url
-            });
-            
-            showSuccess(`Downloaded as ${extension.toUpperCase()}!`);
-            isDownloading = false;
-            return;
-        }
-        
-        // ===== PSD Export =====
-        if (format === 'image/psd') {
-            const dataURL = canvas.toDataURL('image/png');
-            const link = document.createElement('a');
-            link.download = `image.${extension}`;
-            link.href = dataURL;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            saveHistory({
-                name: originalImageData?.name || 'image',
-                original: originalImageData ? `${originalImageData.width}×${originalImageData.height}` : '',
-                resized: `${canvas.width}×${canvas.height}`,
-                size: formatFileSize(Math.round((dataURL.length * 3) / 4)),
-                imageData: dataURL
-            });
-            
             showSuccess(`Downloaded as ${extension.toUpperCase()}!`);
             isDownloading = false;
             return;
@@ -1079,14 +913,6 @@ function downloadImage() {
                 
                 generatePDF(canvas, filename)
                     .then(() => {
-                        saveHistory({
-                            name: originalImageData?.name || 'image',
-                            original: originalImageData ? `${originalImageData.width}×${originalImageData.height}` : '',
-                            resized: `${canvas.width}×${canvas.height}`,
-                            size: 'PDF',
-                            imageData: canvas.toDataURL('image/png')
-                        });
-                        
                         showSuccess(`Downloaded as ${extension.toUpperCase()}!`);
                         isDownloading = false;
                     })
@@ -1134,14 +960,6 @@ function downloadImage() {
             link.click();
             document.body.removeChild(link);
             
-            saveHistory({
-                name: originalImageData?.name || 'image',
-                original: originalImageData ? `${originalImageData.width}×${originalImageData.height}` : '',
-                resized: `${canvas.width}×${canvas.height}`,
-                size: formatFileSize(Math.round((dataURL.length * 3) / 4)),
-                imageData: dataURL
-            });
-            
             showSuccess(`Downloaded as ${fallbackExt.toUpperCase()} (fallback)!`);
             isDownloading = false;
             return;
@@ -1163,13 +981,6 @@ function downloadImage() {
         document.body.removeChild(link);
         
         const sizeInBytes = Math.round((dataURL.length * 3) / 4);
-        saveHistory({
-            name: originalImageData?.name || 'image',
-            original: originalImageData ? `${originalImageData.width}×${originalImageData.height}` : '',
-            resized: `${canvas.width}×${canvas.height}`,
-            size: formatFileSize(sizeInBytes),
-            imageData: dataURL
-        });
         
         showSuccess(`Downloaded as ${extension.toUpperCase()}!`);
         isDownloading = false;
@@ -1182,108 +993,6 @@ function downloadImage() {
 }
 
 // ============================================================
-// 19. HISTORY MANAGEMENT
-// ============================================================
-
-function getHistory() {
-    try {
-        const data = localStorage.getItem('imageResizeHistory');
-        return data ? JSON.parse(data) : [];
-    } catch (e) {
-        return [];
-    }
-}
-
-function saveHistory(entry) {
-    try {
-        const history = getHistory();
-        history.unshift({
-            id: Date.now(),
-            timestamp: new Date().toISOString(),
-            ...entry
-        });
-        if (history.length > 50) history.length = 50;
-        localStorage.setItem('imageResizeHistory', JSON.stringify(history));
-        renderHistory();
-    } catch (e) {
-        console.warn('Failed to save history:', e);
-    }
-}
-
-function clearHistory() {
-    localStorage.removeItem('imageResizeHistory');
-    renderHistory();
-}
-
-function deleteHistoryItem(id) {
-    const history = getHistory();
-    const filtered = history.filter(item => item.id !== id);
-    localStorage.setItem('imageResizeHistory', JSON.stringify(filtered));
-    renderHistory();
-}
-
-function restoreHistoryItem(id) {
-    const history = getHistory();
-    const item = history.find(h => h.id === id);
-    if (!item) {
-        showError('History item not found.');
-        return;
-    }
-    
-    if (!item.imageData) {
-        showError('Image data not available for restore.');
-        return;
-    }
-    
-    fetch(item.imageData)
-        .then(res => res.blob())
-        .then(blob => {
-            const file = new File([blob], item.name || 'restored-image.png', { type: 'image/png' });
-            loadImage(file);
-            showSuccess(`Restored: ${item.name}`);
-        })
-        .catch(err => {
-            showError('Failed to restore image.');
-            console.error(err);
-        });
-}
-
-function renderHistory() {
-    const list = getCachedElement('historyList');
-    if (!list) return;
-    
-    const history = getHistory();
-    
-    if (history.length === 0) {
-        list.innerHTML = '<p class="empty-history">No history yet.</p>';
-        return;
-    }
-    
-    list.innerHTML = history.map(item => `
-        <div class="history-item">
-            <div class="history-item-info">
-                <span class="history-item-name">${item.name}</span>
-                <span class="history-item-dims">${item.original || ''} → ${item.resized || ''}</span>
-                <span class="history-item-size">${item.size || ''}</span>
-                <span class="history-item-time">${new Date(item.timestamp).toLocaleString()}</span>
-            </div>
-            <div class="history-item-actions">
-                <button class="history-btn" onclick="window.restoreHistoryItemUI(${item.id})">↻ Restore</button>
-                <button class="history-btn danger" onclick="window.deleteHistoryItemUI(${item.id})">✕</button>
-            </div>
-        </div>
-    `).join('');
-}
-
-window.restoreHistoryItemUI = function(id) {
-    restoreHistoryItem(id);
-};
-
-window.deleteHistoryItemUI = function(id) {
-    deleteHistoryItem(id);
-};
-
-// ============================================================
 // 20. UI EVENTS & INITIALIZATION
 // ============================================================
 
@@ -1293,8 +1002,6 @@ function initTool() {
     const changeImageBtn = getCachedElement('changeImageBtn');
     const resizeBtn = getCachedElement('resizeBtn');
     const downloadBtn = getCachedElement('downloadBtn');
-    const historyToggleBtn = getCachedElement('historyToggleBtn');
-    const clearHistoryBtn = getCachedElement('clearHistoryBtn');
     const platformSelect = getCachedElement('platformSelect');
     const typeSelect = getCachedElement('typeSelect');
     const paperSelect = getCachedElement('paperSelect');
@@ -1302,7 +1009,6 @@ function initTool() {
     const qualitySelect = getCachedElement('qualitySelect');
     const formatSelect = getCachedElement('formatSelect');
     const resizeMode = getCachedElement('resizeMode');
-    const historySection = getCachedElement('historySection');
 
     // Check PDF library
     const PDF = window.jspdf?.jsPDF || window.jsPDF || (typeof jsPDF !== 'undefined' ? jsPDF : null);
@@ -1316,7 +1022,6 @@ function initTool() {
     console.log('[Image Resizer] 📚 BMP library:', typeof bmp !== 'undefined' ? '✅' : '❌');
     console.log('[Image Resizer] 📚 TIFF library:', typeof UTIF !== 'undefined' ? '✅' : '❌');
     console.log('[Image Resizer] 📚 ICO library:', typeof ICO !== 'undefined' ? '✅' : '❌');
-    console.log('[Image Resizer] 📚 PSD library:', typeof PSD !== 'undefined' ? '✅' : '❌');
 
     // Tab Switching
     document.querySelectorAll('.template-tab').forEach(tab => {
@@ -1473,36 +1178,9 @@ function initTool() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', downloadImage);
     }
-
-    // History Toggle
-    if (historyToggleBtn && historySection) {
-        historyToggleBtn.addEventListener('click', function() {
-            historyVisible = !historyVisible;
-            historySection.classList.toggle('hidden');
-            
-            if (historyVisible) {
-                renderHistory();
-                setTimeout(function() {
-                    const targetPosition = historySection.getBoundingClientRect().top + window.scrollY - 80;
-                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                }, 200);
-            }
-        });
-    }
-
-    if (clearHistoryBtn) {
-        clearHistoryBtn.addEventListener('click', () => {
-            if (confirm('Are you sure you want to clear all history?')) {
-                clearHistory();
-                showSuccess('History cleared!');
-            }
-        });
-    }
-
     // Initialize
     updateTypeOptions();
     updatePrintDisplay();
-    renderHistory();
     
     console.log('[Image Resizer] ✅ Fully initialized!');
     console.log('[Image Resizer] 📊 Social platforms:', Object.keys(SOCIAL_PRESETS).length);
@@ -1527,22 +1205,22 @@ function runSelfTest() {
         passed = false;
     }
     
-    if (!FORMAT_CONFIG.inputFormats || FORMAT_CONFIG.inputFormats.length < 10) {
-        console.error('[Self-Test] Failed: Format configuration incomplete');
+   const requiredFormats = [
+    "image/jpeg",
+    "image/png",
+    "image/webp"
+];
+
+requiredFormats.forEach(format => {
+
+    if (!FORMAT_CONFIG.inputFormats.includes(format)) {
+        console.error(
+            `[Self-Test] Missing format: ${format}`
+        );
         passed = false;
     }
-    
-    const history = getHistory();
-    if (!Array.isArray(history)) {
-        console.error('[Self-Test] Failed: History should be an array');
-        passed = false;
-    }
-    
-    if (passed) {
-        console.log('[Image Resizer] ✅ All self-tests passed!');
-    } else {
-        console.warn('[Image Resizer] ⚠️ Some self-tests failed.');
-    }
+
+});
     
     return passed;
 }
@@ -1557,22 +1235,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 console.log('[Image Resizer] 📸 Complete Image Resizer loaded!');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -86,12 +86,6 @@ function applyRgb() {
   const displayValue = `${r}, ${g}, ${b}`;
   if (rgbInput) rgbInput.value = displayValue;
   
-  // Save to history
-  saveHistoryItem({
-    hex: hex.toUpperCase(),
-    rgb: `rgb(${r}, ${g}, ${b})`
-  });
-  
   showSuccess(`Applied RGB: ${displayValue}`);
 }
 
@@ -124,13 +118,6 @@ function applyHsl() {
   // Format the display with % symbols
   const displayValue = `${h}, ${s}%, ${l}%`;
   if (hslInput) hslInput.value = displayValue;
-  
-  // Save to history
-  saveHistoryItem({
-    hex: hex.toUpperCase(),
-    rgb: `rgb(${Math.round(rgb.r)}, ${Math.round(rgb.g)}, ${Math.round(rgb.b)})`
-  });
-  
   showSuccess(`Applied HSL: ${displayValue}`);
 }
 
@@ -283,84 +270,6 @@ function copyHex() {
 }
 
 // ============================================================
-// 5. HISTORY MANAGEMENT
-// ============================================================
-
-function getHistory() {
-  try {
-    const data = localStorage.getItem('colorHistory');
-    return data ? JSON.parse(data) : [];
-  } catch (e) {
-    return [];
-  }
-}
-
-function saveHistoryItem(entry) {
-  const history = getHistory();
-  history.unshift({
-    id: Date.now(),
-    timestamp: new Date().toISOString(),
-    ...entry
-  });
-  if (history.length > 50) history.length = 50;
-  localStorage.setItem('colorHistory', JSON.stringify(history));
-  renderHistory();
-}
-
-function clearHistory() {
-  localStorage.removeItem('colorHistory');
-  renderHistory();
-}
-
-function deleteHistoryItem(id) {
-  const history = getHistory();
-  const filtered = history.filter(item => item.id !== id);
-  localStorage.setItem('colorHistory', JSON.stringify(filtered));
-  renderHistory();
-}
-
-function renderHistory() {
-  const list = getCachedElement('historyList');
-  if (!list) return;
-  
-  const history = getHistory();
-  
-  if (history.length === 0) {
-    list.innerHTML = '<p class="empty-history">No color history yet.</p>';
-    return;
-  }
-  
-  list.innerHTML = history.map(item => `
-    <div class="history-item">
-      <div class="history-item-info">
-        <span class="history-color-swatch" style="background: ${item.hex};"></span>
-        <span class="history-item-hex">${item.hex}</span>
-        <span class="history-item-rgb">${item.rgb}</span>
-        <span class="history-item-time">${new Date(item.timestamp).toLocaleString()}</span>
-      </div>
-      <div>
-        <button class="history-btn" onclick="restoreHistoryItem(${item.id})">↻ Restore</button>
-        <button class="history-btn danger" onclick="deleteHistoryItemUI(${item.id})">✕</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-// Global functions for history buttons
-window.restoreHistoryItem = function(id) {
-  const history = getHistory();
-  const item = history.find(h => h.id === id);
-  if (item) {
-    updateColor(item.hex);
-    showSuccess(`Restored ${item.hex}`);
-  }
-};
-
-window.deleteHistoryItemUI = function(id) {
-  deleteHistoryItem(id);
-};
-
-// ============================================================
 // 6. MAIN TOOL INITIALIZATION
 // ============================================================
 
@@ -373,9 +282,6 @@ function initTool() {
   const applyRgbBtn = getCachedElement('applyRgbBtn');
   const applyHslBtn = getCachedElement('applyHslBtn');
   const clearBtn = getCachedElement('clearBtn');
-  const historyToggleBtn = getCachedElement('historyToggleBtn');
-  const clearHistoryBtn = getCachedElement('clearHistoryBtn');
-  const historySection = getCachedElement('historySection');
   const rgbInput = getCachedElement('rgbInput');
   const hslInput = getCachedElement('hslInput');
 
@@ -504,31 +410,6 @@ function initTool() {
     });
   }
 
-  // ===== History Toggle =====
-
-  if (historyToggleBtn) {
-    historyToggleBtn.addEventListener('click', () => {
-      historyVisible = !historyVisible;
-      if (historySection) {
-        historySection.classList.toggle('hidden');
-      }
-      if (historyVisible) {
-        renderHistory();
-      }
-    });
-  }
-
-  // ===== Clear History =====
-
-  if (clearHistoryBtn) {
-    clearHistoryBtn.addEventListener('click', () => {
-      if (confirm('Are you sure you want to clear all history?')) {
-        clearHistory();
-        showSuccess('History cleared!');
-      }
-    });
-  }
-
   // ===== Initial Color =====
 
   setTimeout(() => {
@@ -614,20 +495,7 @@ console.log('HSL Validation:', validHsl);
 console.log('Invalid HSL:', invalidHsl);
 console.log('HEX Validation:', validHex);
 console.log('Invalid HEX:', invalidHex);
-  
-  // Test 5: History functions
-  try {
-    const history = getHistory();
-    if (!Array.isArray(history)) {
-      console.error('[Self-Test] Failed: History should be an array');
-      passed = false;
-    } else {
-      console.log('[Self-Test] ✅ History functions: passed');
-    }
-  } catch (e) {
-    console.error('[Self-Test] Failed: History functions');
-    passed = false;
-  }
+
   
   // Summary
   if (passed) {
@@ -808,22 +676,3 @@ function parseAndValidateHsl(input) {
     message: validation.message
   };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
