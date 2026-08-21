@@ -3,7 +3,7 @@
     "name": "Calculators",
     "icon": "/assets/icons/category-icons/calculator.svg",
     "new": false,
-    "featured": false,
+    "featured": true,
     "showOnHomepage": true
   },
 
@@ -11,7 +11,7 @@
     "name": "Text Tools",
     "icon": "/assets/icons/category-icons/text.svg",
     "new": false,
-    "featured": false,
+    "featured": true,
     "showOnHomepage": true
   },
 
@@ -35,8 +35,8 @@
     "name": "Color Tools",
     "icon": "/assets/icons/category-icons/color.svg",
     "new": false,
-    "featured": false,
-    "showOnHomepage": false
+    "featured": true,
+    "showOnHomepage": true
   },
 
   "converters": {
@@ -50,9 +50,9 @@
   "generators": {
     "name": "Generators",
     "icon": "/assets/icons/category-icons/generator.svg",
-    "new": false,
+    "new": true,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": true
   },
 
   "developer-tools": {
@@ -66,7 +66,7 @@
   "health-tools": {
     "name": "Health Tools",
     "icon": "/assets/icons/category-icons/health.svg",
-    "new": false,
+    "new": true,
     "featured": false,
     "showOnHomepage": true
   },
@@ -74,23 +74,23 @@
   "education-tools": {
     "name": "Education Tools",
     "icon": "/assets/icons/category-icons/education.svg",
-    "new": false,
+    "new": true,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": true
   },
 
   "finance-tools": {
     "name": "Finance Tools",
     "icon": "/assets/icons/category-icons/finance.svg",
     "new": false,
-    "featured": false,
-    "showOnHomepage": false
+    "featured": true,
+    "showOnHomepage": true
   },
 
   "time-tools": {
     "name": "Date & Time",
     "icon": "/assets/icons/category-icons/date.svg",
-    "new": false,
+    "new": true,
     "featured": false,
     "showOnHomepage": false
   },

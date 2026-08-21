@@ -6,8 +6,8 @@
     "link": "/tools/age-calculator/",
     "icon": "/assets/icons/tool-icons/age-calculator.svg",
     "cat": ["calculators"],
-    "featured": false,
-    "new": false,
+    "featured": true,
+    "new": true,
     "related": [
       "attendance-calculator",
       "exam-countdown",
@@ -21,7 +21,7 @@
     "link": "/tools/attendance-calculator/",
     "icon": "/assets/icons/tool-icons/attendance-calculator.svg",
     "cat": ["calculators", "education-tools"],
-    "featured": false,
+    "featured": true,
     "new": false,
     "related": [
       "average-calculator",
@@ -36,7 +36,7 @@
     "icon": "/assets/icons/tool-icons/average-calculator.svg",
     "cat": ["calculators"],
     "featured": false,
-    "new": false,
+    "new": true,
     "related": [
       "grade-calculator",
       "attendance-calculator"
@@ -50,7 +50,7 @@
     "icon": "/assets/icons/tool-icons/bmi-calculator.svg",
     "cat": ["calculators", "health-tools"],
     "featured": false,
-    "new": false,
+    "new": true,
     "related": [
       "age-calculator",
       "average-calculator"
@@ -63,7 +63,7 @@
     "link": "/tools/case-converter/",
     "icon": "/assets/icons/tool-icons/case-converter.svg",
     "cat": ["text-tools"],
-    "featured": false,
+    "featured": true,
     "new": false,
     "related": [
       "character-counter"
@@ -76,7 +76,7 @@
     "link": "/tools/character-counter/",
     "icon": "/assets/icons/tool-icons/character-counter.svg",
     "cat": ["text-tools"],
-    "featured": false,
+    "featured": true,
     "new": false,
     "related": [
       "case-converter"
@@ -89,7 +89,7 @@
     "link": "/tools/color-palette-generator/",
     "icon": "/assets/icons/tool-icons/color-palette-generator.svg",
     "cat": ["color-tools", "generators"],
-    "featured": false,
+    "featured": true,
     "new": false,
     "related": [
       "color-picker"
@@ -103,7 +103,7 @@
     "icon": "/assets/icons/tool-icons/color-picker.svg",
     "cat": ["color-tools"],
     "featured": false,
-    "new": false,
+    "new": true,
     "related": [
       "color-palette-generator",
       "case-converter"
@@ -117,7 +117,7 @@
     "icon": "/assets/icons/tool-icons/discount-calculator.svg",
     "cat": ["calculators", "finance-tools"],
     "featured": false,
-    "new": false,
+    "new": true,
     "related": [
       "average-calculator",
       "grade-calculator"
@@ -145,7 +145,7 @@
     "link": "/tools/grade-calculator/",
     "icon": "/assets/icons/tool-icons/grade-calculator.svg",
     "cat": ["calculators", "education-tools"],
-    "featured": false,
+    "featured": true,
     "new": false,
     "related": [
       "average-calculator",
