@@ -1,204 +1,235 @@
-        .search-results-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+/* =====================================
+   SEARCH RESULTS
+===================================== */
 
-        .search-results-header {
-            margin-bottom: 32px;
-            padding: 20px 24px;
-            background: var(--bg-secondary, #f8f9fa);
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color, #4f46e5);
-        }
+.search-results{
 
-        .search-results-header h1 {
-            margin: 0;
-            font-size: 1.75rem;
-            color: var(--text-primary, #1a1a2e);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+    width: min(1200px,92%);
+    margin:80px auto;
+    scroll-margin-top:120px;
 
-        .search-results-header h1 .search-icon-header {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary-color, #4f46e5);
-        }
+}
 
-        .search-results-header h1 .query-text {
-            color: var(--primary-color, #4f46e5);
-        }
 
-        .search-results-header .result-meta {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-top: 8px;
-            color: var(--text-secondary, #64748b);
-            font-size: 0.95rem;
-            flex-wrap: wrap;
-        }
 
-        .search-results-header .result-meta strong {
-            color: var(--text-primary, #1a1a2e);
-            font-weight: 600;
-        }
+.section-heading{
 
-        .search-results-header .result-meta .category-badge {
-            display: inline-block;
-            padding: 2px 12px;
-            background: var(--primary-color, #4f46e5);
-            color: white;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
+    text-align:center;
+    margin-bottom:40px;
 
-        .search-results-header .result-time {
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
+}
 
-        .search-results-header .result-time .dot {
-            display: inline-block;
-            width: 4px;
-            height: 4px;
-            background: var(--text-secondary, #64748b);
-            border-radius: 50%;
-            margin-right: 8px;
-            opacity: 0.4;
-        }
 
-        .search-results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-            min-height: 400px;
-        }
 
-        .search-no-results {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 60px 20px;
-        }
+.section-heading h2{
 
-        .search-no-results .no-results-icon {
-            color: var(--primary-color, #4f46e5);
-            margin-bottom: 16px;
-        }
+    font-size:clamp(2rem,4vw,2.8rem);
+    margin-bottom:10px;
 
-        .search-no-results h3 {
-            font-size: 1.5rem;
-            color: var(--text-primary, #1a1a2e);
-            margin: 0 0 8px 0;
-        }
+}
 
-        .search-no-results p {
-            color: var(--text-secondary, #64748b);
-            font-size: 1rem;
-            margin: 0 0 20px 0;
-        }
 
-        .search-no-results .suggestions {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
 
-        .search-no-results .suggestions a {
-            text-decoration: none;
-        }
+.section-heading p{
 
-        .loading-spinner {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 60px 20px;
-        }
+    color:var(--text-light);
+    font-size:1rem;
 
-        .loading-spinner .spinner {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 3px solid var(--border-color, #e5e7eb);
-            border-top-color: var(--primary-color, #4f46e5);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-
-        .loading-spinner p {
-            margin-top: 12px;
-            color: var(--text-secondary, #64748b);
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Dark Mode */
-        body.dark .search-results-header {
-            background: #1e293b;
-            border-left-color: #818cf8;
-        }
-
-        body.dark .search-results-header h1 {
-            color: #f1f5f9;
-        }
-
-        body.dark .search-results-header h1 .query-text {
-            color: #818cf8;
-        }
-
-        body.dark .search-results-header h1 .search-icon-header {
-            color: #818cf8;
-        }
-
-        body.dark .search-results-header .result-meta {
-            color: #94a3b8;
-        }
-
-        body.dark .search-results-header .result-meta strong {
-            color: #f1f5f9;
-        }
-
-        body.dark .search-results-header .result-meta .category-badge {
-            background: #818cf8;
-        }
-
-        body.dark .search-no-results h3 {
-            color: #f1f5f9;
-        }
-
-        body.dark .search-no-results p {
-            color: #94a3b8;
-        }
-
-        body.dark .search-no-results .no-results-icon {
-            color: #818cf8;
-        }
-
-        body.dark .loading-spinner p {
-            color: #94a3b8;
-        }
+}
 
 
 
 
 
+/* =====================================
+   NO RESULTS
+===================================== */
+
+.no-results{
+
+    grid-column:1/-1;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    border:1px solid var(--border-color);
+    border-radius:24px;
+
+    background:var(--card-bg);
+
+}
+
+
+
+.no-results-icon{
+
+    width:100px;
+    height:100px;
+
+    color:var(--primary);
+
+    opacity:.8;
+
+    margin-bottom:24px;
+
+}
+
+.query {
+    color: var(--primary);
+}
+
+
+.no-results h2{
+
+    font-size:2rem;
+    margin-bottom:12px;
+
+}
+
+
+
+.no-results p{
+
+    max-width:550px;
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* =====================================
+   SUGGESTED LINKS
+===================================== */
+
+.suggest-links{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+
+}
 
 
 
 
+/* =====================================
+   SEARCH RESULTS — RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .search-results {
+        width: min(1200px, 94%);
+        margin: 60px auto;
+        scroll-margin-top: 100px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+        padding: 0 8px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(1.8rem, 7vw, 2.3rem);
+        line-height: 1.2;
+    }
+
+    .section-heading p {
+        font-size: .95rem;
+        line-height: 1.6;
+    }
+
+    #searchGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .no-results {
+        padding: 55px 18px;
+        border-radius: 20px;
+    }
+
+    .no-results-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .no-results h2 {
+        font-size: 1.5rem;
+        line-height: 1.35;
+        margin-bottom: 12px;
+    }
+
+    .no-results p {
+        font-size: .95rem;
+        line-height: 1.65;
+        margin-bottom: 25px;
+    }
+
+    .suggest-links {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .suggest-links a {
+        width: 100%;
+        text-align: center;
+    }
+
+}
 
 
+/* =====================================
+   SMALL PHONES
+===================================== */
 
+@media (max-width: 480px) {
 
+    .search-results {
+        width: 92%;
+        margin: 45px auto;
+    }
 
+    .section-heading {
+        margin-bottom: 25px;
+    }
 
+    .section-heading h2 {
+        font-size: 1.7rem;
+    }
 
+    .section-heading p {
+        font-size: .9rem;
+    }
 
+    .no-results {
+        padding: 45px 15px;
+        border-radius: 18px;
+    }
 
+    .no-results-icon {
+        width: 70px;
+        height: 70px;
+    }
 
+    .no-results h2 {
+        font-size: 1.35rem;
+    }
+
+    .no-results p {
+        font-size: .9rem;
+    }
+
+}

@@ -1,319 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- ===================== HOMEPAGE ===================== -->
+
+  <!-- Main pages -->
   <url>
-    <loc>https://toolzary.com</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <!-- ===================== TOOLS PAGE ===================== -->
-  <url>
-    <loc>https://toolzary.com/tools</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>1</priority>
-  </url>
-  <!-- ===================== BASIC TOOLS (17) ===================== -->
-  <url>
-    <loc>https://toolzary.com/tools/age-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/percentage-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/about/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/discount-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/contact/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/tip-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/cookies/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/unit-converter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/disclaimer/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/time-converter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/privacy/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/date-difference-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/terms/</loc>
+  </url>
+
+  <!-- Search -->
+  <url>
+    <loc>https://toolzary.com/search/</loc>
+  </url>
+
+  <!-- Categories -->
+  <url>
+    <loc>https://toolzary.com/categories/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/random-number-generator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/calculators/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/password-generator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/color-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/word-counter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
+    <loc>https://toolzary.com/categories/converters/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/character-counter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
+    <loc>https://toolzary.com/categories/developer-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/sentence-counter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
+    <loc>https://toolzary.com/categories/education-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/case-converter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/finance-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/average-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/generators/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/profit-loss-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- ===================== HEALTH TOOLS (5) ===================== -->
-  <url>
-    <loc>https://toolzary.com/tools/bmi-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
+    <loc>https://toolzary.com/categories/health-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/calorie-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/image-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/water-intake-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/pdf-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/ideal-weight-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/security-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/sleep-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- ===================== STUDENT TOOLS (8) ===================== -->
-  <url>
-    <loc>https://toolzary.com/tools/gpa-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/seo-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/grade-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
+    <loc>https://toolzary.com/categories/text-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/study-planner</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/time-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/exam-countdown</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/utility-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/attendance-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/categories/web-tools/</loc>
+  </url>
+
+  <!-- Tools -->
+  <url>
+    <loc>https://toolzary.com/tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/schedule-maker</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/age-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/flashcard-generator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
+    <loc>https://toolzary.com/tools/attendance-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/quiz-timer</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- ===================== FINANCE TOOLS (10) ===================== -->
-  <url>
-    <loc>https://toolzary.com/tools/emi-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/average-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/simple-interest-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/bmi-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/compound-interest-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/case-converter/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/tax-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/character-counter/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/salary-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/color-palette-generator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/savings-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/color-picker/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/budget-planner</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/discount-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/profit-margin-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
+    <loc>https://toolzary.com/tools/exam-countdown/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/currency-converter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/vat-calculator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- ===================== DEV TOOLS (12) ===================== -->
-  <url>
-    <loc>https://toolzary.com/tools/json-formatter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/base64-encoder-decoder</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/url-encoder-decoder</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/timestamp-converter</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/color-picker</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/qr-code-generator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/text-difference-checker</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/lorem-ipsum-generator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/code-minifier</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/regex-tester</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/color-palette-generator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- ===================== MEDIA TOOLS (2) ===================== -->
-  <url>
-    <loc>https://toolzary.com/tools/image-resizer</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/tools/meme-generator</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- ===================== INFORMATION PAGES ===================== -->
-  <url>
-    <loc>https://toolzary.com/about</loc>
-    <lastmod>2026-07-02</lastmod>>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/contact</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://toolzary.com/faq</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>1</priority>
+    <loc>https://toolzary.com/tools/grade-calculator/</loc>
   </url>
 
 </urlset>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,129 @@
+{
+  "calculators": {
+    "name": "Calculators",
+    "icon": "/assets/icons/category-icons/calculator.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": true
+  },
+
+  "text-tools": {
+    "name": "Text Tools",
+    "icon": "/assets/icons/category-icons/text.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": true
+  },
+
+  "pdf-tools": {
+    "name": "PDF Tools",
+    "icon": "/assets/icons/category-icons/pdf.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "image-tools": {
+    "name": "Image Tools",
+    "icon": "/assets/icons/category-icons/image.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "color-tools": {
+    "name": "Color Tools",
+    "icon": "/assets/icons/category-icons/color.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "converters": {
+    "name": "Converters",
+    "icon": "/assets/icons/category-icons/converter.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "generators": {
+    "name": "Generators",
+    "icon": "/assets/icons/category-icons/generator.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "developer-tools": {
+    "name": "Developer Tools",
+    "icon": "/assets/icons/category-icons/dev.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "health-tools": {
+    "name": "Health Tools",
+    "icon": "/assets/icons/category-icons/health.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": true
+  },
+
+  "education-tools": {
+    "name": "Education Tools",
+    "icon": "/assets/icons/category-icons/education.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "finance-tools": {
+    "name": "Finance Tools",
+    "icon": "/assets/icons/category-icons/finance.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "time-tools": {
+    "name": "Date & Time",
+    "icon": "/assets/icons/category-icons/date.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "utility-tools": {
+    "name": "Utilities",
+    "icon": "/assets/icons/category-icons/utility.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": true
+  },
+
+  "security-tools": {
+    "name": "Security Tools",
+    "icon": "/assets/icons/category-icons/security.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "seo-tools": {
+    "name": "SEO Tools",
+    "icon": "/assets/icons/category-icons/seo.svg",
+    "new": false,
+    "featured": false,
+    "showOnHomepage": false
+  },
+
+  "web-tools": {
+    "name": "Web Tools",
+    "icon": "/assets/icons/category-icons/web.svg",
+    "new": true,
+    "featured": false,
+    "showOnHomepage": false
+  }
+}

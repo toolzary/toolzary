@@ -1,462 +1,1403 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <!-- ========================================== -->
-  <!-- BASIC META TAGS                             -->
-  <!-- ========================================== -->
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#4f46e5">
-  
-  <!-- ========================================== -->
-  <!-- TITLE TAG - SEO OPTIMIZED                  -->
-  <!-- ========================================== -->
-  
-  <title>BMI Calculator | Toolzary – Free Online Tools</title>
-  
-  <!-- ========================================== -->
-  <!-- META DESCRIPTION - SEO OPTIMIZED           -->
-  <!-- ========================================== -->
-  
-  <meta name="description" content="Calculate your Body Mass Index (BMI) instantly with multiple unit options. Get accurate BMI score, health category, and personalized advice. Free online BMI calculator.">
-  
-  <!-- ========================================== -->
-  <!-- KEYWORDS - TARGETED SEARCH TERMS           -->
-  <!-- ========================================== -->
-  
-  <meta name="keywords" content="BMI calculator, body mass index, calculate BMI, BMI score, health calculator, weight calculator, BMI categories, underweight, normal weight, overweight, obese, Toolzary">
-  
-  <!-- ========================================== -->
-  <!-- ROBOTS META TAG                            -->
-  <!-- ========================================== -->
-  
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  
-  <!-- ========================================== -->
-  <!-- AUTHOR & PUBLISHER                         -->
-  <!-- ========================================== -->
-  
-  <meta name="author" content="Toolzary">
-  <meta name="publisher" content="Toolzary">
-  <meta name="copyright" content="Toolzary">
-  
-  <!-- ========================================== -->
-  <!-- GEO TAGS (For Local SEO - Pakistan)       -->
-  <!-- ========================================== -->
-  
-  <meta name="geo.region" content="PK">
-  <meta name="geo.placename" content="Pakistan">
-  <meta name="geo.position" content="30.3753;69.3451">
-  <meta name="ICBM" content="30.3753, 69.3451">
-  
-  <!-- ========================================== -->
-  <!-- OPEN GRAPH TAGS - SOCIAL SHARING           -->
-  <!-- ========================================== -->
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://toolzary.com/tools/bmi-calculator">
-  <meta property="og:title" content="BMI Calculator - Free Online Body Mass Index Tool | Toolzary">
-  <meta property="og:description" content="Calculate your Body Mass Index (BMI) instantly with multiple unit options. Get accurate BMI score, health category, and personalized advice. Free online BMI calculator.">
-  <meta property="og:image" content="https://toolzary.com/assets/images/og/bmi-calculator.svg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="BMI Calculator - Toolzary">
-  <meta property="og:site_name" content="Toolzary">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:updated_time" content="2026-07-02T14:30:00+00:00">
-  
-  <!-- ========================================== -->
-  <!-- FACEBOOK APP ID (Optional)                -->
-  <!-- ========================================== -->
-  
-  <meta property="fb:app_id" content="1234567890123456">
-  
-  <!-- ========================================== -->
-  <!-- TWITTER CARDS - SOCIAL SHARING             -->
-  <!-- ========================================== -->
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://toolzary.com/tools/bmi-calculator">
-  <meta name="twitter:title" content="BMI Calculator - Free Online Body Mass Index Tool | Toolzary">
-  <meta name="twitter:description" content="Calculate your Body Mass Index (BMI) instantly with multiple unit options. Get accurate BMI score, health category, and personalized advice.">
-  <meta name="twitter:image" content="https://toolzary.com/assets/images/og/default.svg">
-  <meta name="twitter:image:alt" content="BMI Calculator - Toolzary">
-  <meta name="twitter:site" content="@toolzary">
-  <meta name="twitter:creator" content="@toolzary">
-  <meta name="twitter:label1" content="Category">
-  <meta name="twitter:data1" content="Health Tools">
-  <meta name="twitter:label2" content="Platform">
-  <meta name="twitter:data2" content="Web">
-  
-  <!-- ========================================== -->
-  <!-- INSTAGRAM & SOCIAL MEDIA                   -->
-  <!-- ========================================== -->
-  
-  <meta property="instagram:title" content="BMI Calculator - Free Online Tool">
-  <meta property="instagram:description" content="Calculate your Body Mass Index instantly.">
-  <meta property="og:image:secure_url" content="https://toolzary.com/assets/images/og/bmi-calculator.svg">
-  <meta property="og:image:type" content="image/jpeg">
-  
-  <!-- ========================================== -->
-  <!-- WHATSAPP / TELEGRAM SHARING                -->
-  <!-- ========================================== -->
-  
-  <meta property="og:title" content="BMI Calculator - Free Online Tool | Toolzary">
-  <meta property="og:description" content="Calculate your Body Mass Index instantly. Free online health tool.">
-  
-  <!-- ========================================== -->
-  <!-- CANONICAL URL                              -->
-  <!-- ========================================== -->
-  
-  <link rel="canonical" href="https://toolzary.com/tools/bmi-calculator">
-  
-  <!-- ========================================== -->
-  <!-- ALTERNATE LANGUAGE VERSIONS                -->
-  <!-- ========================================== -->
-  
-  <!-- <link rel="alternate" hreflang="en" href="https://toolzary.com/tools/bmi-calculator"> -->
-  <!-- <link rel="alternate" hreflang="ur" href="https://toolzary.com/ur/tools/bmi-calculator"> -->
-  
-  <!-- ========================================== -->
-  <!-- FAVICON - ALL SIZES                        -->
-  <!-- ========================================== -->
-  
-  <!-- SVG favicon (Modern browsers) -->
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
-  
-  <!-- PNG favicon - All sizes -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512x512.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  
-  <!-- ICO format (Legacy browsers) -->
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-  
-  <!-- Apple Touch Icon (iOS) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-  
-  <!-- ========================================== -->
-  <!-- PWA MANIFEST                               -->
-  <!-- ========================================== -->
-  
-  <link rel="manifest" href="/manifest.json">
-  
-  <!-- ========================================== -->
-  <!-- WINDOWS / EDGE                             -->
-  <!-- ========================================== -->
-  
-  <meta name="msapplication-TileColor" content="#4f46e5">
-  <meta name="msapplication-TileImage" content="/assets/icons/icon-192x192.png">
-  <meta name="msapplication-config" content="/browserconfig.xml">
-  
-  <!-- ========================================== -->
-  <!-- STYLESHEETS (CSS)                          -->
-  <!-- ========================================== -->
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-  
-  <!-- Tool-specific Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/bmi-calculator.css">
-  
-  <!-- Google Fonts (Optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- ========================================== -->
-  <!-- PRELOAD CRITICAL ASSETS                   -->
-  <!-- ========================================== -->
-  
-  <link rel="preload" href="/assets/css/style.css" as="style">
-  <link rel="preload" href="/assets/css/bmi-calculator.css" as="style">
-  
-  <!-- ========================================== -->
-  <!-- VERIFICATION TAGS                          -->
-  <!-- ========================================== -->
-  
-  <meta name="google-site-verification" content="your-verification-code-here">
-  <meta name="msvalidate.01" content="your-bing-verification-code-here">
-  
-  <!-- ========================================== -->
-  <!-- SCHEMA MARKUP (JSON-LD) - BMI CALCULATOR  -->
-  <!-- ========================================== -->
-  
-  <!-- WebApplication Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "BMI Calculator",
-    "url": "https://toolzary.com/tools/bmi-calculator",
-    "description": "Calculate your Body Mass Index (BMI) instantly with multiple unit options. Get accurate BMI score, health category, and personalized advice.",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "about": {
-      "@type": "Thing",
-      "name": "Body Mass Index",
-      "description": "A measure of body fat based on height and weight"
-    },
-    "featureList": [
-      "Multiple unit support (kg, lbs, stones, grams, ounces)",
-      "Imperial and metric units",
-      "Instant BMI calculation",
-      "Healthy weight range",
-      "Personalized health advice",
-      "BMI category classification"
-    ]
-  }
-  </script>
-  
-  <!-- Breadcrumb Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://toolzary.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Tools",
-        "item": "https://toolzary.com/tools/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!-- Primary SEO -->
+
+    <title>BMI Calculator - Calculate Your Body Mass Index Online | Toolzary</title>
+
+    <meta
+        name="description"
+        content="Calculate your Body Mass Index (BMI) instantly with Toolzary's free online BMI Calculator. Get your BMI result, weight category, and healthy weight range based on your measurements."
+    >
+
+    <meta
+        name="author"
+        content="Toolzary"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://toolzary.com/tools/bmi-calculator/"
+    >
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="BMI Calculator - Calculate Your Body Mass Index Online | Toolzary"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate your Body Mass Index (BMI) with Toolzary's free online BMI Calculator. Get your BMI result, weight category, and healthy weight range instantly."
+    >
+
+    <meta
+        property="og:url"
+        content="https://toolzary.com/tools/bmi-calculator/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Toolzary"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_US"
+    >
+
+    <meta
+        property="og:image"
+        content="https://toolzary.com/assets/images/og/bmi-calculator.png"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Toolzary BMI Calculator"
+    >
+
+    <!-- Twitter / X -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="BMI Calculator - Calculate Your Body Mass Index Online | Toolzary"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Calculate your Body Mass Index (BMI), check your weight category, and view your healthy weight range with Toolzary's free online calculator."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://toolzary.com/assets/images/og/bmi-calculator.png"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="Toolzary BMI Calculator"
+    >
+
+    <!-- Icons -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/assets/icons/favicons/favicon-512.svg"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="/assets/icons/favicons/apple-touch-icon.png"
+    >
+
+    <!-- Styles -->
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/tool-page.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/tools/bmi-calculator.css"
+    >
+
+    <!-- Scripts -->
+
+    <script
+        defer
+        src="/assets/js/script.js"
+    ></script>
+
+    <script
+        defer
+        src="/assets/js/footer.js"
+    ></script>
+
+    <script
+        defer
+        src="/assets/js/tools/bmi-calculator.js"
+    ></script>
+
+    <!-- WebApplication Schema -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
         "name": "BMI Calculator",
-        "item": "https://toolzary.com/tools/bmi-calculator"
-      }
-    ]
-  }
-  </script>
-  
+        "url": "https://toolzary.com/tools/bmi-calculator/",
+        "description": "Free online BMI calculator that calculates Body Mass Index (BMI), weight category, and healthy weight range based on height and weight.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "inLanguage": "en",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Toolzary",
+            "url": "https://toolzary.com/"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://toolzary.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tools",
+                "item": "https://toolzary.com/tools/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "BMI Calculator",
+                "item": "https://toolzary.com/tools/bmi-calculator/"
+            }
+        ]
+    }
+    </script>
+
 </head>
 <body>
+ <!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
 
-  <header>
-    <a href="/" class="logo logo-text">
-  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
-  Toolzary
-</a>
-    <div class="search-wrapper">
-      <label for="globalSearch" class="sr-only">Search Tools</label>
-      <span class="search-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-      </span>
-      <input type="text" id="globalSearch" placeholder="Search tools...">
-    </div>
-    <div class="header-actions">
-      <a href="/Contact" class="nav-link">Contact Us</a>
-      <a href="/faq" class="nav-link">FAQs</a>
-      <a href="/about" class="nav-link">About Toolzary</a>
-      <button id="darkToggle" class="outline">Dark Mode</button>
-    </div>
-  </header>
+    <!-- Logo -->
+    <a href="/" class="logo" aria-label="Toolzary Home">
+        <img
+            src="/assets/logos/logo.svg"
+            alt="Toolzary"
+            width="36"
+            height="36"
+        >
+        <span>Toolzary</span>
+    </a>
 
-  <main class="container tool-split-layout">
-    
-    <section class="tool-workspace">
-      <div class="unified-tool-container">
-        
-        <div class="tool-title-wrap" data-active-tool-id="bmi">
-          <div class="tool-main-icon-large" id="toolMainIcon">
-            <!-- SVG icon placeholder -->
-          </div>
-          <h1 class="tool-main-title-blue" id="toolMainTitle">BMI Calculator</h1>
-          <div>
-            <span class="tool-category-badge" id="toolCategoryBadge">Health</span>
-          </div>
+
+    <!-- ================= TOOL SEARCH ================= -->
+    <form
+        class="search-wrapper"
+        action="/search/"
+        method="get"
+        role="search"
+    >
+
+        <label
+            for="toolSearch"
+            class="sr-only"
+        >
+            Search tools
+        </label>
+
+        <div class="search-wrapper-box">
+
+            <svg
+                class="search-icon"
+                aria-hidden="true"
+                focusable="false"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <circle
+                    cx="11"
+                    cy="11"
+                    r="8"
+                ></circle>
+
+                <line
+                    x1="21"
+                    y1="21"
+                    x2="16.65"
+                    y2="16.65"
+                ></line>
+            </svg>
+
+            <input
+                id="toolSearch"
+                class="toolSearch"
+                name="query"
+                type="search"
+                placeholder="Search tools..."
+                autocomplete="off"
+                enterkeyhint="search"
+                spellcheck="false"
+                required
+            >
+
+            <button
+                class="search-button-small"
+                type="submit"
+                aria-label="Search tools"
+            >
+                Search
+            </button>
+
         </div>
-        
-        <hr class="tool-divider">
 
-        <div class="tool-custom-interface">
-          
-          <!-- Weight Section -->
-          <div class="form-group-centered">
-            <label class="input-label">Weight</label>
-            <input type="number" id="weightValue" class="blue-select data-input-field" placeholder="Enter weight" step="any">
-            <select id="weightUnit" class="unit-select">
-              <option value="kg">Kilograms (kg)</option>
-              <option value="g">Grams (g)</option>
-              <option value="lbs">Pounds (lbs)</option>
-              <option value="st">Stones (st)</option>
-              <option value="oz">Ounces (oz)</option>
-            </select>
-          </div>
+    </form>
 
-          <!-- Height Section -->
-          <div class="form-group-centered">
-            <label class="input-label">Height</label>
-            <input type="number" id="heightValue" class="blue-select data-input-field" placeholder="Enter height" step="any">
-            <select id="heightUnit" class="unit-select">
-              <option value="cm">Centimeters (cm)</option>
-              <option value="m">Meters (m)</option>
-              <option value="in">Inches (in)</option>
-              <option value="ft">Feet (ft)</option>
-              <option value="mm">Millimeters (mm)</option>
-            </select>
-          </div>
-          
-          <button id="calculateBtn" class="submit-btn">Calculate BMI</button>
-          
-          <div id="bmiResultBox" class="result-box-card hidden">
-            <h3 class="result-box-title">Your BMI Result</h3>
-            <div class="bmi-result-grid">
-              <div class="bmi-result-block">
-                <div class="bmi-result-value" id="bmiValue">0</div>
-                <div class="bmi-result-label">BMI Score</div>
-              </div>
-              <div class="bmi-result-block">
-                <div class="bmi-result-value" id="bmiCategory">-</div>
-                <div class="bmi-result-label">Category</div>
-              </div>
-              <div class="bmi-result-block">
-                <div class="bmi-result-value" id="healthyRange">-</div>
-                <div class="bmi-result-label">Healthy Weight Range</div>
-              </div>
+
+    <!-- ================= MOBILE MENU BUTTON ================= -->
+    <button
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+    >
+
+        <img
+            src="/assets/icons/others/menu.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-open-icon"
+        >
+
+        <img
+            src="/assets/icons/others/plus.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-close-icon"
+        >
+
+    </button>
+
+
+    <!-- ================= DESKTOP NAVIGATION ================= -->
+    <nav
+        class="desktop-nav"
+        aria-label="Main navigation"
+    >
+
+        <a href="/tools">
+            Tools
+        </a>
+
+        <a href="/categories">
+            Categories
+        </a>
+
+        <a href="/about">
+            About
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+        <button
+            id="darkToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+
+            <img
+                src="/assets/icons/others/moon.svg"
+                alt=""
+                width="24"
+                height="24"
+                class="themeIcon"
+            >
+
+        </button>
+
+    </nav>
+
+
+    <!-- =================================================
+         FULL SCREEN MOBILE MENU
+    ================================================== -->
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-inner">
+
+
+            <!-- Mobile Search -->
+            <form
+                class="search-wrapper mobile-search"
+                action="/search/"
+                method="get"
+                role="search"
+            >
+
+                <label
+                    for="mobileToolSearch"
+                    class="sr-only"
+                >
+                    Search tools
+                </label>
+
+                <div class="search-wrapper-box">
+
+                    <svg
+                        class="search-icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8"
+                        ></circle>
+
+                        <line
+                            x1="21"
+                            y1="21"
+                            x2="16.65"
+                            y2="16.65"
+                        ></line>
+
+                    </svg>
+
+                    <input
+                        id="mobileToolSearch"
+                        class="toolSearch"
+                        name="query"
+                        type="search"
+                        placeholder="Search tools..."
+                        autocomplete="off"
+                        enterkeyhint="search"
+                        spellcheck="false"
+                        required
+                    >
+
+                    <button
+                        class="search-button-small"
+                        type="submit"
+                        aria-label="Search tools"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Mobile Navigation -->
+            <nav
+                class="mobile-nav"
+                aria-label="Mobile navigation"
+            >
+
+                <a href="/tools">
+                    <span>Tools</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/categories">
+                    <span>Categories</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/about">
+                    <span>About</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/contact">
+                    <span>Contact</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Bottom Controls -->
+            <div class="mobile-menu-bottom">
+
+                <div class="mobile-menu-tagline">
+
+                    <strong>Toolzary</strong>
+
+                    <span>
+                        Free tools. Simple. Fast.
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="mobile-theme-toggle darkToggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <span class="mobile-theme-label">
+                        Dark Mode
+                    </span>
+
+                    <img
+                        src="/assets/icons/others/moon.svg"
+                        alt=""
+                        width="22"
+                        height="22"
+                        class="mobileThemeIcon"
+                    >
+
+                </button>
+
             </div>
-            <div id="bmiStatus" class="bmi-status-message"></div>
-            <div id="bmiAdvice" class="bmi-advice-message"></div>
-          </div>
 
-          <div id="toolLocalError" class="local-error-alert hidden"></div>
-          <div id="toolLocalWarning" class="local-warning-alert hidden"></div>
         </div>
 
-        <hr class="tool-divider">
-
-        <div class="about-tool-section">
-          <h2 class="about-tool-title">About BMI Calculator</h2>
-          <p class="tool-main-desc">Body Mass Index (BMI) is a measure of body fat based on height and weight. This calculator supports multiple units: weight (kg, g, lbs, stones, oz) and height (cm, m, inches, feet, mm). BMI Categories: Underweight (&lt;18.5), Normal (18.5-24.9), Overweight (25-29.9), Obese (≥30).</p>
-        </div>
-
-      </div>
-    </section>
-
-    <aside class="tool-sidebar">
-      <h3 class="sidebar-title">Related Tools</h3>
-      <div class="related-tools-vertical-grid" id="relatedToolsGrid"></div>
-    </aside>
-
-  </main>
-
-  <!-- ========== FAQ SECTION ========== -->
-  <section class="container" id="faq">
-    <div class="faq-section-wrapper">
-      <div class="section-header">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about BMI calculation</p>
-      </div>
-      
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is BMI?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>BMI (Body Mass Index) is a measurement that uses your height and weight to estimate body fat. It's a simple, widely used screening tool for weight categories.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How is BMI calculated?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>Formula: weight (kg) ÷ height² (m²). This calculator automatically converts your selected units to metric for accurate calculation.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What are the BMI categories?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>Underweight: &lt;18.5, Normal: 18.5-24.9, Overweight: 25-29.9, Obese: â‰¥30. Each category has different health implications.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Is BMI accurate for everyone?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>BMI is a general screening tool but may not be accurate for athletes (more muscle mass), pregnant women, or elderly people. Consult a doctor for professional assessment.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What units does this calculator support?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>Weight: Kilograms (kg), Grams (g), Pounds (lbs), Stones (st), Ounces (oz). Height: Centimeters (cm), Meters (m), Inches (in), Feet (ft), Millimeters (mm).</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-  <script src="/assets/js/script.js"></script>
-  <script src="/assets/js/bmi-calculator.js"></script>
-  <script src="/assets/js/footer.js"></script>
+
+</header>
+<main class="tool-page">
+
+
+<!-- =========================
+     TOOL HERO
+========================= -->
+
+<section class="hero tool-hero">
+
+<div class="container">
+
+
+<div class="tool-hero-icon">
+
+<img
+src="/assets/icons/tool-icons/bmi-calculator.svg"
+alt="BMI Calculator"
+>
+
+</div>
+
+
+
+<h1>
+BMI Calculator
+</h1>
+
+
+
+<p>
+Calculate your body mass index (BMI) instantly with accurate browser-based metrics and multi-unit support.
+</p>
+
+
+
+
+<div class="tool-tags">
+
+<span>
+Health Tools
+</span>
+
+<span>
+Free
+</span>
+
+<span>
+Online
+</span>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     TOOL APPLICATION
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="tool-panel">
+
+
+<!--
+    ONLY THIS AREA IS OWNED BY THE TOOL
+-->
+
+
+<div id="tool-app">
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     ABOUT TOOL
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+About BMI Calculator
+</h2>
+
+
+</div>
+
+
+
+
+<article class="tool-info-card">
+
+
+<p>
+
+Toolzary's Body Mass Index (BMI) Calculator is a free online utility designed to help you quickly assess your weight status based on your height and weight. By entering your measurements using your preferred units, the calculator instantly computes your exact BMI score.
+
+</p>
+
+<p>
+
+The tool automatically evaluates standard health metrics to classify your score into categories such as underweight, normal weight, overweight, or obesity. It also outlines normal healthy weight ranges relative to your inputted height.
+
+</p>
+
+<p>
+
+Whether you are monitoring your fitness goals or checking health metrics, Toolzary's BMI Calculator provides fast, secure, and precise evaluations directly in your browser without requiring registration or file installations.
+
+</p>
+
+
+</article>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     HOW TO USE
+========================= -->
+
+<section class="section">
+
+    <div class="container features">
+
+        <div class="section-title">
+
+            <h2>
+                How To Use
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                        1
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Enter Your Height and Weight
+                </h3>
+
+                <p>
+                    Input your height and weight values into the corresponding data input boxes.
+                </p>
+
+            </article>
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                        2
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Select Precise Units
+                </h3>
+
+                <p>
+                    Choose your preferred units for height and weight using the dropdown selectors.
+                </p>
+
+            </article>
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                        3
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Click Calculate Button
+                </h3>
+
+                <p>
+                    Click the <strong>Calculate BMI</strong> button to process your data immediately.
+                </p>
+
+            </article>
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                        4
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Get Results
+                </h3>
+
+                <p>
+                    Review your accurate BMI score and status category in seconds.
+                </p>
+
+            </article>
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="section features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Features
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40"
+                    width="40"
+                    loading="lazy"
+                    src="/assets/icons/others/zap.svg"
+                    alt="Instant calculation">
+
+                </div>
+
+                <h3>
+                    Instant BMI Calculation
+                </h3>
+
+                <p>
+                    Calculate your BMI with multi-unit support instantly using your height and weight measurements.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img 
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/ruler.svg">
+                </div>
+
+                <h3>
+                    Multi-Unit Support
+                </h3>
+
+                <p>
+                    Seamlessly toggle between metric and imperial systems for versatile unit evaluation.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/layout-grid.svg">
+
+                </div>
+
+                <h3>
+                    Category Breakdowns
+                </h3>
+
+                <p>
+                    View detailed health category classifications ranging from underweight to severe obesity.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img 
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/shield-check.svg">
+
+                </div>
+
+                <h3>
+                    Privacy Friendly
+                </h3>
+
+                <p>
+                    Your height and weight data are processed securely in your browser without uploading personal details.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/monitor-smartphone.svg">
+
+                </div>
+
+                <h3>
+                    Works Everywhere
+                </h3>
+
+                <p>
+                    Access the tool smoothly on desktop, tablet, and mobile devices across all modern web browsers.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                   <img
+                   height="40px"
+                   width="40px"
+                   loading="lazy"
+                   alt=""
+                   src="/assets/icons/others/circle-check-big.svg">
+
+                </div>
+
+                <h3>
+                    Accurate Results
+                </h3>
+
+                <p>
+                    Get reliable body mass index evaluations based on recognized medical health formulas.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+</div>
+
+
+
+<div class="faq-list">
+
+
+
+<!-- FAQ 1 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+What is a BMI calculator and how does it work?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+A BMI calculator evaluates your body mass index by comparing your weight relative to your height. It uses established mathematical formulas to provide a clear indicator of body fat and weight category.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 2 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+What are the standard BMI categories?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Standard categories include underweight (below 18.5), normal weight (18.5 to 24.9), overweight (25.0 to 29.9), and obesity (30.0 or higher).
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 3 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+What units of measurement are supported?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+The calculator supports multiple standard units, allowing you to enter height and weight in metric (kilograms, centimeters) or imperial (pounds, inches) formats.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 4 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Can I check someone else's BMI?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. You can enter any valid height and weight measurements to calculate the BMI score for family members or friends.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 5 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Is my health data saved or uploaded anywhere?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+No. All calculations are executed directly within your web browser, ensuring complete data privacy with no server uploads.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 6 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Is BMI accurate for athletes and bodybuilders?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+BMI can sometimes be less accurate for athletes or individuals with high muscle mass, as muscle weighs more than fat, which may classify them as overweight despite low body fat.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 7 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+What should I do if my BMI result falls outside the normal range?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+If your BMI falls outside the normal range, it is best to consult with a healthcare professional or nutritionist for personalized medical guidance and lifestyle advice.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 8 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+What happens if I enter incorrect or negative numbers?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+The calculator validates inputs and will display an error message prompting you to enter realistic and positive numbers for accurate calculation.
+</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     RELATED TOOLS
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+Related Tools
+</h2>
+
+
+<a href="/tools">
+View All
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="tools-grid relatedTools">
+
+
+<!-- existing .tool-card generated here -->
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+</main>
+<footer id="site-footer">
+    <!-- Loaded by footer.js -->
+</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

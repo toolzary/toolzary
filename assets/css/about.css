@@ -1,1303 +1,1058 @@
-/* ============================================
-   ABOUT PAGE STYLES
-   ============================================ */
+/* =========================================================
+   ABOUT PAGE
+   Page Specific Styling Only
+========================================================= */
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
-.about-hero {
-    text-align: center;
-    padding: 60px 20px 40px;
-}
+.about-hero-actions,
+.about-cta-actions {
 
-.about-hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-.about-hero-subtitle {
-    font-size: 20px;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
-
-.about-hero-actions {
     display: flex;
-    gap: 12px;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* ============================================
-   STATS SECTION
-   ============================================ */
-.about-stats-section {
-    padding: 40px 20px;
-}
-
-.about-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 24px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.about-stat-item {
-    text-align: center;
-    padding: 24px;
-    background: var(--surface);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    transition: all 0.3s;
-}
-
-.about-stat-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    border-color: var(--primary);
-}
-
-.about-stat-number {
-    font-size: 36px;
-    font-weight: 800;
-    color: var(--primary);
-}
-
-.about-stat-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text);
-    margin-top: 4px;
-}
-
-/* ============================================
-   CONTENT SECTION
-   ============================================ */
-.about-content-section {
-    padding: 40px 20px;
-}
-
-.about-content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    max-width: 1100px;
-    margin: 0 auto;
-    align-items: start;
-}
-
-.about-content-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.about-content-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--text);
-    margin-bottom: 16px;
-}
-
-.about-features-list {
-    display: grid;
     gap: 16px;
-    margin-top: 24px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+
 }
 
-.about-feature-item {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
+
+
+
+
+
+.about-trust span {
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: .9rem;
+
 }
+
+
+
+
+
+
+
+/* ================= STATS ================= */
+
+
+
+.about-stats {
+
+    max-width: 1100px;
+    margin: 40px auto 100px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+
+}
+
+
+
+.about-stat-card {
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 22px;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+
+
+.about-stat-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(79,70,229,.15);
+
+    border-color: #4f46e5;
+
+}
+
+
+
+.about-stat-card strong {
+
+    display:block;
+
+    font-size:2.4rem;
+
+    color:#4f46e5;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.about-stat-card span {
+
+    color:var(--text-muted);
+
+}
+
+
+
+
+
+
+
+
+/* ================= INTRO ================= */
+
+
+
+.about-introduction {
+
+
+    max-width:1100px;
+
+    margin:0 auto 120px;
+
+    padding:0 20px;
+
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:50px;
+
+    align-items:center;
+
+
+}
+
+
+
+.about-intro-text h2 {
+
+    font-size:2.4rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.about-intro-text p {
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+    color:var(--text-muted);
+
+}
+
+
+
+
+
+.about-visual-card {
+
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(79,70,229,.15),
+        transparent
+    ),
+    var(--card-bg);
+
+
+    border:1px solid var(--border-color);
+
+    border-radius:30px;
+
+    min-height:350px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+.about-visual-card:hover {
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.about-visual-icon {
+
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:rgba(79,70,229,.12);
+
+    color:#4f46e5;
+
+
+    margin-bottom:25px;
+
+
+    transition:.4s ease;
+
+
+}
+
+
+
+.about-visual-card:hover .about-visual-icon {
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+
+
+
+
+
+
+/* ================= SECTION HEADING ================= */
+
+
+
+.about-section-heading {
+
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+}
+
+
+
+.about-section-heading h2 {
+
+    font-size:2.5rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.about-section-heading p {
+
+    color:var(--text-muted);
+
+}
+
+
+
+
+
+
+
+/* ================= AUDIENCE ================= */
+
+
+
+.about-audience,
+.about-features,
+.about-process,
+.about-categories {
+
+    max-width:1200px;
+
+    margin:0 auto 120px;
+
+    padding:0 20px;
+
+}
+
+
+
+
+
+.about-audience-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+
+.about-audience-card {
+
+
+    background:var(--card-bg);
+
+    border:1px solid var(--border-color);
+
+    border-radius:24px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+.about-audience-card:hover {
+
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+
+}
+
+
+.about-audience-card:hover .about-card-icon {
+
+    transform:translateY(-6px) rotate(6deg);
+
+    background:#4f46e5;
+
+    color:white;
+
+}
+
+
+.about-card-icon {
+
+
+     width:75px;
+    height:75px;
+
+    border-radius:22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 22px;
+
+    color:#4f46e5;
+
+    background:rgba(79,70,229,.12);
+
+    transition:.35s ease;
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= FEATURE CARDS ================= */
+
+
+
+.about-feature-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+.about-feature-card {
+
+
+    background:var(--card-bg);
+
+    border:1px solid var(--border-color);
+
+    border-radius:26px;
+
+    padding:35px;
+
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+
+}
+
+
+
+
+
+.about-feature-card:hover {
+
+
+    transform:translateY(-10px);
+
+    border-color:#4f46e5;
+
+    box-shadow:
+    0 25px 50px rgba(79,70,229,.14);
+
+
+}
+
+
 
 .about-feature-icon {
-    flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    color: var(--primary);
-    margin-top: 2px;
-}
 
-.about-feature-icon svg {
-    width: 100%;
-    height: 100%;
-}
 
-.about-feature-item h4 {
-    font-size: 15px;
-    font-weight: 600;
-    margin: 0 0 2px;
-}
+    width:75px;
 
-.about-feature-item p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin: 0;
-}
+    height:75px;
 
-/* ============================================
-   IMAGE CARD
-   ============================================ */
-.about-image-card {
-    background: var(--surface);
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    padding: 40px;
-    text-align: center;
-    transition: ease 0.3s;
-}
-.about-image-card:hover{
- transform: translateY(-4px);
- box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
- border-color: var(--primary);
-}
+    border-radius:22px;
 
-.about-image-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
 
-.about-image-placeholder svg {
-    width: 80px;
-    height: 80px;
-    color: var(--primary);
-}
+    background:rgba(79,70,229,.12);
 
-.about-image-placeholder h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-}
+    color:#4f46e5;
 
-.about-image-placeholder p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin: 0;
-}
 
-/* ============================================
-   CATEGORIES SECTION
-   ============================================ */
-.about-categories-section {
-    padding: 40px 20px;
-    text-align: center;
-}
+    display:flex;
 
-.about-categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+    align-items:center;
 
-.about-category-card {
-    display: block;
-    padding: 24px 16px;
-    background: var(--surface);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    text-decoration: none;
-    color: var(--text);
-    transition: all 0.3s;
-    text-align: center;
-}
+    justify-content:center;
 
-.about-category-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary);
-    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
-}
 
-.about-category-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    margin: 0 auto 12px;
-    background: rgba(79, 70, 229, 0.1);
-    border-radius: 12px;
-    color: var(--primary);
-}
+    margin-bottom:25px;
 
-.about-category-icon svg {
-    width: 28px;
-    height: 28px;
-}
 
-.about-category-card h3 {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 0 4px;
-}
+    transition:.4s ease;
 
-.about-category-card p {
-    font-size: 13px;
-    color: var(--text-secondary);
-    margin: 0 0 8px;
-}
 
-.about-category-link {
-    font-size: 13px;
-    color: var(--primary);
-    font-weight: 500;
 }
 
-/* ============================================
-   WHY CHOOSE US
-   ============================================ */
-.about-why-section {
-    padding: 40px 20px;
-    text-align: center;
-}
 
-.about-why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
 
-.about-why-item {
-    padding: 28px 24px;
-    background: var(--surface);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    text-align: center;
-    transition: all 0.3s;
-}
 
-.about-why-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    border-color: var(--primary);
-}
+.about-feature-card:hover .about-feature-icon {
 
-.about-why-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 16px;
-    background: rgba(79, 70, 229, 0.1);
-    border-radius: 50%;
-    color: var(--primary);
-}
 
-.about-why-icon svg {
-    width: 32px;
-    height: 32px;
-}
+    transform:
+    translateY(-5px)
+    rotate(8deg);
 
-.about-why-item h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 8px;
-}
 
-.about-why-item p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin: 0;
-}
+    background:#4f46e5;
 
-/* ============================================
-   TESTIMONIALS / TRUST
-   ============================================ */
-.about-trust-section {
-    padding: 40px 20px;
-    text-align: center;
-}
+    color:white;
 
-.about-trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
 
-.about-trust-item {
-   background: var(--surface);
-    padding: 24px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    text-align: left;
-    transition: all 0.3s;
-}
-.about-trust-item:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);;
-    border-color: var(--primary);
 }
 
-.about-trust-stars {
-    display: flex;
-    gap: 2px;
-    margin-bottom: 8px;
-}
 
-.about-trust-stars svg {
-    width: 20px;
-    height: 20px;
-    color: #f59e0b;
-    fill: #f59e0b;
-}
 
-.about-trust-item p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--text);
-    margin: 0 0 12px;
-    font-style: italic;
-}
+.about-feature-card h3 {
 
-.about-trust-author {
-    font-size: 14px;
-    color: var(--text-secondary);
-    font-weight: 500;
-}
 
-/* ============================================
-   CTA SECTION
-   ============================================ */
-.about-cta-section {
-    padding: 60px 20px;
-    text-align: center;
-}
+    margin-bottom:12px;
 
-.about-cta-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 48px;
-    background: var(--surface);
-    border-radius: 16px;
-    border: 1px solid var(--border);
-}
+    font-size:1.35rem;
 
-.about-cta-content h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0 0 12px;
-}
 
-.about-cta-content p {
-    font-size: 16px;
-    color: var(--text-secondary);
-    margin: 0 0 24px;
 }
 
-.about-cta-actions {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-/* ============================================
-   DARK MODE OVERRIDES
-   ============================================ */
-body.dark .about-stat-item,
-body.dark .about-image-card,
-body.dark .about-category-card,
-body.dark .about-why-item,
-body.dark .about-trust-item,
-body.dark .about-cta-content {
-    background: var(--surface);
-    border-color: var(--border);
-}
 
-body.dark .about-content-text,
-body.dark .about-feature-item p,
-body.dark .about-why-item p,
-body.dark .about-trust-item p {
-    color: var(--text-secondary);
-}
+.about-feature-card p {
 
-body.dark .about-hero-subtitle,
-body.dark .section-subtitle,
-body.dark .about-stat-label,
-body.dark .about-image-placeholder p,
-body.dark .about-category-card p {
-    color: var(--text-secondary);
-}
 
-body.dark .about-stat-item:hover,
-body.dark .about-why-item:hover,
-body.dark .about-category-card:hover {
-    border-color: var(--primary);
-}
+    color:var(--text-muted);
 
-body.dark .about-category-icon,
-body.dark .about-why-icon {
-    background: rgba(79, 70, 229, 0.15);
-}
+    line-height:1.7;
 
-body.dark .about-trust-stars svg {
-    color: #f59e0b;
-    fill: #f59e0b;
-}
 
-body.dark .about-feature-icon {
-    color: var(--primary);
 }
 
-body.dark .about-hero-actions .btn-outline,
-body.dark .about-cta-actions .btn-outline {
-    border-color: var(--border);
-    color: var(--text);
-}
 
-body.dark .about-hero-actions .btn-outline:hover,
-body.dark .about-cta-actions .btn-outline:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
+
+
+
+
+
+
+/* ================= PROCESS ================= */
+
+
+
+.about-process-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
 
-body.dark .about-image-placeholder h3 {
-    color: var(--text);
+
 }
+
+
+
+.about-process-card {
+
+
+    padding:35px;
+
+    border-radius:25px;
 
-body.dark .about-category-link {
-    color: var(--primary);
+    background:var(--card-bg);
+
+    border:1px solid var(--border-color);
+
+
+    transition:.35s ease;
+
+
 }
-body.dark .about-trust-item:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    border-color: var(--primary);
+
+
+
+.about-process-card:hover {
+
+
+    transform:translateY(-8px);
+
+
 }
+
+
 
-/* ============================================
-   UTILITY OVERRIDES FOR ABOUT PAGE
-   ============================================ */
-.about-hero-actions .btn-primary,
-.about-cta-actions .btn-primary {
-    background: var(--primary);
-    color: white;
-    padding: 12px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s;
-    display: inline-block;
+
+.about-process-card span {
+
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#4f46e5;
+
+
 }
+
 
-.about-hero-actions .btn-primary:hover,
-.about-cta-actions .btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+
+
+
+
+
+/* ================= CATEGORY ================= */
+
+
+
+.about-category-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
 }
+
+
+
+
+
+
+
+
+/* ================= FINAL CTA ================= */
+
+
+
+.about-final-cta {
+
+
+    max-width:1000px;
+
+    margin:0 auto 100px;
+
+    padding:70px 30px;
 
-.about-hero-actions .btn-outline,
-.about-cta-actions .btn-outline {
-    display: inline-block;
-    padding: 12px 28px;
-    background: transparent;
-    color: var(--text);
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s;
+    text-align:center;
+
+
+    border-radius:35px;
+
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(79,70,229,.15),
+    transparent
+    );
+
+
+    border:1px solid var(--border-color);
+
+
 }
+
+
+
+.about-final-cta h2 {
+
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
 
-.about-hero-actions .btn-outline:hover,
-.about-cta-actions .btn-outline:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    transform: translateY(-2px);
+
 }
-/* ============================================
-   1. ULTRA SMALL DEVICES (Smartwatches, Tiny Screens)
-   Width: < 375px
-   ============================================ */
-@media (max-width: 374px) {
-  /* --- HERO --- */
-  .about-hero {
-    padding: 30px 12px 20px;
-  }
-  .about-hero-title {
-    font-size: 28px;
-  }
-  .about-hero-subtitle {
-    font-size: 15px;
-    max-width: 100%;
-  }
-  .about-hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-hero-actions .btn-primary,
-  .about-hero-actions .btn-outline {
-    width: 100%;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  /* --- STATS --- */
-  .about-stats-section {
-    padding: 24px 12px;
-  }
-  .about-stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .about-stat-item {
-    padding: 16px;
-  }
-  .about-stat-number {
-    font-size: 24px;
-  }
-  .about-stat-label {
-    font-size: 13px;
-  }
-
-  /* --- CONTENT --- */
-  .about-content-section {
-    padding: 24px 12px;
-  }
-  .about-content-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .about-content-title {
-    font-size: 24px;
-  }
-  .about-content-text {
-    font-size: 14px;
-  }
-  .about-feature-item h4 {
-    font-size: 14px;
-  }
-  .about-feature-item p {
-    font-size: 13px;
-  }
-  .about-image-card {
-    padding: 24px;
-  }
-  .about-image-placeholder svg {
-    width: 60px;
-    height: 60px;
-  }
-  .about-image-placeholder h3 {
-    font-size: 16px;
-  }
-  .about-image-placeholder p {
-    font-size: 13px;
-  }
-
-  /* --- CATEGORIES --- */
-  .about-categories-section {
-    padding: 24px 12px;
-  }
-  .about-categories-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .about-category-card {
-    padding: 16px 12px;
-  }
-  .about-category-icon {
-    width: 40px;
-    height: 40px;
-  }
-  .about-category-icon svg {
-    width: 22px;
-    height: 22px;
-  }
-  .about-category-card h3 {
-    font-size: 14px;
-  }
-  .about-category-card p {
-    font-size: 12px;
-  }
-  .about-category-link {
-    font-size: 12px;
-  }
-
-  /* --- WHY CHOOSE US --- */
-  .about-why-section {
-    padding: 24px 12px;
-  }
-  .about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .about-why-item {
-    padding: 20px 16px;
-  }
-  .about-why-icon {
-    width: 52px;
-    height: 52px;
-  }
-  .about-why-icon svg {
-    width: 26px;
-    height: 26px;
-  }
-  .about-why-item h3 {
-    font-size: 16px;
-  }
-  .about-why-item p {
-    font-size: 13px;
-  }
-
-  /* --- TRUST/TESTIMONIALS --- */
-  .about-trust-section {
-    padding: 24px 12px;
-  }
-  .about-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .about-trust-item {
-    padding: 18px 16px;
-  }
-  .about-trust-item p {
-    font-size: 14px;
-  }
-  .about-trust-author {
-    font-size: 13px;
-  }
-
-  /* --- CTA --- */
-  .about-cta-section {
-    padding: 30px 12px;
-  }
-  .about-cta-content {
-    padding: 24px 16px;
-  }
-  .about-cta-content h2 {
-    font-size: 24px;
-  }
-  .about-cta-content p {
-    font-size: 14px;
-  }
-  .about-cta-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-cta-actions .btn-primary,
-  .about-cta-actions .btn-outline {
-    width: 100%;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 14px;
-  }
+
+
+
+.about-final-cta p {
+
+
+    color:var(--text-muted);
+
+    margin-bottom:30px;
+
+
 }
+
+
+
+
+
+
 
-/* ============================================
-   2. SMALL DEVICES (Phones - Portrait)
-   Width: 375px - 575px
-   ============================================ */
-@media (min-width: 375px) and (max-width: 575px) {
-  /* --- HERO --- */
-  .about-hero {
-    padding: 35px 16px 25px;
-  }
-  .about-hero-title {
-    font-size: 32px;
-  }
-  .about-hero-subtitle {
-    font-size: 16px;
-    max-width: 100%;
-  }
-  .about-hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-hero-actions .btn-primary,
-  .about-hero-actions .btn-outline {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* --- STATS --- */
-  .about-stats-section {
-    padding: 28px 16px;
-  }
-  .about-stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  .about-stat-number {
-    font-size: 28px;
-  }
-
-  /* --- CONTENT --- */
-  .about-content-section {
-    padding: 28px 16px;
-  }
-  .about-content-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .about-content-title {
-    font-size: 26px;
-  }
-  .about-image-card {
-    padding: 28px;
-  }
-
-  /* --- CATEGORIES --- */
-  .about-categories-section {
-    padding: 28px 16px;
-  }
-  .about-categories-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-
-  /* --- WHY CHOOSE US --- */
-  .about-why-section {
-    padding: 28px 16px;
-  }
-  .about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  /* --- TRUST --- */
-  .about-trust-section {
-    padding: 28px 16px;
-  }
-  .about-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  /* --- CTA --- */
-  .about-cta-section {
-    padding: 40px 16px;
-  }
-  .about-cta-content {
-    padding: 28px 20px;
-  }
-  .about-cta-content h2 {
-    font-size: 26px;
-  }
-  .about-cta-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-cta-actions .btn-primary,
-  .about-cta-actions .btn-outline {
-    width: 100%;
-    text-align: center;
-  }
+/* ================= RESPONSIVE ================= */
+
+
+
+@media(max-width:900px){
+
+
+.about-stats,
+.about-audience-grid,
+.about-feature-grid,
+.about-process-grid,
+.about-category-grid {
+
+    grid-template-columns:repeat(2,1fr);
+
 }
 
-/* ============================================
-   3. MEDIUM DEVICES (Large Phones & Small Tablets)
-   Width: 576px - 767px
-   ============================================ */
-@media (min-width: 576px) and (max-width: 767px) {
-  /* --- HERO --- */
-  .about-hero-title {
-    font-size: 36px;
-  }
-  .about-hero-subtitle {
-    font-size: 17px;
-  }
-
-  /* --- STATS --- */
-  .about-stats-section {
-    padding: 32px 20px;
-  }
-  .about-stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  .about-stat-number {
-    font-size: 30px;
-  }
-
-  /* --- CONTENT --- */
-  .about-content-section {
-    padding: 32px 20px;
-  }
-  .about-content-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .about-content-title {
-    font-size: 28px;
-  }
-
-  /* --- CATEGORIES --- */
-  .about-categories-section {
-    padding: 32px 20px;
-  }
-  .about-categories-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  /* --- WHY CHOOSE US --- */
-  .about-why-section {
-    padding: 32px 20px;
-  }
-  .about-why-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  /* --- TRUST --- */
-  .about-trust-section {
-    padding: 32px 20px;
-  }
-  .about-trust-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  /* --- CTA --- */
-  .about-cta-section {
-    padding: 50px 20px;
-  }
-  .about-cta-content {
-    padding: 32px 28px;
-  }
-  .about-cta-content h2 {
-    font-size: 28px;
-  }
-  .about-cta-actions {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .about-cta-actions .btn-primary,
-  .about-cta-actions .btn-outline {
-    padding: 11px 24px;
-    font-size: 15px;
-  }
+
+
+.about-introduction {
+
+    grid-template-columns:1fr;
+
 }
+
 
-/* ============================================
-   4. LARGE DEVICES (Tablets & Small Laptops)
-   Width: 768px - 991px
-   ============================================ */
-@media (min-width: 768px) and (max-width: 991px) {
-  /* --- HERO --- */
-  .about-hero {
-    padding: 50px 24px 35px;
-  }
-  .about-hero-title {
-    font-size: 40px;
-  }
-
-  /* --- STATS --- */
-  .about-stats-section {
-    padding: 36px 24px;
-  }
-  .about-stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  .about-stat-number {
-    font-size: 32px;
-  }
-  .about-stat-label {
-    font-size: 15px;
-  }
-
-  /* --- CONTENT --- */
-  .about-content-section {
-    padding: 36px 24px;
-  }
-  .about-content-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
-  }
-  .about-content-title {
-    font-size: 30px;
-  }
-
-  /* --- CATEGORIES --- */
-  .about-categories-section {
-    padding: 36px 24px;
-  }
-  .about-categories-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  /* --- WHY CHOOSE US --- */
-  .about-why-section {
-    padding: 36px 24px;
-  }
-  .about-why-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  /* --- TRUST --- */
-  .about-trust-section {
-    padding: 36px 24px;
-  }
-  .about-trust-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  /* --- CTA --- */
-  .about-cta-section {
-    padding: 60px 24px;
-  }
-  .about-cta-content {
-    padding: 40px 32px;
-  }
-  .about-cta-content h2 {
-    font-size: 30px;
-  }
-  .about-cta-actions .btn-primary,
-  .about-cta-actions .btn-outline {
-    padding: 12px 28px;
-  }
 }
+
+
 
-/* ============================================
-   5. EXTRA LARGE (Laptops & Standard Desktops)
-   Width: 992px - 1199px
-   ============================================ */
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* --- HERO --- */
-  .about-hero-title {
-    font-size: 44px;
-  }
-
-  /* --- STATS --- */
-  .about-stats-grid {
-    max-width: 800px;
-    gap: 24px;
-  }
-
-  /* --- CONTENT --- */
-  .about-content-grid {
-    max-width: 1000px;
-    gap: 40px;
-  }
-  .about-content-title {
-    font-size: 32px;
-  }
-
-  /* --- CATEGORIES --- */
-  .about-categories-grid {
-    max-width: 900px;
-  }
-
-  /* --- WHY CHOOSE US --- */
-  .about-why-grid {
-    max-width: 900px;
-  }
-
-  /* --- TRUST --- */
-  .about-trust-grid {
-    max-width: 900px;
-  }
-
-  /* --- CTA --- */
-  .about-cta-content {
-    padding: 44px 36px;
-  }
+
+@media(max-width:600px){
+
+
+.about-stats,
+.about-audience-grid,
+.about-feature-grid,
+.about-process-grid,
+.about-category-grid {
+
+    grid-template-columns:1fr;
+
 }
+
+
 
-/* ============================================
-   6. EXTRA EXTRA LARGE (Large Desktops & 4K)
-   Width: 1200px - 1399px
-   ============================================ */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  /* --- HERO --- */
-  .about-hero-title {
-    font-size: 48px;
-  }
-
-  /* --- STATS --- */
-  .about-stats-grid {
-    max-width: 900px;
-    gap: 28px;
-  }
-
-  /* --- CONTENT --- */
-  .about-content-grid {
-    max-width: 1100px;
-    gap: 48px;
-  }
-
-  /* --- CATEGORIES --- */
-  .about-categories-grid {
-    max-width: 1000px;
-  }
-
-  /* --- WHY CHOOSE US --- */
-  .about-why-grid {
-    max-width: 1000px;
-  }
-
-  /* --- TRUST --- */
-  .about-trust-grid {
-    max-width: 1000px;
-  }
-
-  /* --- CTA --- */
-  .about-cta-content {
-    padding: 48px;
-  }
+
+
+
+
+.about-feature-card,
+.about-audience-card,
+.about-process-card {
+
+    padding:25px;
+
 }
 
-/* ============================================
-   7. ULTRA LARGE (Ultrawide & 4K+ Monitors)
-   Width: 1400px+
-   ============================================ */
-@media (min-width: 1400px) {
-  /* --- HERO --- */
-  .about-hero {
-    padding: 80px 40px 50px;
-  }
-  .about-hero-title {
-    font-size: 56px;
-  }
-  .about-hero-subtitle {
-    font-size: 22px;
-    max-width: 700px;
-  }
-  .about-hero-actions {
-    gap: 16px;
-  }
-  .about-hero-actions .btn-primary,
-  .about-hero-actions .btn-outline {
-    padding: 14px 36px;
-    font-size: 16px;
-    border-radius: 10px;
-  }
-
-  /* --- STATS --- */
-  .about-stats-section {
-    padding: 50px 40px;
-  }
-  .about-stats-grid {
-    max-width: 1000px;
-    gap: 30px;
-  }
-  .about-stat-item {
-    padding: 28px;
-    border-radius: 14px;
-  }
-  .about-stat-number {
-    font-size: 42px;
-  }
-  .about-stat-label {
-    font-size: 18px;
-  }
-
-  /* --- CONTENT --- */
-  .about-content-section {
-    padding: 50px 40px;
-  }
-  .about-content-grid {
-    max-width: 1200px;
-    gap: 60px;
-  }
-  .about-content-title {
-    font-size: 36px;
-  }
-  .about-content-text {
-    font-size: 18px;
-    line-height: 1.9;
-  }
-  .about-feature-item {
-    gap: 16px;
-  }
-  .about-feature-icon {
-    width: 32px;
-    height: 32px;
-  }
-  .about-feature-item h4 {
-    font-size: 17px;
-  }
-  .about-feature-item p {
-    font-size: 15px;
-  }
-  .about-image-card {
-    padding: 48px;
-    border-radius: 20px;
-  }
-  .about-image-placeholder svg {
-    width: 100px;
-    height: 100px;
-  }
-  .about-image-placeholder h3 {
-    font-size: 20px;
-  }
-  .about-image-placeholder p {
-    font-size: 16px;
-  }
-
-  /* --- CATEGORIES --- */
-  .about-categories-section {
-    padding: 50px 40px;
-  }
-  .about-categories-grid {
-    max-width: 1100px;
-    gap: 24px;
-  }
-  .about-category-card {
-    padding: 28px 20px;
-    border-radius: 14px;
-  }
-  .about-category-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
-  }
-  .about-category-icon svg {
-    width: 32px;
-    height: 32px;
-  }
-  .about-category-card h3 {
-    font-size: 18px;
-  }
-  .about-category-card p {
-    font-size: 14px;
-  }
-  .about-category-link {
-    font-size: 14px;
-  }
-
-  /* --- WHY CHOOSE US --- */
-  .about-why-section {
-    padding: 50px 40px;
-  }
-  .about-why-grid {
-    max-width: 1100px;
-    gap: 28px;
-  }
-  .about-why-item {
-    padding: 32px 28px;
-    border-radius: 14px;
-  }
-  .about-why-icon {
-    width: 72px;
-    height: 72px;
-  }
-  .about-why-icon svg {
-    width: 36px;
-    height: 36px;
-  }
-  .about-why-item h3 {
-    font-size: 20px;
-  }
-  .about-why-item p {
-    font-size: 15px;
-  }
-
-  /* --- TRUST --- */
-  .about-trust-section {
-    padding: 50px 40px;
-  }
-  .about-trust-grid {
-    max-width: 1100px;
-    gap: 28px;
-  }
-  .about-trust-item {
-    padding: 28px;
-    border-radius: 14px;
-  }
-  .about-trust-stars svg {
-    width: 22px;
-    height: 22px;
-  }
-  .about-trust-item p {
-    font-size: 16px;
-  }
-  .about-trust-author {
-    font-size: 15px;
-  }
-
-  /* --- CTA --- */
-  .about-cta-section {
-    padding: 80px 40px;
-  }
-  .about-cta-content {
-    max-width: 700px;
-    padding: 56px 48px;
-    border-radius: 20px;
-  }
-  .about-cta-content h2 {
-    font-size: 36px;
-  }
-  .about-cta-content p {
-    font-size: 18px;
-  }
-  .about-cta-actions {
-    gap: 16px;
-  }
-  .about-cta-actions .btn-primary,
-  .about-cta-actions .btn-outline {
-    padding: 14px 36px;
-    font-size: 16px;
-    border-radius: 10px;
-  }
+
 }
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+/* ---------- TABLET ---------- */
 
-/* ============================================
-   8. SPECIAL: REDUCED MOTION (Accessibility)
-   ============================================ */
-@media (prefers-reduced-motion: reduce) {
-  .about-stat-item,
-  .about-image-card,
-  .about-category-card,
-  .about-why-item,
-  .about-trust-item,
-  .about-hero-actions .btn-primary,
-  .about-hero-actions .btn-outline,
-  .about-cta-actions .btn-primary,
-  .about-cta-actions .btn-outline {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
-  
-  .about-stat-item:hover,
-  .about-image-card:hover,
-  .about-category-card:hover,
-  .about-why-item:hover,
-  .about-trust-item:hover {
-    transform: none !important;
-  }
-  
-  .about-hero-actions .btn-primary:hover,
-  .about-hero-actions .btn-outline:hover,
-  .about-cta-actions .btn-primary:hover,
-  .about-cta-actions .btn-outline:hover {
-    transform: none !important;
-  }
+@media (max-width: 900px) {
+
+    .about-stats,
+    .about-audience-grid,
+    .about-feature-grid,
+    .about-process-grid,
+    .about-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .about-introduction {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-bottom: 90px;
+    }
+
+    .about-visual-card {
+        min-height: 300px;
+    }
+
+    .about-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .about-section-heading h2 {
+        font-size: 2.1rem;
+    }
+
+    .about-intro-text h2 {
+        font-size: 2.1rem;
+    }
+
+    .about-audience,
+    .about-features,
+    .about-process,
+    .about-categories {
+        margin-bottom: 90px;
+    }
+
+    .about-final-cta {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 80px;
+        padding: 55px 25px;
+    }
+
+    .about-final-cta h2 {
+        font-size: 2.1rem;
+    }
 }
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    /* General sections */
+
+    .about-audience,
+    .about-features,
+    .about-process,
+    .about-categories {
+        width: 100%;
+        padding: 0 16px;
+        margin-bottom: 70px;
+    }
+
+
+    /* Hero buttons */
+
+    .about-hero-actions,
+    .about-cta-actions {
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .about-hero-actions > *,
+    .about-cta-actions > * {
+        width: 100%;
+        max-width: 320px;
+    }
+
+
+    /* Trust badges */
+
+    .about-trust {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-trust span {
+        padding: 7px 13px;
+        font-size: .82rem;
+    }
+
+
+    /* Stats */
+
+    .about-stats {
+        width: 100%;
+        padding: 0 16px;
+        margin: 30px auto 70px;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .about-stat-card {
+        padding: 24px 12px;
+        border-radius: 18px;
+    }
+
+    .about-stat-card strong {
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+    }
+
+    .about-stat-card span {
+        font-size: .85rem;
+    }
 
 
+    /* Introduction */
 
+    .about-introduction {
+        width: 100%;
+        padding: 0 16px;
+        margin-bottom: 70px;
+        gap: 30px;
+    }
 
+    .about-intro-text h2 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
 
+    .about-intro-text p {
+        font-size: .95rem;
+        line-height: 1.75;
+        margin-bottom: 14px;
+    }
 
 
+    /* Visual card */
 
+    .about-visual-card {
+        min-height: 260px;
+        padding: 30px 20px;
+        border-radius: 24px;
+    }
 
+    .about-visual-icon {
+        width: 90px;
+        height: 90px;
+        border-radius: 24px;
+        margin-bottom: 18px;
+    }
 
 
+    /* Section headings */
 
+    .about-section-heading {
+        padding: 0 5px;
+        margin-bottom: 30px;
+    }
 
+    .about-section-heading h2 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
 
+    .about-section-heading p {
+        font-size: .92rem;
+        line-height: 1.65;
+    }
 
 
+    /* Audience */
 
+    .about-audience-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
 
+    .about-audience-card {
+        padding: 28px 20px;
+        border-radius: 20px;
+    }
 
+    .about-card-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 19px;
+        margin-bottom: 17px;
+    }
+
+
+    /* Feature cards */
+
+    .about-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .about-feature-card {
+        padding: 25px 20px;
+        border-radius: 21px;
+    }
+
+    .about-feature-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 19px;
+        margin-bottom: 18px;
+    }
+
+    .about-feature-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 9px;
+    }
+
+    .about-feature-card p {
+        font-size: .92rem;
+        line-height: 1.65;
+    }
+
+
+    /* Process */
+
+    .about-process-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .about-process-card {
+        padding: 25px 20px;
+        border-radius: 21px;
+    }
+
+    .about-process-card span {
+        font-size: 1.7rem;
+    }
+
+
+    /* Categories */
+
+    .about-category-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+
+    /* Final CTA */
+
+    .about-final-cta {
+        width: calc(100% - 32px);
+        margin: 0 auto 60px;
+        padding: 45px 20px;
+        border-radius: 25px;
+    }
+
+    .about-final-cta h2 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        margin-bottom: 14px;
+    }
+
+    .about-final-cta p {
+        font-size: .92rem;
+        line-height: 1.65;
+        margin-bottom: 22px;
+    }
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 380px) {
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stat-card {
+        padding: 22px 15px;
+    }
+
+    .about-section-heading h2,
+    .about-intro-text h2,
+    .about-final-cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-feature-card,
+    .about-audience-card,
+    .about-process-card {
+        padding: 22px 17px;
+    }
+}

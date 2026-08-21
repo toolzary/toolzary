@@ -1,0 +1,879 @@
+/* ============================================
+   ATTENDANCE CALCULATOR TOOL INTERFACE
+   ============================================ */
+
+
+.tool-interface {
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+
+    gap:1.2rem;
+
+}
+
+
+
+
+
+
+/* ============================================
+   INPUT GROUP
+   ============================================ */
+
+
+.form-group-centered {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.5rem;
+
+}
+
+
+
+
+
+.form-group-centered .input-label {
+
+
+    font-weight:600;
+
+    color:var(--text);
+
+    font-size:.95rem;
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+/* ============================================
+   INPUT FIELDS
+   ============================================ */
+
+
+.data-input-field {
+
+
+    width:100%;
+
+    height:3.2rem;
+
+
+    padding:0 1rem;
+
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+
+    background:var(--surface);
+
+    color:var(--text);
+
+
+    font-size:1rem;
+
+    font-weight:500;
+
+
+    text-align:center;
+
+
+    box-sizing:border-box;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+
+
+.data-input-field::placeholder {
+
+
+    color:var(--text-secondary);
+
+    opacity:.7;
+
+
+}
+
+
+
+
+.data-input-field:hover {
+
+
+    border-color:var(--primary);
+
+
+}
+
+
+
+
+
+.data-input-field:focus {
+
+
+    outline:none;
+
+
+    border-color:var(--primary);
+
+
+    box-shadow:
+    0 0 0 3px rgba(79,70,229,.12);
+
+
+}
+
+
+
+
+
+
+
+/* ============================================
+   CALCULATE BUTTON
+   ============================================ */
+
+
+.third-btn {
+
+
+    width:100%;
+
+
+    height:3.2rem;
+
+
+    border:none;
+
+
+    border-radius:var(--radius);
+
+
+    background:var(--primary);
+
+
+    color:white;
+
+
+    font-size:1rem;
+
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+
+
+.third-btn:hover {
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:0 8px 20px rgba(79,70,229,.25);
+
+
+}
+
+
+
+
+
+.third-btn:active {
+
+
+    transform:translateY(0);
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   ATTENDANCE RESULT CARD
+   ============================================ */
+
+
+.result-box-card {
+
+
+    background:var(--bg);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:var(--radius);
+
+
+    padding:1.5rem;
+
+
+    margin-top:.5rem;
+
+
+    animation:toolFade .3s ease;
+
+
+}
+
+
+
+
+
+
+.result-box-title {
+
+
+    text-align:center;
+
+
+    margin-bottom:1.2rem;
+
+
+    color:var(--primary);
+
+
+    font-size:1.1rem;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+/* ============================================
+   METRICS GRID
+   ============================================ */
+
+
+.attendance-metrics-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(4,1fr);
+
+
+    gap:1rem;
+
+
+}
+
+
+
+
+
+
+/* ============================================
+   METRIC BOX
+   ============================================ */
+
+
+.metric-output-block {
+
+
+    background:var(--surface);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:12px;
+
+
+    padding:1rem .5rem;
+
+
+    text-align:center;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+
+
+
+.metric-output-block:hover {
+
+
+    border-color:var(--primary);
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+
+
+.metric-display-val {
+
+
+    display:block;
+
+
+    font-size:1.8rem;
+
+
+    font-weight:800;
+
+
+    color:var(--primary);
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+
+
+
+
+.metric-display-lbl {
+
+
+    display:block;
+
+
+    margin-top:.4rem;
+
+
+    font-size:.75rem;
+
+
+    color:var(--text-secondary);
+
+
+    font-weight:600;
+
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+
+
+
+
+/* ============================================
+   STATUS COLORS
+   ============================================ */
+
+
+.status-excellent {
+
+    color:#10b981;
+
+}
+
+
+
+.status-good {
+
+    color:#3b82f6;
+
+}
+
+
+
+.status-average {
+
+    color:#f59e0b;
+
+}
+
+
+
+.status-low {
+
+    color:#ef4444;
+
+}
+
+
+
+
+
+
+
+/* ============================================
+   ATTENDANCE MESSAGE
+   ============================================ */
+
+
+.attendance-message {
+
+
+    margin-top:1rem;
+
+
+    padding:1rem;
+
+
+    border-radius:12px;
+
+
+    background:rgba(79,70,229,.08);
+
+
+    color:var(--primary);
+
+
+    text-align:center;
+
+
+    font-weight:500;
+
+
+    line-height:1.5;
+
+
+}
+
+
+
+
+
+
+
+.attendance-message.success {
+
+
+    background:rgba(16,185,129,.1);
+
+    color:#10b981;
+
+
+}
+
+
+
+.attendance-message.warning {
+
+
+    background:rgba(245,158,11,.1);
+
+    color:#f59e0b;
+
+
+}
+
+
+
+.attendance-message.danger {
+
+
+    background:rgba(239,68,68,.1);
+
+    color:#ef4444;
+
+
+}
+
+
+
+.attendance-message.info {
+
+
+    background:rgba(59,130,246,.1);
+
+    color:#3b82f6;
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   PROGRESS BAR
+   ============================================ */
+
+
+.attendance-progress-container {
+
+
+    width:100%;
+
+
+    height:8px;
+
+
+    margin-top:1rem;
+
+
+    background:var(--border);
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.attendance-progress-bar {
+
+
+    height:100%;
+
+
+    width:0;
+
+
+    border-radius:20px;
+
+
+    background:var(--primary);
+
+
+    transition:width .5s ease;
+
+
+}
+
+
+
+
+.attendance-progress-bar.excellent {
+
+    background:#10b981;
+
+}
+
+
+.attendance-progress-bar.good {
+
+    background:#3b82f6;
+
+}
+
+
+.attendance-progress-bar.average {
+
+    background:#f59e0b;
+
+}
+
+
+.attendance-progress-bar.low {
+
+    background:#ef4444;
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   ERROR MESSAGE
+   ============================================ */
+
+
+.local-error-alert {
+
+
+    padding:1rem;
+
+
+    border-radius:10px;
+
+
+    background:rgba(239,68,68,.1);
+
+
+    border:1px solid rgba(239,68,68,.2);
+
+
+    color:#ef4444;
+
+
+    text-align:center;
+
+
+    font-weight:500;
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   HIDDEN
+   ============================================ */
+
+
+.hidden {
+
+
+    display:none !important;
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   ANIMATION
+   ============================================ */
+
+
+@keyframes toolFade {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   ATTENDANCE CALCULATOR — RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+
+    .tool-interface {
+        gap: 1rem;
+    }
+
+    /* Input */
+    .form-group-centered {
+        gap: .45rem;
+    }
+
+    .form-group-centered .input-label {
+        font-size: .9rem;
+    }
+
+    .data-input-field {
+        height: 3rem;
+        padding: 0 .85rem;
+        font-size: .95rem;
+    }
+
+    /* Button */
+    .third-btn {
+        height: 3rem;
+        font-size: .95rem;
+    }
+
+    /* Result */
+    .result-box-card {
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    .result-box-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Metrics */
+    .attendance-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .75rem;
+    }
+
+    .metric-output-block {
+        padding: .9rem .5rem;
+        border-radius: 11px;
+    }
+
+    .metric-display-val {
+        font-size: 1.5rem;
+    }
+
+    .metric-display-lbl {
+        font-size: .7rem;
+        line-height: 1.3;
+    }
+
+    /* Message */
+    .attendance-message {
+        padding: .85rem;
+        font-size: .9rem;
+    }
+
+    /* Error */
+    .local-error-alert {
+        padding: .85rem;
+        font-size: .9rem;
+    }
+
+}
+
+
+/* ============================================
+   SMALL PHONES
+============================================ */
+
+@media (max-width: 480px) {
+
+    .tool-interface {
+        gap: .9rem;
+    }
+
+    .result-box-card {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .attendance-metrics-grid {
+        gap: .6rem;
+    }
+
+    .metric-output-block {
+        padding: .8rem .35rem;
+        border-radius: 10px;
+    }
+
+    .metric-display-val {
+        font-size: 1.3rem;
+        word-break: break-word;
+    }
+
+    .metric-display-lbl {
+        font-size: .65rem;
+    }
+
+    .attendance-message {
+        font-size: .85rem;
+        line-height: 1.6;
+    }
+
+    .attendance-progress-container {
+        height: 7px;
+    }
+
+}
+
+
+/* ============================================
+   VERY SMALL PHONES
+============================================ */
+
+@media (max-width: 360px) {
+
+    .result-box-card {
+        padding: .85rem;
+    }
+
+    .attendance-metrics-grid {
+        grid-template-columns: 1fr;
+        gap: .6rem;
+    }
+
+    .metric-output-block {
+        padding: .85rem;
+    }
+
+    .metric-display-val {
+        font-size: 1.25rem;
+    }
+
+    .metric-display-lbl {
+        font-size: .7rem;
+    }
+
+}

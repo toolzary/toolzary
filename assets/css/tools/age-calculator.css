@@ -1,0 +1,412 @@
+/* ============================================
+   AGE CALCULATOR TOOL INTERFACE
+   ============================================ */
+
+
+.tool-interface {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.2rem;
+}
+
+
+
+/* INPUT */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+.form-group label {
+
+    font-weight: 600;
+    color: var(--text);
+    font-size: .95rem;
+
+}
+
+
+.tool-input {
+
+    width: 100%;
+    height: 3.2rem;
+
+    padding: 0 1rem;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-size: 1rem;
+    text-align: center;
+
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+/* RESULT CARDS */
+
+
+.result-card {
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 1.5rem;
+
+    margin-top: .5rem;
+
+    animation: toolFade .3s ease;
+
+}
+
+
+
+.result-card h3 {
+
+    text-align: center;
+
+    margin-bottom: 1.2rem;
+
+    color: var(--primary);
+
+    font-size: 1.1rem;
+
+}
+
+
+
+
+
+/* RESULT GRID */
+
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 1rem;
+
+}
+
+
+
+.result-card:nth-of-type(3) .result-grid {
+
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+
+
+.result-item {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 1rem .5rem;
+
+    text-align: center;
+
+    transition: ease 0.3s;
+
+}
+
+
+.result-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+
+
+.result-item span {
+
+    display:block;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    line-height:1.2;
+
+}
+
+
+
+.result-item small {
+
+    display:block;
+
+    margin-top:.4rem;
+
+    font-size:.8rem;
+
+    color:var(--text-secondary);
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* BIRTHDAY MESSAGE */
+
+
+.birthday-message {
+
+    margin-top:1rem;
+
+    padding:1rem;
+
+    border-radius:12px;
+
+    background:rgba(79,70,229,.08);
+
+    color:var(--primary);
+
+    text-align:center;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+/* ERROR */
+
+
+.error-message {
+
+    padding:1rem;
+
+    border-radius:10px;
+
+    background:rgba(239,68,68,.1);
+
+    border:1px solid rgba(239,68,68,.2);
+
+    color:#ef4444;
+
+    text-align:center;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+/* HIDDEN */
+
+.hidden {
+
+    display:none;
+
+}
+
+
+
+
+
+/* ANIMATION */
+
+
+@keyframes toolFade {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* ============================================
+   AGE CALCULATOR — RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+
+    .tool-interface {
+        gap: 1rem;
+    }
+
+    .form-group {
+        gap: .45rem;
+    }
+
+    .form-group label {
+        font-size: .9rem;
+    }
+
+    .tool-input {
+        height: 3rem;
+        padding: 0 .85rem;
+        font-size: .95rem;
+    }
+
+    .result-card {
+        padding: 1.2rem;
+        border-radius: 18px;
+    }
+
+    .result-card h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .result-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: .7rem;
+    }
+
+    .result-card:nth-of-type(3) .result-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .result-item {
+        padding: .85rem .4rem;
+        border-radius: 10px;
+    }
+
+    .result-item span {
+        font-size: 1.6rem;
+    }
+
+    .result-item small {
+        font-size: .72rem;
+    }
+
+    .birthday-message,
+    .error-message {
+        padding: .85rem;
+        font-size: .9rem;
+    }
+}
+
+
+/* ============================================
+   MOBILE PHONES
+============================================ */
+
+@media (max-width: 640px) {
+
+    .result-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .65rem;
+    }
+
+    .result-card:nth-of-type(3) .result-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-item {
+        padding: .8rem .35rem;
+    }
+
+    .result-item span {
+        font-size: 1.45rem;
+    }
+
+    .result-item small {
+        font-size: .7rem;
+        line-height: 1.3;
+    }
+}
+
+
+/* ============================================
+   SMALL PHONES
+============================================ */
+
+@media (max-width: 400px) {
+
+    .tool-interface {
+        gap: .85rem;
+    }
+
+    .result-card {
+        padding: 1rem;
+    }
+
+    .result-grid,
+    .result-card:nth-of-type(3) .result-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+    }
+
+    .result-item {
+        padding: .7rem .25rem;
+    }
+
+    .result-item span {
+        font-size: 1.3rem;
+    }
+
+    .result-item small {
+        font-size: .65rem;
+    }
+}
+
+
+/* ============================================
+   VERY SMALL PHONES
+============================================ */
+
+@media (max-width: 360px) {
+
+    .result-grid,
+    .result-card:nth-of-type(3) .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-item {
+        padding: .8rem;
+    }
+
+    .result-item span {
+        font-size: 1.4rem;
+    }
+
+}

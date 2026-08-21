@@ -1,0 +1,355 @@
+/* ========== AVERAGE CALCULATOR ========== */
+
+/* Input Section */
+
+/* Input Field Styling */
+
+.data-input-field {
+  height: 3rem;
+  padding: 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.data-input-field::placeholder {
+  color: var(--text-secondary);
+}
+
+.data-input-field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, .15);
+}
+
+
+/* Number input arrows */
+
+.data-input-field::-webkit-inner-spin-button,
+.data-input-field::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+
+/* Dark Mode */
+
+body.dark .data-input-field {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.input-with-button {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 450px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.input-with-button .data-input-field {
+  flex: 2;
+}
+
+.clear-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.form-group-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.form-group-centered .input-label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Number Tags */
+
+.number-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 50px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.number-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  animation: tagAppear .25s ease;
+}
+
+.remove-tag {
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: .75;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.remove-tag:hover {
+  opacity: 1;
+}
+
+.empty-tags-message {
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+/* Results */
+
+.result-box-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  scroll-margin-top: 14vh;
+  animation: toolSlideUp .35s ease;
+}
+
+.result-box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.average-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .75rem;
+}
+
+.metric-output-block {
+  padding: 1rem .5rem;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.metric-output-block:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.metric-display-val {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.metric-display-lbl {
+  margin-top: .3rem;
+  font-size: .72rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+body.dark .metric-display-val {
+  color: var(--primary-light);
+}
+
+/* Error */
+
+.local-error-alert {
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(239,68,68,.1);
+  border: 1px solid rgba(239,68,68,.25);
+  border-radius: var(--radius);
+  color: #ef4444;
+  font-weight: 500;
+}
+
+/* Animations */
+
+@keyframes toolSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tagAppear {
+  from {
+    opacity: 0;
+    transform: scale(.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .input-with-button {
+        max-width: 100%;
+    }
+
+    .average-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .75rem;
+    }
+
+    .metric-output-block {
+        padding: .9rem .5rem;
+    }
+
+    .metric-display-val {
+        font-size: 1.5rem;
+    }
+
+    .result-box-card {
+        padding: 1.25rem;
+    }
+
+    .number-tags-container {
+        padding: .65rem;
+        gap: .45rem;
+    }
+
+}
+
+
+/* ============================================
+   SMALL MOBILE
+   ============================================ */
+
+@media (max-width: 480px) {
+
+    .input-with-button {
+        flex-direction: column;
+        gap: .65rem;
+    }
+
+    .input-with-button .data-input-field,
+    .input-with-button button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .data-input-field {
+        height: 3rem;
+        font-size: .95rem;
+    }
+
+    .average-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .6rem;
+    }
+
+    .metric-output-block {
+        padding: .8rem .4rem;
+        border-radius: 9px;
+    }
+
+    .metric-display-val {
+        font-size: 1.35rem;
+    }
+
+    .metric-display-lbl {
+        font-size: .68rem;
+    }
+
+    .result-box-card {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .result-box-title {
+        font-size: 1rem;
+    }
+
+    .number-tags-container {
+        padding: .6rem;
+        gap: .4rem;
+    }
+
+    .number-tag {
+        padding: .35rem .65rem;
+        font-size: .8rem;
+    }
+
+}
+
+
+/* ============================================
+   VERY SMALL MOBILE
+   ============================================ */
+
+@media (max-width: 360px) {
+
+    .average-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-display-val {
+        font-size: 1.2rem;
+    }
+
+    .metric-display-lbl {
+        font-size: .65rem;
+    }
+
+    .result-box-card {
+        padding: .8rem;
+    }
+
+    .number-tag {
+        font-size: .75rem;
+        padding: .3rem .55rem;
+    }
+
+    .form-group-centered .input-label {
+        font-size: .9rem;
+    }
+
+}

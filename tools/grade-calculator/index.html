@@ -1,274 +1,1423 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <title>Grade Calculator | Toolzary – Free Online Tools</title>
-  <meta name="description" content="Calculate your grades, GPA, weighted scores, and final exam requirements with multiple grading systems.">
-  <meta name="author" content="Toolzary">
-  <meta name="theme-color" content="#4f46e5">
-  
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/grade-calculator.css">
-  <link rel="icon" href="/assets/icons/logo.svg">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Primary SEO -->
+
+    <title>
+        Grade Calculator - Calculate Grades, GPA & Final Exam Scores | Toolzary
+    </title>
+
+    <meta
+        name="description"
+        content="Calculate grades, weighted grades, GPA, and required final exam scores with Toolzary's free Grade Calculator. Supports 4.0, 5.0, 100-point, and UK grading systems."
+    >
+
+    <meta
+        name="author"
+        content="Toolzary"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://toolzary.com/tools/grade-calculator/"
+    >
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Grade Calculator - Calculate Grades, GPA & Final Exam Scores | Toolzary"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate grades, weighted grades, GPA, and final exam scores instantly with Toolzary's free online Grade Calculator."
+    >
+
+    <meta
+        property="og:url"
+        content="https://toolzary.com/tools/grade-calculator/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Toolzary"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_US"
+    >
+
+    <meta
+        property="og:image"
+        content="https://toolzary.com/assets/images/og/grade-calculator.png"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Toolzary Grade Calculator"
+    >
+
+    <!-- Twitter / X -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Grade Calculator - Calculate Grades, GPA & Final Exam Scores | Toolzary"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Calculate grades, GPA, weighted grades, and required final exam scores with Toolzary's free online Grade Calculator."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://toolzary.com/assets/images/og/grade-calculator.png"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="Toolzary Grade Calculator"
+    >
+
+    <!-- Icons -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/assets/icons/favicons/favicon-512.svg"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="/assets/icons/favicons/apple-touch-icon.png"
+    >
+
+    <!-- Styles -->
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/tool-page.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/tools/grade-calculator.css"
+    >
+
+    <!-- Scripts -->
+
+    <script
+        defer
+        src="/assets/js/script.js"
+    ></script>
+
+    <script
+        defer
+        src="/assets/js/footer.js"
+    ></script>
+
+    <script
+        defer
+        src="/assets/js/tools/grade-calculator.js"
+    ></script>
+
+    <!-- WebApplication Schema -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Grade Calculator",
+        "url": "https://toolzary.com/tools/grade-calculator/",
+        "description": "Free online Grade Calculator for calculating simple grades, weighted grades, GPA, and required final exam scores. Supports 4.0, 5.0, 100-point, and UK grading systems.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Toolzary",
+            "url": "https://toolzary.com/"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://toolzary.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tools",
+                "item": "https://toolzary.com/tools/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Grade Calculator",
+                "item": "https://toolzary.com/tools/grade-calculator/"
+            }
+        ]
+    }
+    </script>
+
 </head>
 <body>
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
 
-  <header>
-   <a href="/" class="logo logo-text">
-  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
-  Toolzary
+    <!-- Logo -->
+    <a href="/" class="logo" aria-label="Toolzary Home">
+        <img
+            src="/assets/logos/logo.svg"
+            alt="Toolzary"
+            width="36"
+            height="36"
+        >
+        <span>Toolzary</span>
+    </a>
+
+
+    <!-- ================= TOOL SEARCH ================= -->
+    <form
+        class="search-wrapper"
+        action="/search/"
+        method="get"
+        role="search"
+    >
+
+        <label
+            for="toolSearch"
+            class="sr-only"
+        >
+            Search tools
+        </label>
+
+        <div class="search-wrapper-box">
+
+            <svg
+                class="search-icon"
+                aria-hidden="true"
+                focusable="false"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <circle
+                    cx="11"
+                    cy="11"
+                    r="8"
+                ></circle>
+
+                <line
+                    x1="21"
+                    y1="21"
+                    x2="16.65"
+                    y2="16.65"
+                ></line>
+            </svg>
+
+            <input
+                id="toolSearch"
+                class="toolSearch"
+                name="query"
+                type="search"
+                placeholder="Search tools..."
+                autocomplete="off"
+                enterkeyhint="search"
+                spellcheck="false"
+                required
+            >
+
+            <button
+                class="search-button-small"
+                type="submit"
+                aria-label="Search tools"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <!-- ================= MOBILE MENU BUTTON ================= -->
+    <button
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+    >
+
+        <img
+            src="/assets/icons/others/menu.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-open-icon"
+        >
+
+        <img
+            src="/assets/icons/others/plus.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-close-icon"
+        >
+
+    </button>
+
+
+    <!-- ================= DESKTOP NAVIGATION ================= -->
+    <nav
+        class="desktop-nav"
+        aria-label="Main navigation"
+    >
+
+        <a href="/tools">
+            Tools
+        </a>
+
+        <a href="/categories">
+            Categories
+        </a>
+
+        <a href="/about">
+            About
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+        <button
+            id="darkToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+
+            <img
+                src="/assets/icons/others/moon.svg"
+                alt=""
+                width="24"
+                height="24"
+                class="themeIcon"
+            >
+
+        </button>
+
+    </nav>
+
+
+    <!-- =================================================
+         FULL SCREEN MOBILE MENU
+    ================================================== -->
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-inner">
+
+
+            <!-- Mobile Search -->
+            <form
+                class="search-wrapper mobile-search"
+                action="/search/"
+                method="get"
+                role="search"
+            >
+
+                <label
+                    for="mobileToolSearch"
+                    class="sr-only"
+                >
+                    Search tools
+                </label>
+
+                <div class="search-wrapper-box">
+
+                    <svg
+                        class="search-icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8"
+                        ></circle>
+
+                        <line
+                            x1="21"
+                            y1="21"
+                            x2="16.65"
+                            y2="16.65"
+                        ></line>
+
+                    </svg>
+
+                    <input
+                        id="mobileToolSearch"
+                        class="toolSearch"
+                        name="query"
+                        type="search"
+                        placeholder="Search tools..."
+                        autocomplete="off"
+                        enterkeyhint="search"
+                        spellcheck="false"
+                        required
+                    >
+
+                    <button
+                        class="search-button-small"
+                        type="submit"
+                        aria-label="Search tools"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Mobile Navigation -->
+            <nav
+                class="mobile-nav"
+                aria-label="Mobile navigation"
+            >
+
+                <a href="/tools">
+                    <span>Tools</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/categories">
+                    <span>Categories</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/about">
+                    <span>About</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/contact">
+                    <span>Contact</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Bottom Controls -->
+            <div class="mobile-menu-bottom">
+
+                <div class="mobile-menu-tagline">
+
+                    <strong>Toolzary</strong>
+
+                    <span>
+                        Free tools. Simple. Fast.
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="mobile-theme-toggle darkToggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <span class="mobile-theme-label">
+                        Dark Mode
+                    </span>
+
+                    <img
+                        src="/assets/icons/others/moon.svg"
+                        alt=""
+                        width="22"
+                        height="22"
+                        class="mobileThemeIcon"
+                    >
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+<main class="tool-page">
+
+
+<!-- =========================
+     TOOL HERO
+========================= -->
+
+<section class="hero tool-hero">
+
+<div class="container">
+
+
+<div class="tool-hero-icon">
+
+<img
+    src="/assets/icons/tool-icons/grade-calculator.svg"
+    alt="Grade Calculator"
+    width="64"
+    height="64"
+>
+
+</div>
+
+
+
+<h1>
+Grade Calculator
+</h1>
+
+
+
+<p>
+Calculate simple grades, weighted grades, GPA, and final exam scores instantly with Toolzary's free online Grade Calculator.
+</p>
+
+
+
+
+<div class="tool-tags">
+
+<span>
+Education Tools
+</span>
+
+<span>
+Free
+</span>
+
+<span>
+Online
+</span>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     TOOL APPLICATION
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="tool-panel">
+
+
+<!--
+    ONLY THIS AREA IS OWNED BY THE TOOL
+
+    Example:
+
+    grade-calculator.js
+        creates date inputs
+
+    char-counter.js
+        creates textarea
+
+    image-resizer.js
+        creates upload interface
+
+-->
+
+
+<div id="tool-app">
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     ABOUT TOOL
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+About Grade Calculator
+</h2>
+
+
+</div>
+
+
+
+
+<article class="tool-info-card">
+
+
+<p>
+
+Toolzary's Grade Calculator is a free online tool that helps you calculate grades quickly and accurately. It allows you to calculate simple grades, weighted grades, GPA, and required final exam scores with ease.
+
+</p>
+
+
+<p>
+
+The calculator supports multiple grading systems, including 4.0 GPA, 5.0 GPA, 100-point scale, and UK grading systems. Enter your scores, assignments, or course details to get accurate results instantly.
+
+</p>
+
+
+<p>
+
+Whether you are a student tracking your academic performance or a teacher calculating grades, Toolzary's Grade Calculator provides fast, reliable, and easy-to-use results directly in your browser without registration or installation.
+
+</p>
+
+
+</article>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     HOW TO USE
+========================= -->
+
+<section class="section">
+
+    <div class="container features">
+
+        <div class="section-title">
+
+            <h2>
+                How To Use
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                            1
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Select Calculation Type
+                </h3>
+
+                <p>
+                    Choose the calculation method you need, including simple grade, weighted grade, GPA calculator, or final exam score calculation.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                            2
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Enter Your Grade Details
+                </h3>
+
+                <p>
+                    Add your scores, total marks, assignment weights, course grades, or credit hours depending on your selected calculation method.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                            3
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Add Multiple Entries
+                </h3>
+
+                <p>
+                    Add multiple assignments, courses, or grade records to calculate your overall results more accurately.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                            4
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Review Your Results
+                </h3>
+
+                <p>
+                    Click calculate and view your final grade, GPA, weighted score, or required final exam marks instantly.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="section features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Features
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40"
+                    width="40"
+                    loading="lazy"
+                    src="/assets/icons/others/zap.svg"
+                    alt="Instant grade calculation">
+
+                </div>
+
+                <h3>
+                    Instant Grade Calculation
+                </h3>
+
+                <p>
+                    Calculate grades, GPA, and final exam scores instantly with accurate results.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img 
+                    height="40"
+                    width="40"
+                    loading="lazy"
+                    alt="Multiple grading systems"
+                    src="/assets/icons/others/layers.svg">
+
+                </div>
+
+                <h3>
+                    Multiple Grading Systems
+                </h3>
+
+                <p>
+                    Supports 4.0 GPA, 5.0 GPA, 100-point, and UK grading scales for flexible calculations.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40"
+                    width="40"
+                    loading="lazy"
+                    alt="Weighted grade calculation"
+                    src="/assets/icons/others/percent.svg">
+
+                </div>
+
+                <h3>
+                    Weighted Grade Support
+                </h3>
+
+                <p>
+                    Calculate weighted grades by adding assignments, scores, and percentage weights.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img 
+                    height="40"
+                    width="40"
+                    loading="lazy"
+                    alt="Final exam calculator"
+                    src="/assets/icons/others/target.svg">
+
+                </div>
+
+                <h3>
+                    Final Exam Calculator
+                </h3>
+
+                <p>
+                    Find the exact score needed on your final exam to reach your desired grade.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40"
+                    width="40"
+                    loading="lazy"
+                    alt="Privacy friendly calculator"
+                    src="/assets/icons/others/shield-check.svg">
+
+                </div>
+
+                <h3>
+                    Privacy Friendly
+                </h3>
+
+                <p>
+                    Your grade information is processed securely in your browser without storing data.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                   <img
+                   height="40"
+                   width="40"
+                   loading="lazy"
+                   alt="Works on all devices"
+                   src="/assets/icons/others/monitor-smartphone.svg">
+
+                </div>
+
+                <h3>
+                    Works Everywhere
+                </h3>
+
+                <p>
+                    Use the calculator on desktop, tablet, and mobile devices with any modern browser.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+</div>
+
+
+
+<div class="faq-list">
+
+
+
+<!-- FAQ 1 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+How is the GPA calculated?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+GPA is calculated by multiplying each course grade point by its credit hours, adding the results, and dividing by the total number of credit hours. The calculator supports multiple grading scales.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 2 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+What is a weighted grade?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+A weighted grade considers the importance of each assignment, exam, or project. Each item is calculated according to its assigned percentage weight.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 3 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+How do I calculate my required final exam score?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Enter your current grade, desired grade, and final exam weight. The calculator will determine the exact score you need on your final exam.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 4 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Which grading systems are supported?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+The Grade Calculator supports 4.0 GPA, 5.0 GPA, 100-point grading scales, and UK classification systems.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 5 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Can I calculate grades for multiple courses?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. You can add multiple courses, assignments, or grades depending on the calculation method you choose.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 6 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Is my grade information stored anywhere?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+No. Your grade information is processed directly in your browser and is not uploaded or stored on any server.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 7 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Can teachers use this calculator?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. Teachers can use the calculator to quickly calculate student grades, weighted scores, and GPA results.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 8 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Is the Grade Calculator free to use?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. Toolzary's Grade Calculator is completely free and works directly in your browser without registration or installation.
+</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     RELATED TOOLS
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+Related Tools
+</h2>
+
+
+<a href="/tools">
+View All
 </a>
-    <div class="search-wrapper">
-      <label for="globalSearch" class="sr-only">Search Tools</label>
-      <span class="search-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-      </span>
-      <input type="text" id="globalSearch" placeholder="Search tools...">
-    </div>
-    <div class="header-actions">
-      <a href="/Contact" class="nav-link">Contact Us</a>
-      <a href="/faq" class="nav-link">FAQs</a>
-      <a href="/about" class="nav-link">About Toolzary</a>
-      <button id="darkToggle" class="outline">Dark Mode</button>
-    </div>
-  </header>
 
-  <main class="container tool-split-layout">
-    
-    <section class="tool-workspace">
-      <div class="unified-tool-container">
-        
-        <div class="tool-title-wrap" data-active-tool-id="grade">
-          <div class="tool-main-icon-large" id="toolMainIcon"></div>
-          <h1 class="tool-main-title-blue" id="toolMainTitle">Grade Calculator</h1>
-          <div>
-            <span class="tool-category-badge" id="toolCategoryBadge">Student</span>
-          </div>
-        </div>
-        
-        <hr class="tool-divider">
 
-        <div class="tool-custom-interface">
-          
-          <!-- Tabs -->
-          <div class="grade-tabs">
-            <button class="grade-tab active" data-tab="simple">Simple Grade</button>
-            <button class="grade-tab" data-tab="weighted">Weighted Grade</button>
-            <button class="grade-tab" data-tab="gpa">GPA Calculator</button>
-            <button class="grade-tab" data-tab="final">Final Exam</button>
-          </div>
+</div>
 
-          <!-- Tab 1: Simple Grade -->
-          <div class="grade-tab-content active" id="tab-simple">
-            <div class="form-group">
-              <label class="input-label">Enter Your Scores</label>
-              <div class="grade-input-group">
-                <div class="grade-input-row">
-                  <label>Score</label>
-                  <input type="number" id="simpleScore" class="data-input-field" placeholder="85" min="0" step="0.01">
-                </div>
-                <div class="grade-input-row">
-                  <label>Total Possible</label>
-                  <input type="number" id="simpleTotal" class="data-input-field" placeholder="100" min="1" step="0.01">
-                </div>
-              </div>
-              <button id="simpleAddBtn" class="primary-btn">Add Score</button>
-              <div id="simpleScoreList" class="tag-list"></div>
-              <button id="simpleCalculateBtn" class="submit-btn">Calculate Grade</button>
-            </div>
-          </div>
 
-          <!-- Tab 2: Weighted Grade -->
-          <div class="grade-tab-content" id="tab-weighted">
-            <div class="form-group">
-              <label class="input-label">Add Weighted Assignments</label>
-              <div class="grade-input-group">
-                <div class="grade-input-row">
-                  <label>Assignment Name</label>
-                  <input type="text" id="weightedName" class="data-input-field" placeholder="Final Exam">
-                </div>
-                <div class="grade-input-row">
-                  <label>Score (%)</label>
-                  <input type="number" id="weightedScore" class="data-input-field" placeholder="85" min="0" max="100" step="0.01">
-                </div>
-                <div class="grade-input-row">
-                  <label>Weight (%)</label>
-                  <input type="number" id="weightedWeight" class="data-input-field" placeholder="30" min="0" max="100" step="0.01">
-                </div>
-              </div>
-              <button id="weightedAddBtn" class="primary-btn">Add Assignment</button>
-              <div id="weightedList" class="tag-list"></div>
-              <button id="weightedCalculateBtn" class="submit-btn">Calculate Weighted Grade</button>
-            </div>
-          </div>
 
-          <!-- Tab 3: GPA Calculator -->
-          <div class="grade-tab-content" id="tab-gpa">
-            <div class="form-group">
-              <label class="input-label">Select Grading Scale</label>
-              <select id="gpaScale" class="data-input-field select-field">
-                <option value="4.0">4.0 Scale (US Standard)</option>
-                <option value="5.0">5.0 Scale (Weighted)</option>
-                <option value="100">100 Point Scale</option>
-                <option value="uk">UK Classification</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="input-label">Add Course Grades</label>
-              <div class="grade-input-group">
-                <div class="grade-input-row">
-                  <label>Course Name</label>
-                  <input type="text" id="gpaCourseName" class="data-input-field" placeholder="Math 101">
-                </div>
-                <div class="grade-input-row">
-                  <label>Grade / Score</label>
-                  <input type="text" id="gpaGrade" class="data-input-field" placeholder="A or 85">
-                </div>
-                <div class="grade-input-row">
-                  <label>Credits</label>
-                  <input type="number" id="gpaCredits" class="data-input-field" placeholder="3" min="0.5" max="6" step="0.5">
-                </div>
-              </div>
-              <button id="gpaAddBtn" class="primary-btn">Add Course</button>
-              <div id="gpaList" class="tag-list"></div>
-              <button id="gpaCalculateBtn" class="submit-btn">Calculate GPA</button>
-            </div>
-          </div>
 
-          <!-- Tab 4: Final Exam -->
-          <div class="grade-tab-content" id="tab-final">
-            <div class="form-group">
-              <label class="input-label">What Grade Do You Need?</label>
-              <div class="grade-input-group">
-                <div class="grade-input-row">
-                  <label>Current Grade (%)</label>
-                  <input type="number" id="finalCurrent" class="data-input-field" placeholder="82" min="0" max="100" step="0.01">
-                </div>
-                <div class="grade-input-row">
-                  <label>Desired Grade (%)</label>
-                  <input type="number" id="finalDesired" class="data-input-field" placeholder="90" min="0" max="100" step="0.01">
-                </div>
-                <div class="grade-input-row">
-                  <label>Final Exam Weight (%)</label>
-                  <input type="number" id="finalWeight" class="data-input-field" placeholder="30" min="0" max="100" step="0.01">
-                </div>
-              </div>
-              <button id="finalCalculateBtn" class="submit-btn">Calculate Required Score</button>
-            </div>
-          </div>
 
-          <!-- Results -->
-          <div id="gradeResultBox" class="result-box-card hidden">
-            <h3 class="result-box-title">Results</h3>
-            <div id="gradeResultContent" class="grade-result-content"></div>
-          </div>
+<div class="tools-grid relatedTools">
 
-          <div id="toolLocalError" class="local-error-alert hidden"></div>
-        </div>
 
-        <hr class="tool-divider">
+<!-- existing .tool-card generated here -->
 
-        <div class="about-tool-section">
-          <h2 class="about-tool-title">About Grade Calculator</h2>
-          <p class="tool-main-desc">Calculate your grades with multiple grading systems. Supports simple grade calculation, weighted grades, GPA (4.0, 5.0, 100-point, and UK scales), and final exam score calculation. Perfect for students and teachers.</p>
-        </div>
 
-      </div>
-    </section>
+</div>
 
-    <aside class="tool-sidebar">
-      <h3 class="sidebar-title">Related Tools</h3>
-      <div class="related-tools-vertical-grid" id="relatedToolsGrid"></div>
-    </aside>
-  </main>
 
-  <!-- ========== FAQ SECTION ========== -->
-  <section class="container" id="faq">
-    <div class="faq-section-wrapper">
-      <div class="section-header">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about grade calculation</p>
-      </div>
-      
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How is the GPA calculated?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>GPA is calculated by multiplying each course grade points by its credit hours, summing them, and dividing by total credit hours. Different scales (4.0, 5.0, 100-point) are supported.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is weighted grade?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>Weighted grade considers the importance of each assignment. For example, a final exam worth 30% of your grade has more impact than a quiz worth 10%.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How do I calculate what I need on my final exam?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>Enter your current grade, desired grade, and final exam weight. The calculator will tell you the exact score you need on your final to achieve your goal.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Is my data stored or sent anywhere?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>No. All calculations are performed locally in your browser.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <script src="/assets/js/script.js"></script>
-  <script src="/assets/js/grade-calculator.js"></script>
-   <script src="/assets/js/footer.js"></script>
+
+</div>
+
+
+</section>
+
+
+
+
+
+</main>
+<footer id="site-footer">
+    <!-- Loaded by footer.js -->
+</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

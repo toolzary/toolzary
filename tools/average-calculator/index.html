@@ -1,462 +1,1305 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <!-- ========================================== -->
-  <!-- BASIC META TAGS                             -->
-  <!-- ========================================== -->
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#4f46e5">
-  
-  <!-- ========================================== -->
-  <!-- TITLE TAG - SEO OPTIMIZED                  -->
-  <!-- ========================================== -->
-  
-  <title>Average Calculator | Toolzary – Free Online Tools</title>
-  
-  <!-- ========================================== -->
-  <!-- META DESCRIPTION - SEO OPTIMIZED           -->
-  <!-- ========================================== -->
-  
-  <meta name="description" content="Calculate average (mean), sum, count, minimum, maximum, and median of any set of numbers instantly. Free online statistical calculator for students and professionals.">
-  
-  <!-- ========================================== -->
-  <!-- KEYWORDS - TARGETED SEARCH TERMS           -->
-  <!-- ========================================== -->
-  
-  <meta name="keywords" content="average calculator, mean calculator, median calculator, calculate average, statistical calculator, average of numbers, sum calculator, find average, mean median calculator, average finder, statistical mean, number average, Toolzary">
-  
-  <!-- ========================================== -->
-  <!-- ROBOTS META TAG                            -->
-  <!-- ========================================== -->
-  
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  
-  <!-- ========================================== -->
-  <!-- AUTHOR & PUBLISHER                         -->
-  <!-- ========================================== -->
-  
-  <meta name="author" content="Toolzary">
-  <meta name="publisher" content="Toolzary">
-  <meta name="copyright" content="Toolzary">
-  
-  <!-- ========================================== -->
-  <!-- GEO TAGS (For Local SEO - Pakistan)       -->
-  <!-- ========================================== -->
-  
-  <meta name="geo.region" content="PK">
-  <meta name="geo.placename" content="Pakistan">
-  <meta name="geo.position" content="30.3753;69.3451">
-  <meta name="ICBM" content="30.3753, 69.3451">
-  
-  <!-- ========================================== -->
-  <!-- OPEN GRAPH TAGS - SOCIAL SHARING           -->
-  <!-- ========================================== -->
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://toolzary.com/tools/average-calculator">
-  <meta property="og:title" content="Average Calculator - Free Online Mean & Median Calculator Tool | Toolzary">
-  <meta property="og:description" content="Calculate average, sum, count, minimum, maximum, and median of any set of numbers instantly. Free online statistical calculator.">
-  <meta property="og:image" content="https://toolzary.com/assets/images/og/average-calculator.svg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Average Calculator - Toolzary">
-  <meta property="og:site_name" content="Toolzary">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:updated_time" content="2026-07-02T14:30:00+00:00">
-  
-  <!-- ========================================== -->
-  <!-- FACEBOOK APP ID (Optional)                -->
-  <!-- ========================================== -->
-  
-  <meta property="fb:app_id" content="1234567890123456">
-  
-  <!-- ========================================== -->
-  <!-- TWITTER CARDS - SOCIAL SHARING             -->
-  <!-- ========================================== -->
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://toolzary.com/tools/average-calculator">
-  <meta name="twitter:title" content="Average Calculator - Free Online Mean & Median Calculator Tool | Toolzary">
-  <meta name="twitter:description" content="Calculate average, sum, count, min, max, and median of any set of numbers instantly. Free online statistical calculator.">
-  <meta name="twitter:image" content="https://toolzary.com/assets/images/og/default.svg">
-  <meta name="twitter:image:alt" content="Average Calculator - Toolzary">
-  <meta name="twitter:site" content="@toolzary">
-  <meta name="twitter:creator" content="@toolzary">
-  <meta name="twitter:label1" content="Category">
-  <meta name="twitter:data1" content="Basic Tools">
-  <meta name="twitter:label2" content="Platform">
-  <meta name="twitter:data2" content="Web">
-  
-  <!-- ========================================== -->
-  <!-- INSTAGRAM & SOCIAL MEDIA                   -->
-  <!-- ========================================== -->
-  
-  <meta property="instagram:title" content="Average Calculator - Free Online Tool">
-  <meta property="instagram:description" content="Calculate average, median, and more instantly.">
-  <meta property="og:image:secure_url" content="https://toolzary.com/assets/images/og/average-calculator.svg">
-  <meta property="og:image:type" content="image/jpeg">
-  
-  <!-- ========================================== -->
-  <!-- WHATSAPP / TELEGRAM SHARING                -->
-  <!-- ========================================== -->
-  
-  <meta property="og:title" content="Average Calculator - Free Online Tool | Toolzary">
-  <meta property="og:description" content="Calculate average, sum, min, max, and median of any numbers.">
-  
-  <!-- ========================================== -->
-  <!-- CANONICAL URL                              -->
-  <!-- ========================================== -->
-  
-  <link rel="canonical" href="https://toolzary.com/tools/average-calculator">
-  
-  <!-- ========================================== -->
-  <!-- ALTERNATE LANGUAGE VERSIONS                -->
-  <!-- ========================================== -->
-  
-  <!-- <link rel="alternate" hreflang="en" href="https://toolzary.com/tools/average-calculator"> -->
-  <!-- <link rel="alternate" hreflang="ur" href="https://toolzary.com/ur/tools/average-calculator"> -->
-  
-  <!-- ========================================== -->
-  <!-- FAVICON - ALL SIZES                        -->
-  <!-- ========================================== -->
-  
-  <!-- SVG favicon (Modern browsers) -->
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
-  
-  <!-- PNG favicon - All sizes -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512x512.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  
-  <!-- ICO format (Legacy browsers) -->
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-  
-  <!-- Apple Touch Icon (iOS) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-  
-  <!-- ========================================== -->
-  <!-- PWA MANIFEST                               -->
-  <!-- ========================================== -->
-  
-  <link rel="manifest" href="/manifest.json">
-  
-  <!-- ========================================== -->
-  <!-- WINDOWS / EDGE                             -->
-  <!-- ========================================== -->
-  
-  <meta name="msapplication-TileColor" content="#4f46e5">
-  <meta name="msapplication-TileImage" content="/assets/icons/icon-192x192.png">
-  <meta name="msapplication-config" content="/browserconfig.xml">
-  
-  <!-- ========================================== -->
-  <!-- STYLESHEETS (CSS)                          -->
-  <!-- ========================================== -->
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-  
-  <!-- Tool-specific Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/average-calculator.css">
-  
-  <!-- Google Fonts (Optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- ========================================== -->
-  <!-- PRELOAD CRITICAL ASSETS                   -->
-  <!-- ========================================== -->
-  
-  <link rel="preload" href="/assets/css/style.css" as="style">
-  <link rel="preload" href="/assets/css/average-calculator.css" as="style">
-  
-  <!-- ========================================== -->
-  <!-- VERIFICATION TAGS                          -->
-  <!-- ========================================== -->
-  
-  <meta name="google-site-verification" content="your-verification-code-here">
-  <meta name="msvalidate.01" content="your-bing-verification-code-here">
-  
-  <!-- ========================================== -->
-  <!-- SCHEMA MARKUP (JSON-LD) - AVERAGE         -->
-  <!-- ========================================== -->
-  
-  <!-- WebApplication Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Average Calculator",
-    "url": "https://toolzary.com/tools/average-calculator",
-    "description": "Calculate average (mean), sum, count, minimum, maximum, and median of any set of numbers instantly. Free online statistical calculator.",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "about": {
-      "@type": "Thing",
-      "name": "Statistical Calculation",
-      "description": "Calculate mean, median, and other statistics from a set of numbers"
-    },
-    "featureList": [
-      "Calculate average (mean)",
-      "Calculate median",
-      "Sum of all numbers",
-      "Count of numbers",
-      "Minimum value",
-      "Maximum value",
-      "Add/remove numbers easily",
-      "Visual number tags"
-    ]
-  }
-  </script>
-  
-  <!-- Breadcrumb Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://toolzary.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Tools",
-        "item": "https://toolzary.com/tools/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Primary SEO -->
+
+    <title>Average Calculator - Calculate Average Online | Toolzary</title>
+
+    <meta
+        name="description"
+        content="Calculate the average, mean, median, sum, count, minimum, and maximum of any list of numbers with Toolzary's free online Average Calculator."
+    >
+
+    <meta
+        name="author"
+        content="Toolzary"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://toolzary.com/tools/average-calculator/"
+    >
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Average Calculator - Calculate Average Online | Toolzary"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate the average, mean, median, sum, minimum, maximum, and count of any list of numbers with Toolzary's free online Average Calculator."
+    >
+
+    <meta
+        property="og:url"
+        content="https://toolzary.com/tools/average-calculator/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Toolzary"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_US"
+    >
+
+    <meta
+        property="og:image"
+        content="https://toolzary.com/assets/images/og/average-calculator.png"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Toolzary Average Calculator"
+    >
+
+    <!-- Twitter / X -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Average Calculator - Calculate Average Online | Toolzary"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Calculate the average, mean, median, sum, minimum, maximum, and count of any list of numbers with Toolzary's free online calculator."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://toolzary.com/assets/images/og/average-calculator.png"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="Toolzary Average Calculator"
+    >
+
+    <!-- Icons -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/assets/icons/favicons/favicon-512.svg"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="/assets/icons/favicons/apple-touch-icon.png"
+    >
+
+    <!-- Styles -->
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/tool-page.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/tools/average-calculator.css"
+    >
+
+    <!-- Scripts -->
+
+    <script
+        defer
+        src="/assets/js/script.js"
+    ></script>
+
+    <script
+        defer
+        src="/assets/js/footer.js"
+    ></script>
+
+    <script
+        defer
+        src="/assets/js/tools/average-calculator.js"
+    ></script>
+
+    <!-- WebApplication Schema -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
         "name": "Average Calculator",
-        "item": "https://toolzary.com/tools/average-calculator"
-      }
-    ]
-  }
-  </script>
-  
+        "url": "https://toolzary.com/tools/average-calculator/",
+        "description": "Free online average calculator that calculates the mean, median, sum, minimum, maximum, and count of a list of numbers.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "inLanguage": "en",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Toolzary",
+            "url": "https://toolzary.com/"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://toolzary.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tools",
+                "item": "https://toolzary.com/tools/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Average Calculator",
+                "item": "https://toolzary.com/tools/average-calculator/"
+            }
+        ]
+    }
+    </script>
+
 </head>
 <body>
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
 
-  <header>
-    <a href="/" class="logo logo-text">
-  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
-  Toolzary
+    <!-- Logo -->
+    <a href="/" class="logo" aria-label="Toolzary Home">
+        <img
+            src="/assets/logos/logo.svg"
+            alt="Toolzary"
+            width="36"
+            height="36"
+        >
+        <span>Toolzary</span>
+    </a>
+
+
+    <!-- ================= TOOL SEARCH ================= -->
+    <form
+        class="search-wrapper"
+        action="/search/"
+        method="get"
+        role="search"
+    >
+
+        <label
+            for="toolSearch"
+            class="sr-only"
+        >
+            Search tools
+        </label>
+
+        <div class="search-wrapper-box">
+
+            <svg
+                class="search-icon"
+                aria-hidden="true"
+                focusable="false"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <circle
+                    cx="11"
+                    cy="11"
+                    r="8"
+                ></circle>
+
+                <line
+                    x1="21"
+                    y1="21"
+                    x2="16.65"
+                    y2="16.65"
+                ></line>
+            </svg>
+
+            <input
+                id="toolSearch"
+                class="toolSearch"
+                name="query"
+                type="search"
+                placeholder="Search tools..."
+                autocomplete="off"
+                enterkeyhint="search"
+                spellcheck="false"
+                required
+            >
+
+            <button
+                class="search-button-small"
+                type="submit"
+                aria-label="Search tools"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <!-- ================= MOBILE MENU BUTTON ================= -->
+    <button
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+    >
+
+        <img
+            src="/assets/icons/others/menu.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-open-icon"
+        >
+
+        <img
+            src="/assets/icons/others/plus.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-close-icon"
+        >
+
+    </button>
+
+
+    <!-- ================= DESKTOP NAVIGATION ================= -->
+    <nav
+        class="desktop-nav"
+        aria-label="Main navigation"
+    >
+
+        <a href="/tools">
+            Tools
+        </a>
+
+        <a href="/categories">
+            Categories
+        </a>
+
+        <a href="/about">
+            About
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+        <button
+            id="darkToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+
+            <img
+                src="/assets/icons/others/moon.svg"
+                alt=""
+                width="24"
+                height="24"
+                class="themeIcon"
+            >
+
+        </button>
+
+    </nav>
+
+
+    <!-- =================================================
+         FULL SCREEN MOBILE MENU
+    ================================================== -->
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-inner">
+
+
+            <!-- Mobile Search -->
+            <form
+                class="search-wrapper mobile-search"
+                action="/search/"
+                method="get"
+                role="search"
+            >
+
+                <label
+                    for="mobileToolSearch"
+                    class="sr-only"
+                >
+                    Search tools
+                </label>
+
+                <div class="search-wrapper-box">
+
+                    <svg
+                        class="search-icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8"
+                        ></circle>
+
+                        <line
+                            x1="21"
+                            y1="21"
+                            x2="16.65"
+                            y2="16.65"
+                        ></line>
+
+                    </svg>
+
+                    <input
+                        id="mobileToolSearch"
+                        class="toolSearch"
+                        name="query"
+                        type="search"
+                        placeholder="Search tools..."
+                        autocomplete="off"
+                        enterkeyhint="search"
+                        spellcheck="false"
+                        required
+                    >
+
+                    <button
+                        class="search-button-small"
+                        type="submit"
+                        aria-label="Search tools"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Mobile Navigation -->
+            <nav
+                class="mobile-nav"
+                aria-label="Mobile navigation"
+            >
+
+                <a href="/tools">
+                    <span>Tools</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/categories">
+                    <span>Categories</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/about">
+                    <span>About</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/contact">
+                    <span>Contact</span>
+
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Bottom Controls -->
+            <div class="mobile-menu-bottom">
+
+                <div class="mobile-menu-tagline">
+
+                    <strong>Toolzary</strong>
+
+                    <span>
+                        Free tools. Simple. Fast.
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="mobile-theme-toggle darkToggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <span class="mobile-theme-label">
+                        Dark Mode
+                    </span>
+
+                    <img
+                        src="/assets/icons/others/moon.svg"
+                        alt=""
+                        width="22"
+                        height="22"
+                        class="mobileThemeIcon"
+                    >
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+<main class="tool-page">
+
+
+<!-- =========================
+     TOOL HERO
+========================= -->
+
+<section class="hero tool-hero">
+
+<div class="container">
+
+
+<div class="tool-hero-icon">
+
+<img
+src="/assets/icons/tool-icons/average-calculator.svg"
+alt="Average Calculator"
+>
+
+</div>
+
+
+
+<h1>
+Average Calculator
+</h1>
+
+
+
+<p>
+Enter a list of numbers to instantly calculate the average, sum, count, minimum, maximum, and median—all in your browser.
+</p>
+
+
+
+
+<div class="tool-tags">
+
+<span>
+Calculators
+</span>
+
+<span>
+Free
+</span>
+
+<span>
+Online
+</span>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     TOOL APPLICATION
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="tool-panel">
+
+
+<!--
+    ONLY THIS AREA IS OWNED BY THE TOOL
+
+    Example:
+
+    age-calculator.js
+        creates date inputs
+
+    char-counter.js
+        creates textarea
+
+    image-resizer.js
+        creates upload interface
+
+-->
+
+
+<div id="tool-app">
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     ABOUT TOOL
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+About Average Calculator
+</h2>
+
+
+</div>
+
+
+
+
+<article class="tool-info-card">
+
+<p>
+Toolzary's Average Calculator helps you quickly calculate the arithmetic mean of any set of numbers. Simply enter your values one by one and get instant results.
+</p>
+
+<p>
+Along with the average, the calculator also displays the total sum, number of values, minimum value, maximum value, and median to give you a complete statistical summary.
+</p>
+
+<p>
+Whether you're a student, teacher, researcher, accountant, or anyone working with numbers, this free online calculator performs all calculations instantly without uploading or storing your data.
+</p>
+
+</article>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     HOW TO USE
+========================= -->
+
+<section class="section">
+
+    <div class="container features">
+
+        <div class="section-title">
+
+            <h2>
+                How To Use
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                            1
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Enter Numbers
+                </h3>
+
+                <p>
+                    Enter one number at a time and click "Add" to build your list.
+                </p>
+
+            </article>
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                            2
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Review Your List
+                </h3>
+
+                <p>
+                    Check the added numbers below the input. Remove individual numbers or clear the entire list if needed.
+
+            </article>
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+
+                        <circle cx="24" cy="24" r="20" fill="#4f46e5"/>
+
+                        <text x="24" y="30"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="700"
+                              fill="#fff"
+                              font-family="Arial, sans-serif">
+                            3
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Calculate Results
+                </h3>
+
+                <p>
+                    Click "Calculate Average" to view the average, sum, count, minimum, maximum, and median instantly.
+                </p>
+
+            </article>
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="section features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Features
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40"
+                    width="40"
+                    loading="lazy"
+                    src="/assets/icons/others/zap.svg"
+                    alt="Instant calculation">
+
+                </div>
+
+                <h3>
+                    Instant Average Calculation
+                </h3>
+
+                <p>
+                    Calculate the arithmetic mean of any list of numbers instantly.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img 
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/chart-column.svg">
+                </div>
+
+                <h3>
+                    Multiple Statistics
+                </h3>
+
+                <p>View the average, sum, count, minimum, maximum, and median together.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/sigma.svg">
+
+                </div>
+
+                <h3>
+                    Supports Decimals
+                </h3>
+
+                <p>
+                    Enter whole numbers or decimal values with full accuracy.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img 
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/shield-check.svg">
+
+                </div>
+
+                <h3>
+                    Privacy Friendly
+                </h3>
+
+                <p>
+                    All calculations are performed locally in your browser. Your numbers are never uploaded or stored.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                    height="40px"
+                    width="40px"
+                    loading="lazy"
+                    alt=""
+                    src="/assets/icons/others/list-checks.svg">
+
+                </div>
+
+                <h3>
+                    Easy Number Management
+                </h3>
+
+                <p>
+                    Add, remove, or clear numbers anytime before recalculating.
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                   <img
+                   height="40px"
+                   width="40px"
+                   loading="lazy"
+                   alt=""
+                   src="/assets/icons/others/circle-check-big.svg">
+
+                </div>
+
+                <h3>
+                    Accurate Results
+                </h3>
+
+                <p>
+                    Get accurate statistical results instantly using modern browser technology.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+</div>
+
+
+
+<div class="faq-list">
+
+
+
+<!-- FAQ 1 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+How is the average calculated?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+The average (mean) is calculated by adding all numbers together and dividing the total by the number of values.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 2 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+What is the difference between average and median?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+The average is the sum of all values divided by the number of values, while the median is the middle value after sorting the numbers.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 3 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Can I enter decimal numbers?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. The calculator supports both whole numbers and decimal values.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 4 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Can I remove individual numbers?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. Click the <strong>×</strong> button next to any number to remove it before recalculating.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 5 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Is there a limit to how many numbers I can enter?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+There is no fixed limit for normal use. You can enter as many numbers as your browser can comfortably handle.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- FAQ 6 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+Is my data stored?
+</span>
+
+<img
+class="faq-icon"
+src="/assets/icons/others/chevron-down.svg"
+alt=""
+width="20"
+height="20"
+>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+No. Everything is calculated locally in your browser. Toolzary does not upload or save your data.
+</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     RELATED TOOLS
+========================= -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+Related Tools
+</h2>
+
+
+<a href="/tools">
+View All
 </a>
-    <div class="search-wrapper">
-      <label for="globalSearch" class="sr-only">Search Tools</label>
-      <span class="search-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-      </span>
-      <input type="text" id="globalSearch" placeholder="Search tools...">
-    </div>
-    <div class="header-actions">
-      <a href="/Contact" class="nav-link">Contact Us</a>
-      <a href="/faq" class="nav-link">FAQs</a>
-      <a href="/about" class="nav-link">About Toolzary</a>
-      <button id="darkToggle" class="outline">Dark Mode</button>
-    </div>
-  </header>
 
-  <main class="container tool-split-layout">
-    
-    <section class="tool-workspace">
-      <div class="unified-tool-container">
-        
-        <div class="tool-title-wrap" data-active-tool-id="average">
-          <div class="tool-main-icon-large" id="toolMainIcon">
-            <!-- SVG icon will be loaded from TOOLS array -->
-          </div>
-          <h1 class="tool-main-title-blue" id="toolMainTitle">Average Calculator</h1>
-          <div>
-            <span class="tool-category-badge" id="toolCategoryBadge">Basic</span>
-          </div>
-        </div>
-        
-        <hr class="tool-divider">
 
-        <div class="tool-custom-interface">
-          
-          <!-- Input Section with Inline Number Bar -->
-          <div class="average-input-section">
-            <div class="form-group-centered">
-              <label for="numberInput" class="input-label">Enter a Number</label>
-              <div class="input-with-button">
-                <input type="number" id="numberInput" class="blue-select data-input-field" placeholder="Enter number" step="any">
-                <button id="addBtn" class="btn-primary">+ Add</button>
-              </div>
-            </div>
+</div>
 
-            <!-- Clear All Button -->
-            <div class="clear-section">
-              <button id="clearAllBtn" class="primary-btn">Clear All</button>
-            </div>
-          </div>
 
-          <!-- Number Tags -->
-          <div id="numberTags" class="number-tags-container">
-            <!-- Numbers will appear here as tags -->
-          </div>
 
-          <button id="calculateBtn" class="submit-btn">Calculate Average</button>
-          
-          <div id="averageResultBox" class="result-box-card hidden">
-            <h3 class="result-box-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" style="display:inline-block;margin-right:8px;vertical-align:middle;">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-              </svg>
-              Results
-            </h3>
-            <div class="average-metrics-grid">
-              <div class="metric-output-block">
-                <div class="metric-display-val" id="avgAverage">0</div>
-                <div class="metric-display-lbl">Average</div>
-              </div>
-              <div class="metric-output-block">
-                <div class="metric-display-val" id="avgSum">0</div>
-                <div class="metric-display-lbl">Sum</div>
-              </div>
-              <div class="metric-output-block">
-                <div class="metric-display-val" id="avgCount">0</div>
-                <div class="metric-display-lbl">Count</div>
-              </div>
-              <div class="metric-output-block">
-                <div class="metric-display-val" id="avgMin">0</div>
-                <div class="metric-display-lbl">Minimum</div>
-              </div>
-              <div class="metric-output-block">
-                <div class="metric-display-val" id="avgMax">0</div>
-                <div class="metric-display-lbl">Maximum</div>
-              </div>
-              <div class="metric-output-block">
-                <div class="metric-display-val" id="avgMedian">0</div>
-                <div class="metric-display-lbl">Median</div>
-              </div>
-            </div>
-          </div>
 
-          <div id="toolLocalError" class="local-error-alert hidden"></div>
-        </div>
 
-        <hr class="tool-divider">
+<div class="tools-grid relatedTools">
 
-        <div class="about-tool-section">
-          <h2 class="about-tool-title">About Average Calculator</h2>
-          <p class="tool-main-desc">Calculate the average (mean), sum, count, minimum, maximum, and median of any set of numbers. Add numbers one by one and see results instantly. Perfect for students, teachers, and anyone needing quick statistical calculations.</p>
-        </div>
 
-      </div>
-    </section>
+<!-- existing .tool-card generated here -->
 
-    <aside class="tool-sidebar">
-      <h3 class="sidebar-title">Related Tools</h3>
-      <div class="related-tools-vertical-grid" id="relatedToolsGrid"></div>
-    </aside>
 
-  </main>
+</div>
 
-  <!-- ========== FAQ SECTION ========== -->
-  <section class="container" id="faq">
-    <div class="faq-section-wrapper">
-      <div class="section-header">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about calculating averages</p>
-      </div>
-      
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is the average (mean)?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>The average (mean) is the sum of all numbers divided by the count of numbers. For example, the average of 85, 90, and 95 is (85+90+95) Ã· 3 = 90.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is the median?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>The median is the middle value when numbers are sorted. For odd count, it's the middle number. For even count, it's the average of the two middle numbers.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How do I add numbers?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>Type a number in the input field and click "Add" or press Enter. Each number will appear as a colored tag. Click the âœ• on any tag to remove it.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What does the count show?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <p>The count shows how many numbers you've entered. For example, if you add 5 numbers, the count will show 5.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <script src="/assets/js/script.js"></script>
-  <script src="/assets/js/average-calculator.js"></script>
-  <script src="/assets/js/footer.js"></script>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+</main>
+<footer id="site-footer">
+    <!-- Loaded by footer.js -->
+</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

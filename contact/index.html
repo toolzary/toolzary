@@ -1,439 +1,1027 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-    <title>Contact | Toolzary – Free Online Tools</title>
-    <meta name="description" content="Contact Toolzary - Suggest a tool, report a bug, or collaborate with us. We'd love to hear from you!">
-    <meta name="theme-color" content="#4f46e5">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Contact Toolzary">
-    <meta property="og:description" content="Get in touch with Toolzary team. Suggest tools, report bugs, or collaborate.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://toolzary.com/contact">
-    <link rel="canonical" href="https://toolzary.com/contact">
-    
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/contact.css">
-    <link rel="stylesheet" href="/assets/css/about.css">
-    <link rel="icon" href="/assets/icons/logo.svg">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact Toolzary - Support, Feedback, Bug Reports & Suggestions</title>
+
+    <meta
+        name="description"
+        content="Contact Toolzary for support, bug reports, tool suggestions, feature requests, content corrections, partnerships, or general feedback about our free online tools."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://toolzary.com/contact/"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/assets/icons/favicons/favicon-512.svg"
+    >
+
+    <!-- PWA -->
+
+    <link
+        rel="manifest"
+        href="/manifest.json"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Toolzary"
+    >
+
+    <meta
+        property="og:title"
+        content="Contact Toolzary - Support, Feedback & Suggestions"
+    >
+
+    <meta
+        property="og:description"
+        content="Get in touch with Toolzary for support, bug reports, tool suggestions, feature requests, partnerships, and general feedback."
+    >
+
+    <meta
+        property="og:url"
+        content="https://toolzary.com/contact/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://toolzary.com/assets/images/og/main.svg"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Contact Toolzary"
+    >
+
+    <!-- Twitter / X -->
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Contact Toolzary - Support, Feedback & Suggestions"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Contact Toolzary for help, bug reports, tool suggestions, feature requests, partnerships and feedback."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://toolzary.com/assets/images/og/main.svg"
+    >
+
+    <!-- Stylesheets -->
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/contact.css"
+    >
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://toolzary.com/#organization",
+        "name": "Toolzary",
+        "url": "https://toolzary.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://toolzary.com/assets/logos/logo.svg"
+        },
+        "email": "mailto:support@toolzary.com"
+    }
+    </script>
+
+    <!-- Contact Page Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "@id": "https://toolzary.com/contact/#webpage",
+        "url": "https://toolzary.com/contact/",
+        "name": "Contact Toolzary - Support, Feedback, Bug Reports & Suggestions",
+        "description": "Contact Toolzary for support, bug reports, tool suggestions, feature requests, partnerships and general feedback.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://toolzary.com/#website",
+            "name": "Toolzary",
+            "url": "https://toolzary.com/"
+        },
+        "about": {
+            "@id": "https://toolzary.com/#organization"
+        },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script
+        defer
+        src="/assets/js/script.js"
+    ></script>
+
+    <script
+        defer
+        src="/assets/js/footer.js"
+    ></script>
+
 </head>
+
+
 <body>
 
-    <!-- ========== HEADER ========== -->
-    <header>
-        <a href="/" class="logo logo-text">
-  <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
-  Toolzary
-</a>
-        <div class="search-wrapper">
-            <label for="globalSearch" class="sr-only">Search Tools</label>
-            <span class="search-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"/>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
-            </span>
-            <input type="text" id="globalSearch" placeholder="Search tools...">
-        </div>
-        <div class="header-actions">
-            <a href="/about" class="nav-link">About Toolzary</a>
-             <a href="/faq" class="nav-link">FAQs</a>
-            <button id="darkToggle" class="outline">Dark Mode</button>
-        </div>
-    </header>
 
-    <!-- ========== MAIN CONTENT ========== -->
-    <main>
 
-        <!-- ========== HERO SECTION ========== -->
-        <section class="contact-hero">
-            <div class="contact-hero-content">
-                <div class="contact-hero-badge">Get in Touch</div>
-                <h1 class="contact-hero-title">Let's <span class="text-gradient">Connect</span></h1>
-                <p class="contact-hero-subtitle">
-                    Have a suggestion, found a bug, or want to collaborate?<br>
-                    We'd love to hear from you!
-                </p>
-            <div class="contact-stats-grid">
-                <div class="contact-stat-item">
-                    <div class="contact-stat-number heroToolCount">0</div>
-                    <div class="contact-stat-label">Free Tools</div>
-                </div>
-                <div class="contact-stat-item">
-                    <div class="contact-stat-number" id="aboutCatCount">0</div>
-                    <div class="contact-stat-label">Categories</div>
-                </div>
-                <div class="contact-stat-item">
-                    <div class="contact-stat-number">24/7</div>
-                    <div class="contact-stat-label">Support</div>
-                </div>
-                <div class="contact-stat-item">
-                    <div class="contact-stat-number">100%</div>
-                    <div class="contact-stat-label">Free</div>
-                </div>
-            </div>
-        </section>
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
 
-        <!-- ========== CONTACT SECTION ========== -->
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <div class="contact-grid">
-                    
-                    <!-- Contact Form -->
-                    <div class="contact-form-wrapper">
-                        <div class="form-header">
-                            <h2 class="form-title">Send Us a Message</h2>
-                            <p class="form-subtitle">We'll get back to you within 24 hours</p>
-                        </div>
+    <a href="/" class="logo" aria-label="Toolzary Home">
 
-                        <form 
-    name="contact" 
-    method="POST" 
-    data-netlify="true" 
-    netlify-honeypot="bot-field"
-    action="/contact/success/" 
-    id="contactForm"
->
-    <input type="hidden" name="form-name" value="contact">
-    
-    <!-- Honeypot field to prevent spam -->
-    <p style="display:none;">
-        <label>Don't fill this out if you're human: <input name="bot-field"></label>
-    </p>
+        <img
+            src="/assets/logos/logo.svg"
+            alt="Toolzary"
+            width="36"
+            height="36"
+        >
 
-    <div class="form-row">
-        <div class="form-group">
-            <label for="contactName">Full Name <span class="required">*</span></label>
-            <div class="input-wrapper">
-                <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                </svg>
-                <input type="text" id="contactName" name="name" placeholder="John Doe" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="contactEmail">Email Address <span class="required">*</span></label>
-            <div class="input-wrapper">
-                <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2"/>
-                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
-                </svg>
-                <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required>
-            </div>
-        </div>
-    </div>
+        <span>Toolzary</span>
 
-    <div class="form-group">
-        <label for="contactSubject">Subject <span class="required">*</span></label>
-        <div class="input-wrapper">
-            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10 9 9 9 8 9"/>
-            </svg>
-            <input type="text" id="contactSubject" name="subject" placeholder="What's this about?" required>
-        </div>
-    </div>
+    </a>
 
-    <div class="form-group">
-        <label for="contactMessage">Message <span class="required">*</span></label>
-        <div class="input-wrapper textarea-wrapper">
-            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-            <textarea id="contactMessage" name="message" rows="6" placeholder="Tell us everything..." required></textarea>
-        </div>
-    </div>
 
-    <button type="submit" class="submit-btn">
-        <span>Send Message</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13"/>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-        </svg>
+    <!-- Mobile menu button -->
+    <button
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+    >
+
+        <img
+            src="/assets/icons/others/menu.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-open-icon"
+        >
+
+        <img
+            src="/assets/icons/others/plus.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-close-icon"
+        >
+
     </button>
 
-    <p class="form-footer-text">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <polyline points="9 12 11 14 15 10"/>
-        </svg>
-        Your data is safe and will never be shared
-    </p>
+
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+
+        <a href="/tools">
+            Tools
+        </a>
+
+        <a href="/categories">
+            Categories
+        </a>
+
+        <a href="/about">
+            About
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+        <button
+            id="darkToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+
+            <img
+                src="/assets/icons/others/moon.svg"
+                alt=""
+                width="24"
+                height="24"
+                class="themeIcon"
+            >
+
+        </button>
+
+    </nav>
+
+
+    <!-- =================================================
+         FULL SCREEN MOBILE MENU
+    ================================================== -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-inner">
+
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+
+                <a href="/tools">
+                    <span>Tools</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/categories">
+                    <span>Categories</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/about">
+                    <span>About</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/contact">
+                    <span>Contact</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile bottom controls -->
+
+            <div class="mobile-menu-bottom">
+
+                <div class="mobile-menu-tagline">
+                    <strong>Toolzary</strong>
+
+                    <span>
+                        Free tools. Simple. Fast.
+                    </span>
+                </div>
+
+
+                <button
+                    class="mobile-theme-toggle darkToggle"
+                    type="button"
+                >
+
+                    <span class="mobile-theme-label">
+                        Dark Mode
+                    </span>
+
+                    <img
+                        src="/assets/icons/others/moon.svg"
+                        alt=""
+                        width="22"
+                        height="22"
+                        class="mobileThemeIcon"
+                    >
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+
+<main>
+
+
+
+
+
+<!-- ================= CONTACT HERO ================= -->
+
+
+<section class="hero reveal">
+
+
+<h1>
+
+Contact
+
+<span class="gradient-text">
+Toolzary
+</span>
+
+</h1>
+
+
+
+<p>
+
+Have a question, found a bug, or want to suggest a new tool?
+Your feedback helps us improve Toolzary for everyone.
+
+</p>
+
+
+
+<p class="hero-trust">
+
+No sign-up â€¢ No installation â€¢ 100% Free
+
+</p>
+
+
+
+
+<div class="hero-actions">
+
+
+<a href="#contact-form" class="second-btn">
+
+Send Message
+
+</a>
+
+
+
+<a href="/tools" class="second-btn-outline">
+
+Explore Tools
+
+</a>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= CONTACT OPTIONS ================= -->
+
+
+<section class="section features container reveal">
+
+
+
+<div class="section-title">
+
+
+<h2>
+
+How Can We Help?
+
+</h2>
+
+
+</div>
+
+
+
+<div class="feature-grid contact-topic-grid">
+
+
+
+
+
+
+<article class="feature-card">
+
+
+<div class="feature-icon">
+
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/lightbulb.svg">
+
+
+</div>
+
+
+<h3>
+Tool Suggestion
+</h3>
+
+
+<p>
+Have an idea for a useful calculator, converter, or productivity tool? Tell us what you want to see.
+</p>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="feature-card">
+
+
+<div class="feature-icon">
+
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/bug.svg">
+
+
+</div>
+
+
+<h3>
+Bug Report
+</h3>
+
+
+<p>
+Found something broken? Report incorrect results, errors, or problems with any Toolzary feature.
+</p>
+
+
+</article>
+
+
+
+
+
+
+
+
+<article class="feature-card">
+
+
+<div class="feature-icon">
+
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/sparkles.svg">
+
+
+</div>
+
+
+<h3>
+Feature Request
+</h3>
+
+
+<p>
+Share improvements or new ideas that could make Toolzary faster and easier to use.
+</p>
+
+
+</article>
+
+
+
+
+
+
+
+
+<article class="feature-card">
+
+
+<div class="feature-icon">
+
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/message-circle.svg">
+
+
+</div>
+
+
+<h3>
+General Questions
+</h3>
+
+
+<p>
+Need help or want to know more about Toolzary? Send us your questions.
+</p>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="feature-card">
+
+
+<div class="feature-icon">
+
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/handshake.svg">
+
+
+</div>
+
+
+<h3>
+Business Partnership
+</h3>
+
+
+<p>
+Interested in collaboration, partnerships, or working with Toolzary?
+</p>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="feature-card">
+
+
+<div class="feature-icon">
+
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/clipboard-check.svg">
+
+
+</div>
+
+
+<h3>
+Content Correction
+</h3>
+
+
+<p>
+Found inaccurate information? Let us know so we can keep Toolzary reliable.
+</p>
+
+
+</article>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= CONTACT FORM ================= -->
+
+
+<section class="section container reveal" id="contact-form">
+
+
+
+<div class="section-title">
+
+<h2>
+Tell Us How We Can Help
+</h2>
+
+</div>
+
+
+
+
+
+<div class="contact-wrapper">
+
+
+
+<div class="contact-info">
+
+
+
+<h3>
+We'd Love To Hear From You
+</h3>
+
+
+<p>
+Whether you have feedback, a suggestion, or need assistance, your message helps us improve.
+</p>
+
+
+
+<div class="contact-info-item">
+
+<strong>
+Response Time
+</strong>
+
+<span>
+Usually within 24-48 hours
+</span>
+
+</div>
+
+
+
+<div class="contact-info-item">
+
+<strong>
+Best For
+</strong>
+
+<span>
+Suggestions, reports, and feedback
+</span>
+
+</div>
+
+
+
+<div class="contact-info-item">
+
+<strong>
+Community Driven
+</strong>
+
+<span>
+Your ideas shape future improvements
+</span>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<form class="contact-form">
+
+
+<label>
+
+Name
+
+<input
+type="text"
+name="name"
+placeholder="Your name"
+required
+>
+
+</label>
+
+
+
+<label>
+
+Email
+
+<input
+type="email"
+name="email"
+placeholder="Your email"
+required
+>
+
+</label>
+
+
+
+
+<label>
+
+Topic
+
+
+<select name="topic">
+
+
+<option>
+Tool Suggestion
+</option>
+
+
+<option>
+Bug Report
+</option>
+
+
+<option>
+Feature Request
+</option>
+
+
+<option>
+Business Partnership
+</option>
+
+
+<option>
+General Question
+</option>
+
+
+<option>
+Other
+</option>
+
+
+</select>
+
+
+</label>
+
+
+
+
+
+<label>
+
+Message
+
+
+<textarea
+name="message"
+rows="6"
+placeholder="Write your message..."
+required
+></textarea>
+
+
+</label>
+
+
+
+
+<button class="second-btn" type="submit">
+
+Send Message
+
+</button>
+
+
+
 </form>
-                    </div>
 
-                    <!-- Contact Info Cards -->
-                    <div class="contact-info">
-                        <!-- Email Card -->
-                        <div class="info-card email-card">
-                            <div class="info-icon-wrapper">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
-                                </svg>
-                            </div>
-                            <div class="info-content">
-                                <h4>Email Us</h4>
-                                <p>contact@toolzary.com</p>
-                                <span class="info-action">Click to copy →</span>
-                            </div>
-                        </div>
 
-                        <!-- Suggest Tool Card -->
-                        <a href="#contactForm" class="info-card suggest-tool">
-                            <div class="info-icon-wrapper">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
-                                    <path d="M9 18h6"/>
-                                    <path d="M10 22h4"/>
-                                </svg>
-                            </div>
-                            <div class="info-content">
-                                <h4>Suggest a Tool</h4>
-                                <p>Have an idea? Let us know!</p>
-                                <span class="info-action">Share your idea →</span>
-                            </div>
-                        </a>
+</div>
 
-                        <!-- Report Bug Card -->
-                        <a href="#contactForm" class="info-card report-bug">
-                            <div class="info-icon-wrapper">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 20v-9"/>
-                                    <path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/>
-                                    <path d="M14.12 3.88 16 2"/>
-                                    <path d="M21 21a4 4 0 0 0-3.81-4"/>
-                                    <path d="M21 5a4 4 0 0 1-3.55 3.97"/>
-                                    <path d="M22 13h-4"/>
-                                    <path d="M3 21a4 4 0 0 1 3.81-4"/>
-                                    <path d="M3 5a4 4 0 0 0 3.55 3.97"/>
-                                    <path d="M6 13H2"/>
-                                    <path d="m8 2 1.88 1.88"/>
-                                    <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/>
-                                </svg>
-                            </div>
-                            <div class="info-content">
-                                <h4>Report a Bug</h4>
-                                <p>Help us improve</p>
-                                <span class="info-action">Report issue →</span>
-                            </div>
-                        </a>
 
-                        <!-- Response Time Card -->
-                        <div class="info-card response-card">
-                            <div class="info-icon-wrapper">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12 6 12 12 16 14"/>
-                                </svg>
-                            </div>
-                            <div class="info-content">
-                                <h4>Response Time</h4>
-                                <p>We reply within 24 hours</p>
-                                <span class="info-action">Fast support ⚡</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+</section>
 
-        <!-- ========== TRUST BADGES ========== -->
-        <section class="contact-trust">
-            <div class="container">
-                <div class="trust-grid">
-                    <div class="trust-item">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <polyline points="9 12 11 14 15 10"/>
-                        </svg>
-                        <h4>100% Secure</h4>
-                        <p>Your data is encrypted and never shared</p>
-                    </div>
-                    <div class="trust-item">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                        <h4>Fast Response</h4>
-                        <p>We reply within 24 hours</p>
-                    </div>
-                    <div class="trust-item">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                        <h4>Human Support</h4>
-                        <p>Real people, not bots</p>
-                    </div>
-                    <div class="trust-item">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
-                        <h4>No Sign-up</h4>
-                        <p>Contact us without creating an account</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ========== TESTIMONIALS ========== -->
-        <section class="contact-testimonials">
-            <div class="container">
-                <div class="testimonials-header">
-                    <span class="testimonials-badge">❤️ Trusted by Users</span>
-                    <h2 class="testimonials-title">What Our Users Say</h2>
-                </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-item">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p>"Toolzary has been a lifesaver for my studies. The GPA calculator is spot on!"</p>
-                        <div class="testimonial-author">— Khushal K., University Student</div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p>"The JSON formatter and Base64 encoder save me hours of work every week."</p>
-                        <div class="testimonial-author">— Raza K., Web Developer</div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p>"Finally, a free tool site that actually works and popups everywhere!"</p>
-                        <div class="testimonial-author">— Mashal K., Small Business Owner</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ========== CTA SECTION ========== -->
-        <section class="contact-cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Get Started?</h2>
-                    <p>Explore all <span class="cta-tool-count heroToolCount">0</span> free tools and find the perfect one for your needs.</p>
-                    <div class="cta-actions">
-                        <a href="/tools" class="btn-primary">Browse All Tools</a>
-                        <a href="/about" class="btn-outline">About Toolzary</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ========== FAQ SECTION ========== -->
-        <section class="container" id="faq">
-            <div class="faq-section-wrapper">
-                <div class="section-header">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-subtitle">Quick answers to common questions</p>
-                </div>
-                
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How quickly will I get a response?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please mention "URGENT" in your subject line.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How do I suggest a new tool?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Simply click the "Suggest a Tool" card above or fill out the contact form with your idea. We review all suggestions and implement the most requested ones.</p>
-                        </div>
-                    </div>
+<!-- ================= PROFESSIONAL DIRECT CONTACT ================= -->
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Is Toolzary really free?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes! Toolzary is 100% free forever. No hidden charges, no premium plans, and no credit card required.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Can I collaborate with Toolzary?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Absolutely! We're always open to collaborations, partnerships, and guest contributions. Reach out via the contact form and let's talk!</p>
-                        </div>
-                    </div>
+<section class="section container features reveal">
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How do I report a bug?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Click the "Report a Bug" card above or use the contact form with "Bug Report" as the subject.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you have an API or developer access?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>We're currently working on our API. If you're interested in early access, please reach out through the contact form.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<div class="section-title">
 
-    <!-- ========== SCRIPTS ========== -->
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/contact.js"></script>
-    <script src="/assets/js/footer.js"></script>
+<h2>
+Other Ways To Connect
+</h2>
+
+</div>
+
+
+
+<div class="feature-grid">
+
+
+
+<article class="feature-card">
+
+<div class="feature-icon">
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/mail.svg">
+
+</div>
+
+<h3>
+Direct Email
+</h3>
+
+<p>
+For direct inquiries, partnerships, or urgent issues, email us at:
+</p>
+
+<p>
+<strong>support@toolzary.com</strong>
+</p>
+
+</article>
+
+
+
+
+<article class="feature-card">
+
+<div class="feature-icon">
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/clock-3.svg">
+
+</div>
+
+<h3>
+Support Availability
+</h3>
+
+<p>
+Our team monitors feedback and bug reports around the clock.
+</p>
+
+<p>
+<strong>Monday â€“ Sunday (24/7)</strong>
+</p>
+
+</article>
+
+
+
+
+<article class="feature-card">
+
+<div class="feature-icon">
+
+<img
+height="40px"
+width="40px"
+src="/assets/icons/others/megaphone.svg">
+
+</div>
+
+<h3>
+Follow Toolzary
+</h3>
+
+<p>
+Follow Toolzary across our social media platforms to discover new tools, feature updates, and important announcements.
+</p>
+
+<p>
+<strong>@Toolzary</strong>
+</p>
+
+</article>
+
+
+
+</div>
+
+
+</section>
+<!-- ================= FINAL CTA ================= -->
+
+
+<section class="contact-final-cta reveal">
+
+
+<h2>
+Help Us Build Better Tools
+</h2>
+
+
+<p>
+Every suggestion and report helps make Toolzary better for everyone.
+</p>
+
+
+
+<div class="hero-actions">
+
+
+<a href="/tools" class="second-btn">
+
+Browse Tools
+
+</a>
+
+
+<a href="/" class="second-btn-outline">
+
+Back Home
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<footer id="site-footer">
+
+</footer>
+
+
+
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

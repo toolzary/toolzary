@@ -1,98 +1,357 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results | Toolzary – Free Online Tools</title>
+
+    <title>
+        Search Results | Toolzary - Free Online Tools
+    </title>
+
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="icon" href="/assets/icons/favicon.svg">
     <link rel="stylesheet" href="/assets/css/search.css">
+
+    <link rel="icon" href="/assets/icons/favicons/favicon-512.svg">
+
 </head>
+
 <body>
-    <!-- ========== HEADER ========== -->
-    <header>
-        <a href="/" class="logo logo-text">
-            <img src="/assets/icons/logo.svg" alt="Toolzary Logo" width="32" height="32">
-            Toolzary
+
+ <!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+
+    <a href="/" class="logo" aria-label="Toolzary Home">
+
+        <img
+            src="/assets/logos/logo.svg"
+            alt="Toolzary"
+            width="36"
+            height="36"
+        >
+
+        <span>Toolzary</span>
+
+    </a>
+
+
+    <!-- Mobile menu button -->
+    <button
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+    >
+
+        <img
+            src="/assets/icons/others/menu.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-open-icon"
+        >
+
+        <img
+            src="/assets/icons/others/plus.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="menu-close-icon"
+        >
+
+    </button>
+
+
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+
+        <a href="/tools">
+            Tools
         </a>
-        <div class="search-wrapper">
-            <label for="globalSearch" class="sr-only">Search Tools</label>
-            <span class="search-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"/>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
-            </span>
-            <input type="text" id="globalSearch" placeholder="Search tools..." autofocus>
-        </div>
-        <div class="header-actions">
-            <a href="/Contact" class="nav-link">Contact Us</a>
-            <a href="/about" class="nav-link">About Toolzary</a>
-            <a href="/faq" class="nav-link">FAQs</a>
-            <button id="darkToggle" class="outline">Dark Mode</button>
-        </div>
-    </header>
 
-    <!-- ========== MAIN CONTENT ========== -->
+        <a href="/categories">
+            Categories
+        </a>
+
+        <a href="/about">
+            About
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+        <button
+            id="darkToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+
+            <img
+                src="/assets/icons/others/moon.svg"
+                alt=""
+                width="24"
+                height="24"
+                class="themeIcon"
+            >
+
+        </button>
+
+    </nav>
+
+
+    <!-- =================================================
+         FULL SCREEN MOBILE MENU
+    ================================================== -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-inner">
+
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+
+                <a href="/tools">
+                    <span>Tools</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/categories">
+                    <span>Categories</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/about">
+                    <span>About</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+                <a href="/contact">
+                    <span>Contact</span>
+                    <img
+                        src="/assets/icons/others/chevron-down.svg"
+                        alt=""
+                    >
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile bottom controls -->
+
+            <div class="mobile-menu-bottom">
+
+                <div class="mobile-menu-tagline">
+                    <strong>Toolzary</strong>
+
+                    <span>
+                        Free tools. Simple. Fast.
+                    </span>
+                </div>
+
+
+                <button
+                    class="mobile-theme-toggle darkToggle"
+                    type="button"
+                >
+
+                    <span class="mobile-theme-label">
+                        Dark Mode
+                    </span>
+
+                    <img
+                        src="/assets/icons/others/moon.svg"
+                        alt=""
+                        width="22"
+                        height="22"
+                        class="mobileThemeIcon"
+                    >
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+    <!-- ================= MAIN ================= -->
+
     <main>
-        <div class="search-results-container">
-            <!-- Search Results Header -->
-            <div id="searchResultsHeader" class="search-results-header" style="display: none;">
-                <h1>
-                    <span class="search-icon-header">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m21 21-4.34-4.34"/>
-                            <circle cx="11" cy="11" r="8"/>
-                        </svg>
-                    </span>
-                    Results for "<span class="query-text" id="searchTermDisplay"></span>"
-                </h1>
-                <div class="result-meta">
-                    <span><strong id="searchResultCount"></strong></span>
-                    <span id="categoryFilterDisplay" style="display: none;">
-                        <span class="category-badge" id="categoryBadge"></span>
-                    </span>
-                    <span class="result-time">
-                        <span class="dot"></span>
-                        <span id="searchTimeDisplay"></span>
-                    </span>
+
+        <!-- ================= HERO SEARCH ================= -->
+
+        <section class="hero">
+
+            <h1>
+
+                Search Less
+
+                <span class="gradient-text">
+                    Find Faster
+                </span>
+
+            </h1>
+
+            <p>
+                Type a keyword and instantly discover the tools built to solve your task.
+            </p>
+
+            <p class="hero-trust">
+                No sign-up • No installation • 100% Free
+            </p>
+
+            <!-- BIG SEARCH -->
+
+            <form
+                class="main-search"
+                action="/search/"
+                method="get"
+                role="search">
+
+                <label
+                    for="toolSearch"
+                    class="sr-only">
+                    Search tools
+                </label>
+
+                <div class="main-search-box">
+
+                    <svg
+                        class="search-icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8">
+                        </circle>
+
+                        <line
+                            x1="21"
+                            y1="21"
+                            x2="16.65"
+                            y2="16.65">
+                        </line>
+
+                    </svg>
+
+                    <input
+                        id="toolSearch"
+                        class="toolSearch"
+                        name="query"
+                        type="search"
+                        placeholder="Search tools (PDF, Image, Text, Calculator...)"
+                        autocomplete="off"
+                        enterkeyhint="search"
+                        spellcheck="false"
+                        required>
+
+                    <button
+                        class="search-button"
+                        type="submit"
+                        aria-label="Search tools">
+
+                        Search
+
+                    </button>
+
                 </div>
+
+                <div class="search-tags">
+
+                    <a
+                        href="/search?cat=pdf-tools"
+                        class="first-btn">
+                        PDF Tools
+                    </a>
+
+                    <a
+                        href="/search?cat=image-tools"
+                        class="first-btn">
+                        Image Tools
+                    </a>
+
+                    <a
+                        href="/search?cat=text-tools"
+                        class="first-btn">
+                        Text Tools
+                    </a>
+
+                    <a
+                        href="/search?cat=developer-tools"
+                        class="first-btn">
+                        Developer Tools
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- ================= SEARCH RESULTS ================= -->
+
+        <section
+            id="searchResults"
+            class="search-results"
+            hidden>
+
+            <div class="section-heading">
+
+                <h2 id="searchHeading"></h2>
+
+                <p id="searchInfo"></p>
+
             </div>
 
-            <!-- Results Grid -->
-            <div id="searchResultsGrid" class="search-results-grid">
-                <div class="loading-spinner">
-                    <div class="spinner"></div>
-                    <p>Searching tools...</p>
-                </div>
+            <div
+                id="searchGrid"
+                class="tools-grid">
             </div>
-        </div>
+
+        </section>
+
     </main>
 
-    <!-- ========== SCRIPTS ========== -->
-    <!-- Main Script - loads tools into window.TOOLS and exposes search functions -->
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="site-footer">
+    </footer>
+
+    <!-- ================= SCRIPTS ================= -->
+
     <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/search.js"></script>
     <script src="/assets/js/footer.js"></script>
+    <script src="/assets/js/search.js"></script>
+
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

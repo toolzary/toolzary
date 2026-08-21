@@ -1,0 +1,22 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+
+    <rect
+        width="512"
+        height="512"
+        rx="110"
+        fill="#FFFFFF"/>
+
+    <path
+        d="M128 125
+           H384
+           L338 195
+           H292
+           V280
+           C292 328 274 364 256 394
+           C238 364 220 328 220 280
+           V195
+           H174
+           L128 125Z"
+        fill="#4F45E6"/>
+
+</svg>

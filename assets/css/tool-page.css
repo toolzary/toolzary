@@ -1,0 +1,469 @@
+/* ============================================
+   UNIVERSAL TOOL PAGE
+   Template Layout Only
+   Uses existing main.css system
+============================================ */
+
+
+/* ============================================
+   TOOL HERO
+============================================ */
+
+
+.tool-page .tool-hero {
+
+    padding-top:40px;
+    padding-bottom:30px;
+
+}
+
+
+
+.tool-hero-icon {
+
+
+    width:120px;
+
+    height:120px;
+
+
+    margin:0 auto 25px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:var(--surface);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:30px;
+
+
+    box-shadow:var(--shadow);
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+.tool-hero-icon:hover {
+
+
+    transform:translateY(-8px);
+
+
+    border-color:var(--primary);
+
+
+}
+
+
+
+.tool-hero-icon img {
+
+
+    width:75px;
+
+    height:75px;
+
+
+    object-fit:contain;
+
+
+}
+
+
+
+.tool-tags {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:12px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+.tool-tags span {
+
+
+    padding:8px 18px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    rgba(99,102,241,.12);
+
+
+    color:var(--primary);
+
+
+    font-size:.85rem;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+/* ============================================
+   TOOL CONTAINER
+   Universal wrapper for every tool
+============================================ */
+
+
+.tool-panel {
+
+
+    background:var(--surface);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:var(--radius);
+
+
+    padding:40px;
+
+
+    box-shadow:var(--shadow);
+
+
+}
+
+
+
+.tool-work-area {
+
+
+    width:100%;
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   TOOL INFORMATION CARD
+============================================ */
+
+
+.tool-info-card {
+
+
+    background:var(--surface);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:var(--radius);
+
+
+    padding:35px;
+
+
+    box-shadow:var(--shadow);
+
+
+}
+
+
+
+.tool-info-card p {
+
+
+    color:var(--text-secondary);
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   STEP NUMBER
+   Used inside existing feature cards
+============================================ */
+
+
+.step-icon {
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border-radius:50%;
+
+
+    background:var(--primary);
+
+
+    color:white;
+
+
+    font-weight:700;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ============================================
+   RELATED TOOLS
+   Uses existing .tool-card
+============================================ */
+
+
+.relatedTools {
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   TOOL PAGE RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+
+    /* Hero */
+    .tool-page .tool-hero {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .tool-hero-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        margin-bottom: 20px;
+    }
+
+    .tool-hero-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tool-tags {
+        gap: 8px;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .tool-tags span {
+        padding: 7px 13px;
+        font-size: .8rem;
+    }
+
+
+    /* Main tool panel */
+    .tool-panel {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+    .tool-work-area {
+        margin-top: 20px;
+    }
+
+
+    /* Information card */
+    .tool-info-card {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+    .tool-info-card p {
+        font-size: .95rem;
+        line-height: 1.75;
+    }
+
+
+    /* Step icon */
+    .step-icon {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 15px;
+    }
+
+
+    /* Related tools */
+    .relatedTools {
+        margin-top: 15px;
+    }
+
+}
+
+
+/* ============================================
+   SMALL PHONES
+============================================ */
+
+@media (max-width: 480px) {
+
+    .tool-page .tool-hero {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .tool-hero-icon {
+        width: 85px;
+        height: 85px;
+        border-radius: 20px;
+        margin-bottom: 18px;
+    }
+
+    .tool-hero-icon img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .tool-tags {
+        gap: 7px;
+        margin-top: 16px;
+        padding: 0 5px;
+    }
+
+    .tool-tags span {
+        padding: 6px 11px;
+        font-size: .75rem;
+    }
+
+
+    /* Tool panel */
+    .tool-panel {
+        padding: 20px 15px;
+        border-radius: 18px;
+    }
+
+
+    /* Tool content */
+    .tool-work-area {
+        margin-top: 15px;
+    }
+
+
+    /* Info */
+    .tool-info-card {
+        padding: 22px 17px;
+        border-radius: 18px;
+    }
+
+    .tool-info-card p {
+        font-size: .92rem;
+        line-height: 1.7;
+    }
+
+
+    /* Step */
+    .step-icon {
+        width: 40px;
+        height: 40px;
+        font-size: .9rem;
+    }
+
+}
+
+
+/* ============================================
+   PREVENT MOBILE OVERFLOW
+============================================ */
+
+.tool-page,
+.tool-page * {
+    max-width: 100%;
+}
+
+.tool-page img {
+    height: auto;
+}
+
+.tool-page input,
+.tool-page textarea,
+.tool-page select,
+.tool-page button {
+    max-width: 100%;
+}

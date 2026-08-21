@@ -1,41 +1,195 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  
-  <!-- Background -->
-  <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4F46E5"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
-    </linearGradient>
-  </defs>
-  
-  <rect width="1200" height="630" fill="url(#grad)"/>
-  
-  <!-- Decorative circles -->
-  <circle cx="120" cy="100" r="300" fill="rgba(255,255,255,0.04)"/>
-  <circle cx="1080" cy="530" r="350" fill="rgba(255,255,255,0.04)"/>
-  
-  <!-- Logo -->
-  <g transform="translate(280, 290)">
-    <circle cx="0" cy="0" r="160" fill="rgba(255,255,255,0.05)"/>
-    <circle cx="0" cy="0" r="120" fill="rgba(255,255,255,0.08)"/>
-    <circle cx="0" cy="0" r="80" fill="rgba(255,255,255,0.12)"/>
-    
-    <!-- T Logo -->
-    <rect x="-75" y="-38" width="150" height="38" rx="19" fill="white"/>
-    <rect x="-19" y="-38" width="38" height="140" rx="19" fill="white"/>
-  </g>
-  
-  <text x="480" y="240" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="start" letter-spacing="1">
-    <tspan fill="#FCD34D">Age</tspan> Calculator
-  </text>
-  
-  <!-- Tool Description -->
-  <text x="480" y="310" font-family="Inter, Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.9)" text-anchor="start">Calculate your exact age in years, months, and days</text>
-  
-  <!-- Brand -->
-  <text x="480" y="380" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600" fill="#FCD34D" text-anchor="start">by Toolzary</text>
-  
-  <!-- URL Footer -->
-  <text x="1150" y="610" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.25)" text-anchor="end">toolzary.com</text>
-  
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="630"
+     viewBox="0 0 1200 630"
+     fill="none">
+
+<defs>
+
+  <!-- Toolzary gradient -->
+  <linearGradient id="toolzaryGradient" x1="96" y1="110" x2="416" y2="420">
+    <stop stop-color="#4F45E6"/>
+    <stop offset="1" stop-color="#7C3AED"/>
+  </linearGradient>
+
+
+  <!-- Premium background -->
+  <linearGradient id="background" x1="0" y1="0" x2="1200" y2="630">
+    <stop stop-color="#08090D"/>
+    <stop offset="1" stop-color="#111827"/>
+  </linearGradient>
+
+
+  <!-- Glow -->
+  <radialGradient id="purpleGlow">
+    <stop stop-color="#4F45E6" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#4F45E6" stop-opacity="0"/>
+  </radialGradient>
+
+
+  <!-- Shape gradient -->
+  <linearGradient id="shapeGradient">
+    <stop stop-color="#4F45E6" stop-opacity="0.22"/>
+    <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient>
+
+
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="90"/>
+  </filter>
+
+
+  <filter id="logoShadow">
+    <feDropShadow
+      dx="0"
+      dy="18"
+      stdDeviation="25"
+      flood-color="#4F45E6"
+      flood-opacity="0.45"/>
+  </filter>
+
+</defs>
+
+
+<!-- Background -->
+<rect width="1200" height="630" fill="url(#background)"/>
+
+
+<!-- Soft center glow -->
+<ellipse
+ cx="600"
+ cy="180"
+ rx="300"
+ ry="190"
+ fill="url(#purpleGlow)"
+ filter="url(#blur)"/>
+
+
+<!-- Subtle grid -->
+<g opacity="0.04" stroke="#FFFFFF">
+ <path d="M0 120H1200"/>
+ <path d="M0 240H1200"/>
+ <path d="M0 360H1200"/>
+ <path d="M0 480H1200"/>
+
+ <path d="M200 0V630"/>
+ <path d="M400 0V630"/>
+ <path d="M800 0V630"/>
+ <path d="M1000 0V630"/>
+</g>
+
+
+<!-- Left decorations -->
+
+<circle
+ cx="80"
+ cy="120"
+ r="180"
+ fill="url(#shapeGradient)"
+ filter="url(#blur)"/>
+
+
+<circle
+ cx="160"
+ cy="500"
+ r="90"
+ fill="none"
+ stroke="#4F45E6"
+ stroke-opacity="0.18"
+ stroke-width="2"/>
+
+
+<!-- Right decorations -->
+
+<circle
+ cx="1120"
+ cy="140"
+ r="180"
+ fill="url(#shapeGradient)"
+ filter="url(#blur)"/>
+
+
+<circle
+ cx="1040"
+ cy="510"
+ r="110"
+ fill="none"
+ stroke="#7C3AED"
+ stroke-opacity="0.18"
+ stroke-width="2"/>
+
+
+<!-- Small floating dots -->
+
+<circle cx="220" cy="160" r="7"
+ fill="#4F45E6" opacity="0.5"/>
+
+<circle cx="980" cy="180" r="8"
+ fill="#7C3AED" opacity="0.5"/>
+
+
+<!-- Logo -->
+
+<g transform="translate(435 55) scale(0.65)" filter="url(#logoShadow)">
+ <path
+ d="M96 110 H416 L360 190 H304 V286 C304 340 280 380 256 420 C232 380 208 340 208 286 V190 H152 L96 110Z"
+ fill="url(#toolzaryGradient)"/>
+</g>
+
+
+<!-- Brand -->
+
+<text
+ x="600"
+ y="430"
+ text-anchor="middle"
+ font-family="Inter, Arial, sans-serif"
+ font-size="100"
+ font-weight="750"
+ letter-spacing="-4"
+ fill="#FFFFFF">
+ Age Calculator
+</text>
+
+
+<!-- Tagline -->
+
+<text
+ x="600"
+ y="500"
+ text-anchor="middle"
+ font-family="Inter, Arial, sans-serif"
+ font-size="32"
+ fill="#A1A1AA">
+ Calculate exact age in years, months and days.
+</text>
+
+
+<!-- Accent -->
+
+<rect
+ x="540"
+ y="555"
+ width="120"
+ height="5"
+ rx="3"
+ fill="#4F45E6"/>
+
+
+<!-- Watermark -->
+
+<text
+ x="1120"
+ y="585"
+ text-anchor="end"
+ font-family="Inter, Arial, sans-serif"
+ font-size="24"
+ font-weight="500"
+ letter-spacing="1"
+ fill="#FFFFFF"
+ fill-opacity="0.35">
+ toolzary.com
+</text>
+
+
 </svg>
