@@ -1,0 +1,926 @@
+/* =========================================================
+   TOOLZARY - UNIT CONVERTER
+   Responsive styles
+========================================================= */
+
+
+/* =========================================================
+   TOOL HERO
+========================================================= */
+
+.tool-hero-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   MAIN CONVERTER SECTION
+========================================================= */
+
+.unit-converter-section {
+    padding-top: 20px;
+}
+
+
+.unit-converter-panel {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CATEGORY SELECTOR
+========================================================= */
+
+.converter-category {
+    margin-bottom: 28px;
+}
+
+
+.converter-category label {
+    display: block;
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--text-color, #1f2937);
+}
+
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+.select-wrapper::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 17px;
+
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+
+    transform: translateY(-65%) rotate(45deg);
+
+    pointer-events: none;
+
+    opacity: 0.6;
+}
+
+
+.select-wrapper select {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 0 48px 0 16px;
+
+    border: 1px solid var(--border-color, #dfe3eb);
+    border-radius: 12px;
+
+    background: var(--card-background, #ffffff);
+    color: var(--text-color, #1f2937);
+
+    font: inherit;
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.select-wrapper select:hover {
+    border-color: #b8becb;
+}
+
+
+.select-wrapper select:focus {
+    outline: none;
+
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* =========================================================
+   CONVERTER GRID
+========================================================= */
+
+.converter-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        58px
+        minmax(0, 1fr);
+
+    align-items: end;
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CONVERTER FIELD
+========================================================= */
+
+.converter-field {
+    min-width: 0;
+}
+
+
+.converter-field > label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--text-color, #1f2937);
+}
+
+
+/* =========================================================
+   INPUT + UNIT SELECT
+========================================================= */
+
+.converter-input {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 145px;
+
+    width: 100%;
+
+    min-height: 56px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border-color, #dfe3eb);
+    border-radius: 12px;
+
+    background: var(--card-background, #ffffff);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.converter-input:focus-within {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+.converter-input input {
+    width: 100%;
+    min-width: 0;
+
+    height: 56px;
+
+    padding: 0 16px;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: var(--text-color, #111827);
+
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: 600;
+
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+
+.converter-input input::-webkit-outer-spin-button,
+.converter-input input::-webkit-inner-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+
+
+.converter-input input::placeholder {
+    color: #9ca3af;
+}
+
+
+.converter-input select {
+    width: 100%;
+    min-width: 0;
+
+    height: 56px;
+
+    padding: 0 34px 0 12px;
+
+    border: 0;
+    border-left: 1px solid var(--border-color, #e5e7eb);
+
+    outline: none;
+
+    background-color: var(--soft-background, #f8fafc);
+    color: var(--text-color, #374151);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* =========================================================
+   SWAP BUTTON
+========================================================= */
+
+.converter-swap-wrapper {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 56px;
+}
+
+
+.converter-swap {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border: 1px solid var(--border-color, #dfe3eb);
+    border-radius: 50%;
+
+    background: var(--card-background, #ffffff);
+    color: #4f46e5;
+
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.converter-swap:hover {
+    border-color: #4f46e5;
+
+    background: #f5f3ff;
+
+    box-shadow:
+        0 4px 12px rgba(79, 70, 229, 0.12);
+
+    transform: rotate(180deg);
+}
+
+
+.converter-swap:active {
+    transform: rotate(180deg) scale(0.94);
+}
+
+
+.converter-swap:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+
+/* =========================================================
+   RESULT BOX
+========================================================= */
+
+.converter-result {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 30px;
+    padding: 20px 22px;
+
+    border: 1px solid rgba(79, 70, 229, 0.18);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(79, 70, 229, 0.055),
+            rgba(99, 102, 241, 0.025)
+        );
+}
+
+
+.converter-result-label {
+    flex: 0 0 auto;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #4f46e5;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+.converter-result-value {
+    flex: 1;
+
+    min-width: 0;
+
+    color: var(--text-color, #1f2937);
+
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   COPY RESULT BUTTON
+========================================================= */
+
+.converter-copy-button {
+    display: inline-flex;
+
+    flex: 0 0 auto;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border-color, #dfe3eb);
+    border-radius: 9px;
+
+    background: var(--card-background, #ffffff);
+    color: var(--text-color, #374151);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.converter-copy-button img {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+.converter-copy-button:hover {
+    border-color: #4f46e5;
+
+    background: #ffffff;
+
+    color: #4f46e5;
+}
+
+
+.converter-copy-button:active {
+    transform: scale(0.97);
+}
+
+
+.converter-copy-button:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* =========================================================
+   CONVERTER ACTIONS
+========================================================= */
+
+.converter-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 18px;
+}
+
+
+.converter-reset-button {
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border: 1px solid var(--border-color, #dfe3eb);
+    border-radius: 9px;
+
+    background: transparent;
+    color: var(--text-color, #4b5563);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.converter-reset-button:hover {
+    border-color: #c7ccd5;
+
+    background: var(--soft-background, #f8fafc);
+
+    color: var(--text-color, #111827);
+}
+
+
+.converter-reset-button:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.converter-note {
+    margin: 18px 0 0;
+
+    text-align: center;
+
+    color: var(--muted-text, #6b7280);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TOOL INFO
+========================================================= */
+
+.tool-info-card {
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   RESPONSIVE - LARGE TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .unit-converter-panel {
+        max-width: 820px;
+    }
+
+
+    .converter-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            52px
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+
+    .converter-input {
+        grid-template-columns:
+            minmax(0, 1fr)
+            125px;
+    }
+
+
+    .converter-input select {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .unit-converter-section {
+        padding-top: 10px;
+    }
+
+
+    .converter-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .converter-swap-wrapper {
+        height: 42px;
+
+        order: 2;
+    }
+
+
+    .converter-field:first-child {
+        order: 1;
+    }
+
+
+    .converter-field:last-child {
+        order: 3;
+    }
+
+
+    .converter-swap {
+        width: 42px;
+        height: 42px;
+
+        font-size: 23px;
+    }
+
+
+    .converter-result {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+
+    .converter-result-label {
+        width: 100%;
+    }
+
+
+    .converter-result-value {
+        flex-basis: calc(100% - 70px);
+
+        font-size: 16px;
+    }
+
+
+    .converter-copy-button {
+        margin-left: auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .unit-converter-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .unit-converter-panel {
+        padding: 18px;
+    }
+
+
+    .converter-category {
+        margin-bottom: 22px;
+    }
+
+
+    .converter-category label,
+    .converter-field > label {
+        font-size: 13px;
+    }
+
+
+    .select-wrapper select {
+        min-height: 50px;
+
+        font-size: 14px;
+    }
+
+
+    .converter-input {
+        grid-template-columns:
+            minmax(0, 1fr)
+            115px;
+
+        min-height: 54px;
+
+        border-radius: 10px;
+    }
+
+
+    .converter-input input {
+        height: 54px;
+
+        padding: 0 13px;
+
+        font-size: 17px;
+    }
+
+
+    .converter-input select {
+        height: 54px;
+
+        padding-left: 9px;
+        padding-right: 7px;
+
+        font-size: 12px;
+    }
+
+
+    .converter-swap-wrapper {
+        height: 38px;
+    }
+
+
+    .converter-swap {
+        width: 40px;
+        height: 40px;
+
+        font-size: 21px;
+    }
+
+
+    .converter-result {
+        display: block;
+
+        margin-top: 24px;
+
+        padding: 17px;
+    }
+
+
+    .converter-result-label {
+        display: block;
+
+        margin-bottom: 8px;
+    }
+
+
+    .converter-result-value {
+        display: block;
+
+        margin-bottom: 14px;
+
+        font-size: 15px;
+    }
+
+
+    .converter-copy-button {
+        width: 100%;
+    }
+
+
+    .converter-actions {
+        justify-content: center;
+
+        margin-top: 15px;
+    }
+
+
+    .converter-reset-button {
+        width: 100%;
+    }
+
+
+    .converter-note {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .unit-converter-panel {
+        padding: 14px;
+    }
+
+
+    .converter-input {
+        grid-template-columns:
+            minmax(0, 1fr)
+            100px;
+    }
+
+
+    .converter-input select {
+        font-size: 11px;
+    }
+
+
+    .converter-input input {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark-mode .converter-category label,
+.dark-mode .converter-field > label {
+    color: var(--text-color, #f3f4f6);
+}
+
+
+.dark-mode .select-wrapper select {
+    border-color: var(--border-color, #374151);
+
+    background: var(--card-background, #111827);
+    color: var(--text-color, #f3f4f6);
+}
+
+
+.dark-mode .select-wrapper select:hover {
+    border-color: #4b5563;
+}
+
+
+.dark-mode .converter-input {
+    border-color: var(--border-color, #374151);
+
+    background: var(--card-background, #111827);
+}
+
+
+.dark-mode .converter-input input {
+    color: var(--text-color, #f3f4f6);
+}
+
+
+.dark-mode .converter-input select {
+    border-left-color: var(--border-color, #374151);
+
+    background: #1a2230;
+    color: #e5e7eb;
+}
+
+
+.dark-mode .converter-swap {
+    border-color: var(--border-color, #374151);
+
+    background: var(--card-background, #111827);
+    color: #818cf8;
+}
+
+
+.dark-mode .converter-swap:hover {
+    border-color: #6366f1;
+
+    background: rgba(99, 102, 241, 0.12);
+}
+
+
+.dark-mode .converter-result {
+    border-color: rgba(129, 140, 248, 0.25);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(99, 102, 241, 0.12),
+            rgba(99, 102, 241, 0.04)
+        );
+}
+
+
+.dark-mode .converter-result-label {
+    color: #a5b4fc;
+}
+
+
+.dark-mode .converter-result-value {
+    color: #f3f4f6;
+}
+
+
+.dark-mode .converter-copy-button {
+    border-color: #374151;
+
+    background: #111827;
+    color: #d1d5db;
+}
+
+
+.dark-mode .converter-copy-button:hover {
+    border-color: #6366f1;
+
+    background: #1f2937;
+    color: #a5b4fc;
+}
+
+
+.dark-mode .converter-reset-button {
+    border-color: #374151;
+
+    color: #d1d5db;
+}
+
+
+.dark-mode .converter-reset-button:hover {
+    border-color: #4b5563;
+
+    background: #1f2937;
+}
+
+
+.dark-mode .converter-note {
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .converter-swap,
+    .converter-copy-button,
+    .converter-reset-button,
+    .converter-input,
+    .converter-swap {
+        transition: none;
+    }
+
+}

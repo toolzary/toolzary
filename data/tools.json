@@ -160,7 +160,18 @@
     "icon": "/assets/icons/tool-icons/pdf-merger.svg",
     "cat": ["pdf-tools"],
     "featured": true,
-    "publishDate": "2026-08-21",
+    "publishDate": "2026-08-25",
+    "related": []
+  },
+  {
+    "id": "unit-converter",
+    "name": "Unit Converter",
+    "desc": "Convert different quantity units accuratly",
+    "link": "/tools/unit-converter/",
+    "icon": "/assets/icons/tool-icons/unit-converter.svg",
+    "cat": ["converters"],
+    "featured": false,
+    "publishDate": "2026-08-26",
     "related": []
   }
 ]
