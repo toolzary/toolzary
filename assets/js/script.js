@@ -141,22 +141,60 @@ function updateStats() {
 ================================ */
 function renderCategories() {
 
-    const container = document.querySelector(".categoryGrid");
+    const container =
+        document.querySelector(".categoryGrid");
 
-    if (!container) return;
+    if (!container)
+        return;
 
-    let categoryList = Object.entries(categories);
+    let categoryList =
+        Object.entries(categories);
 
     if (window.location.pathname === "/") {
-        categoryList = categoryList
-            .filter(([id, category]) => category.showOnHomepage)
-            .slice(0, 6);
+
+        categoryList =
+            categoryList
+                .filter(([id, category]) =>
+                    category.showOnHomepage
+                )
+                .slice(0, 6);
     }
 
-    renderCategoryCards(container, categoryList);
+    const now = new Date();
 
+    const newCategoryIds =
+        Object.entries(categories)
+            .filter(([id, category]) => {
+
+                if (!category.publishDate)
+                    return false;
+
+                const publishDate =
+                    new Date(category.publishDate);
+
+                return (
+                    !isNaN(publishDate.getTime()) &&
+                    publishDate <= now
+                );
+
+            })
+            .sort((a, b) => {
+
+                return (
+                    new Date(b[1].publishDate) -
+                    new Date(a[1].publishDate)
+                );
+
+            })
+            .slice(0, 6)
+            .map(([id]) => id);
+
+    renderCategoryCards(
+        container,
+        categoryList,
+        newCategoryIds
+    );
 }
-
 /* ================================
        Featured Categories
 ================================ */
@@ -182,17 +220,48 @@ function renderFeaturedCategories() {
 
 function renderNewCategories() {
 
-    const container = document.querySelector(".newCategories");
+    const container =
+        document.querySelector(".newCategories");
 
-    if (!container) return;
+    if (!container)
+        return;
 
-    const newCategories = Object.entries(categories)
-        .filter(([id, category]) =>
-            category.new === true
-        );
+    const now = new Date();
 
-    renderCategoryCards(container, newCategories);
+    const newCategories =
+        Object.entries(categories)
+            .filter(([id, category]) => {
 
+                if (!category.publishDate)
+                    return false;
+
+                const publishDate =
+                    new Date(category.publishDate);
+
+                return (
+                    !isNaN(publishDate.getTime()) &&
+                    publishDate <= now
+                );
+
+            })
+            .sort((a, b) => {
+
+                return (
+                    new Date(b[1].publishDate) -
+                    new Date(a[1].publishDate)
+                );
+
+            })
+            .slice(0, 6);
+
+    const newCategoryIds =
+        newCategories.map(([id]) => id);
+
+    renderCategoryCards(
+        container,
+        newCategories,
+        newCategoryIds
+    );
 }
 
 /* =====================================
@@ -240,17 +309,20 @@ function renderCategoryTools() {
         Category Card Template
 ======================================*/
 
-function createCategoryCard([id, category]) {
+function createCategoryCard([id, category], isNew = false) {
 
-    const count = tools.filter(
-        tool => tool.cat.includes(id)
-    ).length;
+    const count =
+        tools.filter(
+            tool => tool.cat.includes(id)
+        ).length;
 
     return `
         <a href="/categories/${id}" class="tool-card">
 
-            ${category.new ? `
-                <span class="new-badge">NEW</span>
+            ${isNew ? `
+                <span class="new-badge">
+                    NEW
+                </span>
             ` : ""}
 
             <div class="spotlight"></div>
@@ -270,7 +342,10 @@ function createCategoryCard([id, category]) {
                 </span>
 
                 <div class="tool-content">
-                    <h3 class="tool-name">${category.name}</h3>
+
+                    <h3 class="tool-name">
+                        ${category.name}
+                    </h3>
 
                     <p class="tool-desc">
                         ${category.desc || ""}
@@ -279,6 +354,7 @@ function createCategoryCard([id, category]) {
                     <span class="tool-badge">
                         ${count} Tools
                     </span>
+
                 </div>
 
             </div>
@@ -290,14 +366,23 @@ function createCategoryCard([id, category]) {
 /* ===================================
            Category Card Renderer
 ===================================*/
-function renderCategoryCards(container, categoryList) {
+function renderCategoryCards(
+    container,
+    categoryList,
+    newCategoryIds = []
+) {
 
-    container.innerHTML = categoryList
-        .map(createCategoryCard)
-        .join("");
+    container.innerHTML =
+        categoryList
+            .map(([id, category]) =>
+                createCategoryCard(
+                    [id, category],
+                    newCategoryIds.includes(id)
+                )
+            )
+            .join("");
 
     initToolCards(container);
-
 }
 
 
@@ -305,7 +390,7 @@ function renderCategoryCards(container, categoryList) {
    TOOL CARD TEMPLATE
 ===================================== */
 
-function createToolCard(tool) {
+function createToolCard(tool, showNewBadge = false) {
 
     const iconPath = tool.icon
         ? (tool.icon.startsWith("/") ? tool.icon : "/" + tool.icon)
@@ -327,7 +412,7 @@ function createToolCard(tool) {
 
     <a href="${tool.link}" class="tool-card">
 
-        ${tool.new ? `
+        ${showNewBadge ? `
             <span class="new-badge">
                 NEW
             </span>
@@ -539,27 +624,45 @@ function renderNewTools() {
     const container =
         document.querySelector(".newTools");
 
-
-    if(!container)
+    if (!container)
         return;
 
+    // Current date/time from user's device
+    const now = new Date();
 
-    const newTools =
-        tools.filter(tool => tool.new === true);
+    // Get latest 6 published tools
+    const newTools = tools
+        .filter(tool => tool.publishDate)
+        .filter(tool => {
 
+            const publishDate =
+                new Date(tool.publishDate);
 
+            return (
+                !isNaN(publishDate.getTime()) &&
+                publishDate <= now
+            );
 
+        })
+        .sort((a, b) => {
+
+            return (
+                new Date(b.publishDate) -
+                new Date(a.publishDate)
+            );
+
+        })
+        .slice(0, 6);
+
+    // Render latest 6 with NEW badge
     container.innerHTML =
         newTools
-        .map(createToolCard)
-        .join("");
+            .map(tool => createToolCard(tool, true))
+            .join("");
 
-
-
+    // Initialize card effects
     initToolCards(container);
-
 }
-
 
 
 /* ======================================

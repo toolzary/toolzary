@@ -2,128 +2,128 @@
   "calculators": {
     "name": "Calculators",
     "icon": "/assets/icons/category-icons/calculator.svg",
-    "new": false,
     "featured": true,
-    "showOnHomepage": true
+    "showOnHomepage": true,
+    "publishDate": "2026-08-01"
   },
 
   "text-tools": {
     "name": "Text Tools",
     "icon": "/assets/icons/category-icons/text.svg",
-    "new": false,
     "featured": true,
-    "showOnHomepage": true
+    "showOnHomepage": true,
+    "publishDate": "2026-08-02"
   },
 
   "pdf-tools": {
     "name": "PDF Tools",
     "icon": "/assets/icons/category-icons/pdf.svg",
-    "new": false,
-    "featured": false,
-    "showOnHomepage": false
+    "featured": true,
+    "showOnHomepage": true,
+    "publishDate": "2026-08-03"
   },
 
   "image-tools": {
     "name": "Image Tools",
     "icon": "/assets/icons/category-icons/image.svg",
-    "new": false,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": false,
+    "publishDate": "2026-08-04"
   },
 
   "color-tools": {
     "name": "Color Tools",
     "icon": "/assets/icons/category-icons/color.svg",
-    "new": false,
-    "featured": true,
-    "showOnHomepage": true
+    "featured": false,
+    "showOnHomepage": false,
+    "publishDate": "2026-08-04"
   },
 
   "converters": {
     "name": "Converters",
     "icon": "/assets/icons/category-icons/converter.svg",
-    "new": false,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": false,
+    "publishDate": "2026-08-05"
   },
 
   "generators": {
     "name": "Generators",
     "icon": "/assets/icons/category-icons/generator.svg",
-    "new": true,
     "featured": false,
-    "showOnHomepage": true
+    "showOnHomepage": true,
+    "publishDate": "2026-08-08"
   },
 
   "developer-tools": {
     "name": "Developer Tools",
     "icon": "/assets/icons/category-icons/dev.svg",
-    "new": false,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": false,
+    "publishDate": "2026-08-09"
   },
 
   "health-tools": {
     "name": "Health Tools",
     "icon": "/assets/icons/category-icons/health.svg",
-    "new": true,
     "featured": false,
-    "showOnHomepage": true
+    "showOnHomepage": true,
+    "publishDate": "2026-08-12"
   },
 
   "education-tools": {
     "name": "Education Tools",
     "icon": "/assets/icons/category-icons/education.svg",
-    "new": true,
     "featured": false,
-    "showOnHomepage": true
+    "showOnHomepage": true,
+    "publishDate": "2026-08-13"
   },
 
   "finance-tools": {
     "name": "Finance Tools",
     "icon": "/assets/icons/category-icons/finance.svg",
-    "new": false,
     "featured": true,
-    "showOnHomepage": true
+    "showOnHomepage": true,
+    "publishDate": "2026-08-15"
   },
 
   "time-tools": {
     "name": "Date & Time",
     "icon": "/assets/icons/category-icons/date.svg",
-    "new": true,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": false,
+    "publishDate": "2026-08-16"
   },
 
   "utility-tools": {
     "name": "Utilities",
     "icon": "/assets/icons/category-icons/utility.svg",
-    "new": false,
     "featured": false,
-    "showOnHomepage": true
+    "showOnHomepage": true,
+    "publishDate": "2026-08-17"
   },
 
   "security-tools": {
     "name": "Security Tools",
     "icon": "/assets/icons/category-icons/security.svg",
-    "new": false,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": false,
+    "publishDate": "2026-08-18"
   },
 
   "seo-tools": {
     "name": "SEO Tools",
     "icon": "/assets/icons/category-icons/seo.svg",
-    "new": false,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": false,
+    "publishDate": "2026-08-19"
   },
 
   "web-tools": {
     "name": "Web Tools",
     "icon": "/assets/icons/category-icons/web.svg",
-    "new": true,
     "featured": false,
-    "showOnHomepage": false
+    "showOnHomepage": false,
+    "publishDate": "2026-08-20"
   }
 }

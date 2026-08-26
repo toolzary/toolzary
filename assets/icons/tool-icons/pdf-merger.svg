@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewBox="0 0 24 24"
+     fill="none">
+
+  <!-- PDF file with cut/open area on left -->
+  <path d="M7 4.75h7l4 4V21.25H7a2 2 0 0 1-2-2v-4"
+        stroke="#4f46e5"
+        stroke-width="1.5"
+        stroke-linejoin="round"/>
+
+  <path d="M5 11V6.75a2 2 0 0 1 2-2"
+        stroke="#4f46e5"
+        stroke-width="1.5"
+        stroke-linejoin="round"/>
+
+  <!-- Fold -->
+  <path d="M14 4.75v4h4"
+        stroke="#4f46e5"
+        stroke-width="1.5"
+        stroke-linejoin="round"/>
+
+  <!-- Smaller + inside the cut -->
+  <path d="M5 12v2.4"
+        stroke="#4f46e5"
+        stroke-width="1.2"
+        stroke-linecap="round"/>
+
+  <path d="M3.8 13.2h2.4"
+        stroke="#4f46e5"
+        stroke-width="1.2"
+        stroke-linecap="round"/>
+
+  <!-- Smaller PDF -->
+  <text x="7.8"
+        y="15"
+        font-family="Arial, sans-serif"
+        font-size="4.5"
+        font-weight="600"
+        fill="#4f46e5">
+    PDF
+  </text>
+
+</svg>

@@ -6,8 +6,8 @@
     "link": "/tools/age-calculator/",
     "icon": "/assets/icons/tool-icons/age-calculator.svg",
     "cat": ["calculators"],
-    "featured": true,
-    "new": true,
+    "featured": false,
+    "publishDate": "2026-08-15",
     "related": [
       "attendance-calculator",
       "exam-countdown",
@@ -21,8 +21,8 @@
     "link": "/tools/attendance-calculator/",
     "icon": "/assets/icons/tool-icons/attendance-calculator.svg",
     "cat": ["calculators", "education-tools"],
-    "featured": true,
-    "new": false,
+    "featured": false,
+    "publishDate": "2026-08-16",
     "related": [
       "average-calculator",
       "grade-calculator"
@@ -36,7 +36,7 @@
     "icon": "/assets/icons/tool-icons/average-calculator.svg",
     "cat": ["calculators"],
     "featured": false,
-    "new": true,
+    "publishDate": "2026-08-17",
     "related": [
       "grade-calculator",
       "attendance-calculator"
@@ -49,8 +49,8 @@
     "link": "/tools/bmi-calculator/",
     "icon": "/assets/icons/tool-icons/bmi-calculator.svg",
     "cat": ["calculators", "health-tools"],
-    "featured": false,
-    "new": true,
+    "featured": true,
+    "publishDate": "2026-08-19",
     "related": [
       "age-calculator",
       "average-calculator"
@@ -63,8 +63,8 @@
     "link": "/tools/case-converter/",
     "icon": "/assets/icons/tool-icons/case-converter.svg",
     "cat": ["text-tools"],
-    "featured": true,
-    "new": false,
+    "featured": false,
+    "publishDate": "2026-08-19",
     "related": [
       "character-counter"
     ]
@@ -77,7 +77,7 @@
     "icon": "/assets/icons/tool-icons/character-counter.svg",
     "cat": ["text-tools"],
     "featured": true,
-    "new": false,
+    "publishDate": "2026-08-20",
     "related": [
       "case-converter"
     ]
@@ -90,7 +90,7 @@
     "icon": "/assets/icons/tool-icons/color-palette-generator.svg",
     "cat": ["color-tools", "generators"],
     "featured": true,
-    "new": false,
+    "publishDate": "2026-08-20",
     "related": [
       "color-picker"
     ]
@@ -103,7 +103,7 @@
     "icon": "/assets/icons/tool-icons/color-picker.svg",
     "cat": ["color-tools"],
     "featured": false,
-    "new": true,
+    "publishDate": "2026-08-20",
     "related": [
       "color-palette-generator",
       "case-converter"
@@ -117,7 +117,7 @@
     "icon": "/assets/icons/tool-icons/discount-calculator.svg",
     "cat": ["calculators", "finance-tools"],
     "featured": false,
-    "new": true,
+    "publishDate": "2026-08-17",
     "related": [
       "average-calculator",
       "grade-calculator"
@@ -131,7 +131,7 @@
     "icon": "/assets/icons/tool-icons/exam-countdown.svg",
     "cat": ["education-tools", "time-tools"],
     "featured": false,
-    "new": false,
+    "publishDate": "2026-08-14",
     "related": [
       "age-calculator",
       "attendance-calculator",
@@ -146,10 +146,21 @@
     "icon": "/assets/icons/tool-icons/grade-calculator.svg",
     "cat": ["calculators", "education-tools"],
     "featured": true,
-    "new": false,
+    "publishDate": "2026-08-20",
     "related": [
       "average-calculator",
       "attendance-calculator"
     ]
+  },
+  {
+    "id": "pdf-merger",
+    "name": "PDF Merger",
+    "desc": "Merge multiple pdf files in your preferred order",
+    "link": "/tools/pdf-merger/",
+    "icon": "/assets/icons/tool-icons/pdf-merger.svg",
+    "cat": ["pdf-tools"],
+    "featured": true,
+    "publishDate": "2026-08-21",
+    "related": []
   }
 ]
