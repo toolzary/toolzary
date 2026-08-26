@@ -386,33 +386,68 @@ function renderCategoryCards(
 }
 
 
+
+/* =====================================
+   CHECK IF TOOL IS NEW
+===================================== */
+
+function isNewTool(tool) {
+
+    if (!tool.publishDate)
+        return false;
+
+    const publishDate =
+        new Date(tool.publishDate);
+
+    if (isNaN(publishDate.getTime()))
+        return false;
+
+    const now = new Date();
+
+    // Tool must already be published
+    if (publishDate > now)
+        return false;
+
+    // NEW for 30 days after publishing
+    const newUntil =
+        new Date(publishDate);
+
+    newUntil.setDate(
+        newUntil.getDate() + 7
+    );
+
+    return now <= newUntil;
+}
+
+
 /* =====================================
    TOOL CARD TEMPLATE
 ===================================== */
 
-function createToolCard(tool, showNewBadge = false) {
+function createToolCard(tool) {
 
     const iconPath = tool.icon
         ? (tool.icon.startsWith("/") ? tool.icon : "/" + tool.icon)
         : "";
 
     const currentCategory =
-       window.location.pathname.split("/")[2];
-
+        window.location.pathname.split("/")[2];
 
     const badgeCategory =
-       currentCategory && tool.cat.includes(currentCategory)
-           ? currentCategory
-           : tool.cat[0];
-
+        currentCategory && tool.cat.includes(currentCategory)
+            ? currentCategory
+            : tool.cat[0];
 
     const categoryName =
-       categories[badgeCategory]?.name || "";
+        categories[badgeCategory]?.name || "";
+
+    const isNew = isNewTool(tool);
+
     return `
 
     <a href="${tool.link}" class="tool-card">
 
-        ${showNewBadge ? `
+        ${isNew ? `
             <span class="new-badge">
                 NEW
             </span>
@@ -463,8 +498,8 @@ function createToolCard(tool, showNewBadge = false) {
     </a>
 
     `;
-
 }
+
 
 
 
@@ -627,10 +662,8 @@ function renderNewTools() {
     if (!container)
         return;
 
-    // Current date/time from user's device
     const now = new Date();
 
-    // Get latest 6 published tools
     const newTools = tools
         .filter(tool => tool.publishDate)
         .filter(tool => {
@@ -654,15 +687,17 @@ function renderNewTools() {
         })
         .slice(0, 6);
 
-    // Render latest 6 with NEW badge
+
     container.innerHTML =
         newTools
-            .map(tool => createToolCard(tool, true))
+            .map(createToolCard)
             .join("");
 
-    // Initialize card effects
+
     initToolCards(container);
+
 }
+
 
 
 /* ======================================
