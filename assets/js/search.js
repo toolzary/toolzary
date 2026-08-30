@@ -1,4 +1,4 @@
-/* =====================================
+﻿/* =====================================
    SEARCH PAGE
 ===================================== */
 
@@ -10,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInfo = document.getElementById("searchInfo");
     const searchSection = document.getElementById("searchResults");
     const forms = document.querySelectorAll(".main-search, .search-wrapper");
-    const searchTags = document.querySelector(".search-tags");
-
-
+    
     // Read ?query=
     const params = new URLSearchParams(window.location.search);
     const query = (params.get("query") || "").trim();
@@ -122,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.title =
             `Search Results for ${query} | Toolzary - Free Online Tools`;
-            searchTags.classList.add("hidden")
+
 
         if (!results.length) {
 
@@ -162,23 +160,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <div class="suggest-links">
 
-                        <a class="first-btn-outline" href="/categories/pdf-tools">
+                        <a class="first-btn-outline" href="/tools/categories/pdf-tools">
                             PDF Tools
                         </a>
 
-                        <a class="first-btn-outline" href="/categories/text-tools">
+                        <a class="first-btn-outline" href="/tools/categories/text-tools">
                             Text Tools
                         </a>
 
-                        <a class="first-btn-outline" href="/categories/finance-tools">
+                        <a class="first-btn-outline" href="/tools/categories/finance-tools">
                             Finance Tools
                         </a>
 
-                        <a class="first-btn-outline" href="/categories/seo-tools">
+                        <a class="first-btn-outline" href="/tools/categories/seo-tools">
                             SEO Tools
                         </a>
 
-                        <a class="first-btn-outline" href="/categories/calculators">
+                        <a class="first-btn-outline" href="/tools/categories/calculators">
                             Calculators
                         </a>
 

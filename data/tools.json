@@ -5,7 +5,7 @@
     "desc": "Calculate your exact age in years, months, and days instantly with accurate calendar calculations.",
     "link": "/tools/age-calculator/",
     "icon": "/assets/icons/tool-icons/age-calculator.svg",
-    "cat": ["calculators"],
+    "cat": ["calculators", "time-tools", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-15",
     "related": [
@@ -20,7 +20,7 @@
     "desc": "Calculate your attendance percentage and find out how many classes you can miss or need to attend.",
     "link": "/tools/attendance-calculator/",
     "icon": "/assets/icons/tool-icons/attendance-calculator.svg",
-    "cat": ["calculators", "education-tools"],
+    "cat": ["calculators", "education-tools", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-16",
     "related": [
@@ -34,7 +34,7 @@
     "desc": "Calculate the average of multiple numbers quickly and accurately.",
     "link": "/tools/average-calculator/",
     "icon": "/assets/icons/tool-icons/average-calculator.svg",
-    "cat": ["calculators"],
+    "cat": ["calculators", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-17",
     "related": [
@@ -48,7 +48,7 @@
     "desc": "Calculate your Body Mass Index and understand your BMI category based on your height and weight.",
     "link": "/tools/bmi-calculator/",
     "icon": "/assets/icons/tool-icons/bmi-calculator.svg",
-    "cat": ["calculators", "health-tools"],
+    "cat": ["calculators", "health-tools", "utility-tools"],
     "featured": true,
     "publishDate": "2026-08-19",
     "related": [
@@ -62,7 +62,7 @@
     "desc": "Convert text between uppercase, lowercase, title case, sentence case, and other common text formats.",
     "link": "/tools/case-converter/",
     "icon": "/assets/icons/tool-icons/case-converter.svg",
-    "cat": ["text-tools"],
+    "cat": ["text-tools", "converters", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-19",
     "related": [
@@ -75,7 +75,7 @@
     "desc": "Count characters in your text instantly, with or without spaces.",
     "link": "/tools/character-counter/",
     "icon": "/assets/icons/tool-icons/character-counter.svg",
-    "cat": ["text-tools"],
+    "cat": ["text-tools", "utility-tools"],
     "featured": true,
     "publishDate": "2026-08-20",
     "related": [
@@ -88,7 +88,7 @@
     "desc": "Generate beautiful color palettes for websites, designs, and creative projects.",
     "link": "/tools/color-palette-generator/",
     "icon": "/assets/icons/tool-icons/color-palette-generator.svg",
-    "cat": ["color-tools", "generators"],
+    "cat": ["color-tools", "generators", "developer-tools", "utility-tools"],
     "featured": true,
     "publishDate": "2026-08-20",
     "related": [
@@ -101,7 +101,7 @@
     "desc": "Pick a color and get its HEX, RGB, HSL, and other color values instantly.",
     "link": "/tools/color-picker/",
     "icon": "/assets/icons/tool-icons/color-picker.svg",
-    "cat": ["color-tools"],
+    "cat": ["color-tools", "developer-tools", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-20",
     "related": [
@@ -115,7 +115,7 @@
     "desc": "Calculate discounts, sale prices, savings, and final prices quickly and easily.",
     "link": "/tools/discount-calculator/",
     "icon": "/assets/icons/tool-icons/discount-calculator.svg",
-    "cat": ["calculators", "finance-tools"],
+    "cat": ["calculators", "finance-tools", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-17",
     "related": [
@@ -129,7 +129,7 @@
     "desc": "Count down the days, hours, minutes, and seconds remaining until your exam.",
     "link": "/tools/exam-countdown/",
     "icon": "/assets/icons/tool-icons/exam-countdown.svg",
-    "cat": ["education-tools", "time-tools"],
+    "cat": ["education-tools", "time-tools", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-14",
     "related": [
@@ -144,7 +144,7 @@
     "desc": "Calculate grades, percentages, and academic scores quickly and accurately.",
     "link": "/tools/grade-calculator/",
     "icon": "/assets/icons/tool-icons/grade-calculator.svg",
-    "cat": ["calculators", "education-tools"],
+    "cat": ["calculators", "education-tools", "utility-tools"],
     "featured": true,
     "publishDate": "2026-08-20",
     "related": [
@@ -158,7 +158,7 @@
     "desc": "Merge multiple pdf files in your preferred order",
     "link": "/tools/pdf-merger/",
     "icon": "/assets/icons/tool-icons/pdf-merger.svg",
-    "cat": ["pdf-tools"],
+    "cat": ["pdf-tools", "utility-tools"],
     "featured": true,
     "publishDate": "2026-08-25",
     "related": []
@@ -169,7 +169,7 @@
     "desc": "Convert different quantity units accuratly",
     "link": "/tools/unit-converter/",
     "icon": "/assets/icons/tool-icons/unit-converter.svg",
-    "cat": ["converters"],
+    "cat": ["converters", "utility-tools"],
     "featured": false,
     "publishDate": "2026-08-26",
     "related": []

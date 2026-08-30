@@ -1,4 +1,4 @@
-/* =====================================
+﻿/* =====================================
    Toolzary Main JS
 ===================================== */
 
@@ -51,7 +51,7 @@ async function loadToolsData() {
     } catch(error) {
 
         console.error(
-            "Failed loading tools/categories data:",
+            "Failed loading tool categories data:",
             error
         );
 
@@ -283,7 +283,7 @@ function renderCategoryTools() {
 
 
     const categoryId =
-        pathParts[2];
+        pathParts[3];
 
 
     if (!categoryId)
@@ -317,7 +317,7 @@ function createCategoryCard([id, category], isNew = false) {
         ).length;
 
     return `
-        <a href="/categories/${id}" class="tool-card">
+        <a href="/tools/categories/${id}" class="tool-card">
 
             ${isNew ? `
                 <span class="new-badge">
@@ -431,7 +431,7 @@ function createToolCard(tool) {
         : "";
 
     const currentCategory =
-        window.location.pathname.split("/")[2];
+        window.location.pathname.split("/")[3];
 
     const badgeCategory =
         currentCategory && tool.cat.includes(currentCategory)

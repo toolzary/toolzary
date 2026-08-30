@@ -1,4 +1,4 @@
-/* =====================================
+﻿/* =====================================
    CATEGORIES SEARCH PAGE
 ===================================== */
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             window.location.href =
-                `/categories/?query=${encodeURIComponent(value)}`;
+                `/tools/categories/?query=${encodeURIComponent(value)}`;
 
 
 

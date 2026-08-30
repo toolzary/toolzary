@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Footer Loader
  * --------------------------------------------
  * Injects footer content into:
@@ -92,7 +92,7 @@ function getFeaturedCategories() {
         .slice(0, 6)
         .map(([id, category]) => [
             category.name,
-            `/categories/${id}`
+            `/tools/categories/${id}`
         ]);
 
 }
@@ -221,7 +221,7 @@ function getFeaturedCategories() {
 
         <div class="footer-bottom">
 
-            © ${CURRENT_YEAR}
+            \u00A9 ${CURRENT_YEAR}
             ${FOOTER.brand.name}.
             ${FOOTER.footerText}
 

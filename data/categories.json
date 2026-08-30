@@ -96,7 +96,7 @@
   },
 
   "utility-tools": {
-    "name": "Utilities",
+    "name": "Utility Tools",
     "icon": "/assets/icons/category-icons/utility.svg",
     "featured": false,
     "showOnHomepage": true,

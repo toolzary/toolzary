@@ -707,6 +707,13 @@ function initLocalToolLogic() {
                 birthDay
             );
 
+            resultBox.scrollIntoView({
+             behavior: "smooth",
+             block: "start"
+            });
+
+
+
 
 
             countdownBox.classList.remove("hidden");

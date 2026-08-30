@@ -1,0 +1,461 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiments &dash; Toolzary</title>
+
+<link
+    rel="stylesheet"
+    href="/assets/css/style.css"
+>
+
+<script
+    src="/assets/js/script.js"
+    defer
+></script>
+    <script
+        src="/assets/js/footer.js"
+        defer
+    ></script>
+
+</head> <body> <!-- ================= HEADER ================= --> <header class="site-header" id="siteHeader">
+<a href="/" class="logo" aria-label="Toolzary Home">
+
+    <img
+        src="/assets/logos/logo.svg"
+        alt="Toolzary"
+        width="36"
+        height="36"
+    >
+
+    <span>Toolzary</span>
+
+</a>
+
+
+<!-- Mobile menu button -->
+
+<button
+    class="mobile-menu-toggle"
+    id="mobileMenuToggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="mobileMenu"
+>
+
+    <img
+        src="/assets/icons/others/menu.svg"
+        alt=""
+        width="26"
+        height="26"
+        class="menu-open-icon"
+    >
+
+    <img
+        src="/assets/icons/others/plus.svg"
+        alt=""
+        width="26"
+        height="26"
+        class="menu-close-icon"
+    >
+
+</button>
+
+
+<!-- Desktop navigation -->
+
+<nav class="desktop-nav" aria-label="Main navigation">
+
+    <a href="/tools">
+        Tools
+    </a>
+
+    <a href="/tools/categories">
+        Tool Categories
+    </a>
+
+    <a href="/about">
+        About
+    </a>
+
+    <a href="/contact">
+        Contact
+    </a>
+
+    <button
+        id="darkToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+    >
+
+        <img
+            src="/assets/icons/others/moon.svg"
+            alt=""
+            width="24"
+            height="24"
+            class="themeIcon"
+        >
+
+    </button>
+
+</nav>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+>
+
+    <div class="mobile-menu-inner">
+
+        <nav
+            class="mobile-nav"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="/tools">
+                <span>Tools</span>
+
+                <img
+                    src="/assets/icons/others/chevron-down.svg"
+                    alt=""
+                >
+            </a>
+
+            <a href="/tools/categories">
+
+                <span>Tool Categories</span>
+
+                <img
+                    src="/assets/icons/others/chevron-down.svg"
+                    alt=""
+                >
+
+            </a>
+
+            <a href="/about">
+
+                <span>About</span>
+
+                <img
+                    src="/assets/icons/others/chevron-down.svg"
+                    alt=""
+                >
+
+            </a>
+
+            <a href="/contact">
+
+                <span>Contact</span>
+
+                <img
+                    src="/assets/icons/others/chevron-down.svg"
+                    alt=""
+                >
+
+            </a>
+
+        </nav>
+
+
+        <div class="mobile-menu-bottom">
+
+            <div class="mobile-menu-tagline">
+
+                <strong>Toolzary</strong>
+
+                <span>
+                    Free tools. Simple. Fast.
+                </span>
+
+            </div>
+
+
+            <button
+                class="mobile-theme-toggle darkToggle"
+                type="button"
+            >
+
+                <span class="mobile-theme-label">
+                    Dark Mode
+                </span>
+
+                <img
+                    src="/assets/icons/others/moon.svg"
+                    alt=""
+                    width="22"
+                    height="22"
+                    class="mobileThemeIcon"
+                >
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</header> <!-- ================= MAIN ================= --> <main>
+<!-- ================= HERO ================= -->
+
+<section class="hero stagger">
+
+    <h1>
+
+        Toolzary's
+
+        <span class="gradient-text">
+            Experiments
+        </span>
+
+    </h1>
+
+
+    <p>
+
+        Experimental apps, features, and ideas that are being tested and explored.
+    </p>
+
+</section>
+
+
+<!-- ================= EXPERIMENTS ================= -->
+
+<section class="features">
+
+    <div class="container">
+
+        <h2 class="reveal">
+            Explore Experiments
+        </h2>
+
+
+        <div class="feature-grid">
+
+
+            <!-- HTML -->
+
+            <article class="feature-card reveal-left">
+
+                <a href="/lab/experiments/html/">
+
+                    <div class="feature-icon">
+
+                        <img
+                            height="40"
+                            width="40"
+                            alt=""
+                            loading="lazy"
+                            src="/assets/icons/others/html-5.svg"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        HTML Experiments
+                    </h3>
+
+
+                    <p>
+                        Explore experimental layouts, semantic
+                        structures, forms, and browser features
+                        using HTML.
+                    </p>
+
+                </a>
+
+            </article>
+
+
+            <!-- CSS -->
+
+            <article class="feature-card reveal-left">
+
+                <a href="/lab/experiments/css/">
+
+                    <div class="feature-icon">
+
+                        <img
+                            height="40"
+                            width="40"
+                            alt=""
+                            loading="lazy"
+                            src="/assets/icons/others/css.svg"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        CSS Experiments
+                    </h3>
+
+
+                    <p>
+                        Discover animations, transitions,
+                        gradients, layouts, effects, and
+                        experimental CSS techniques.
+                    </p>
+
+                </a>
+
+            </article>
+
+
+            <!-- JavaScript -->
+
+            <article class="feature-card reveal-left">
+
+                <a href="/lab/experiments/javascript/">
+
+                    <div class="feature-icon">
+
+                        <img
+                            height="40"
+                            width="40"
+                            alt=""
+                            loading="lazy"
+                            src="/assets/icons/others/javascript.svg"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        JavaScript Experiments
+                    </h3>
+
+
+                    <p>
+                        Interactive experiments exploring
+                        JavaScript, browser APIs, events,
+                        and dynamic interfaces.
+                    </p>
+
+                </a>
+
+            </article>
+
+
+            <!-- SVG -->
+
+            <article class="feature-card reveal-left">
+
+                <a href="/lab/experiments/svg/">
+
+                    <div class="feature-icon">
+
+                        <img
+                            height="40"
+                            width="40"
+                            alt=""
+                            loading="lazy"
+                            src="/assets/icons/others/svg.svg"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        SVG Experiments
+                    </h3>
+
+
+                    <p>
+                        Experiment with vectors, paths,
+                        filters, illustrations, and animated
+                        SVG graphics.
+                    </p>
+
+                </a>
+
+            </article>
+
+
+            <!-- Web APIs -->
+
+            <article class="feature-card reveal-left">
+
+                <a href="/lab/experiments/web-apis/">
+
+                    <div class="feature-icon">
+
+                        <img
+                            height="40"
+                            width="40"
+                            alt=""
+                            loading="lazy"
+                            src="/assets/icons/others/api.svg"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        Web APIs
+                    </h3>
+
+
+                    <p>
+                        Test browser capabilities including
+                        storage, clipboard, notifications,
+                        fullscreen, and other Web APIs.
+                    </p>
+
+                </a>
+
+            </article>
+
+
+            <!-- UI -->
+
+            <article class="feature-card reveal-left">
+
+                <a href="/lab/experiments/ui/">
+
+                    <div class="feature-icon">
+
+                        <img
+                            height="40"
+                            width="40"
+                            alt=""
+                            loading="lazy"
+                            src="/assets/icons/others/flask-conical.svg"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        UI Experiments
+                    </h3>
+
+
+                    <p>
+                        Experimental interfaces, components,
+                        interactions, navigation patterns,
+                        and visual concepts.
+                    </p>
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+<!-- ======================== FOOTER ============================= -->
+ <footer id="site-footer">
+    <!-- Loaded by JS -->
+ </footer>
+</body> 
+</html>

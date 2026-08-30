@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main pages -->
@@ -31,55 +31,55 @@
 
   <!-- Categories -->
   <url>
-    <loc>https://toolzary.com/categories/</loc>
+    <loc>https://toolzary.com/tools/categories/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/calculators/</loc>
+    <loc>https://toolzary.com/tools/categories/calculators/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/color-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/color-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/converters/</loc>
+    <loc>https://toolzary.com/tools/categories/converters/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/developer-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/developer-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/education-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/education-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/finance-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/finance-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/generators/</loc>
+    <loc>https://toolzary.com/tools/categories/generators/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/health-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/health-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/image-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/image-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/pdf-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/pdf-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/security-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/security-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/seo-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/seo-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/text-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/text-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/time-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/time-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/utility-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/utility-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/categories/web-tools/</loc>
+    <loc>https://toolzary.com/tools/categories/web-tools/</loc>
   </url>
 
   <!-- Tools -->
