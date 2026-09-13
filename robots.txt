@@ -4,4 +4,4 @@ Allow: /
 
 Disallow: /private/
 
-Sitemap: https://toolzary.com/sitemap.xml
+Sitemap: https://toolzary.netlify.app/sitemap.xml

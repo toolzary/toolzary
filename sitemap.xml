@@ -1,128 +1,128 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main pages -->
   <url>
-    <loc>https://toolzary.com/</loc>
+    <loc>https://toolzary.netlify.app/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/about/</loc>
+    <loc>https://toolzary.netlify.app/about/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/contact/</loc>
+    <loc>https://toolzary.netlify.app/contact/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/cookies/</loc>
+    <loc>https://toolzary.netlify.app/cookies/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/disclaimer/</loc>
+    <loc>https://toolzary.netlify.app/disclaimer/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/privacy/</loc>
+    <loc>https://toolzary.netlify.app/privacy/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/terms/</loc>
+    <loc>https://toolzary.netlify.app/terms/</loc>
   </url>
 
   <!-- Search -->
   <url>
-    <loc>https://toolzary.com/search/</loc>
+    <loc>https://toolzary.netlify.app/search/</loc>
   </url>
 
   <!-- Categories -->
   <url>
-    <loc>https://toolzary.com/tools/categories/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/calculators/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/calculators/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/color-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/color-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/converters/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/converters/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/developer-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/developer-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/education-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/education-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/finance-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/finance-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/generators/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/generators/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/health-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/health-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/image-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/image-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/pdf-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/pdf-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/security-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/security-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/seo-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/seo-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/text-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/text-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/time-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/time-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/utility-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/utility-tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/categories/web-tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/categories/web-tools/</loc>
   </url>
 
   <!-- Tools -->
   <url>
-    <loc>https://toolzary.com/tools/</loc>
+    <loc>https://toolzary.netlify.app/tools/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/age-calculator/</loc>
+    <loc>https://toolzary.netlify.app/tools/age-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/attendance-calculator/</loc>
+    <loc>https://toolzary.netlify.app/tools/attendance-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/average-calculator/</loc>
+    <loc>https://toolzary.netlify.app/tools/average-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/bmi-calculator/</loc>
+    <loc>https://toolzary.netlify.app/tools/bmi-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/case-converter/</loc>
+    <loc>https://toolzary.netlify.app/tools/case-converter/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/character-counter/</loc>
+    <loc>https://toolzary.netlify.app/tools/character-counter/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/color-palette-generator/</loc>
+    <loc>https://toolzary.netlify.app/tools/color-palette-generator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/color-picker/</loc>
+    <loc>https://toolzary.netlify.app/tools/color-picker/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/discount-calculator/</loc>
+    <loc>https://toolzary.netlify.app/tools/discount-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/exam-countdown/</loc>
+    <loc>https://toolzary.netlify.app/tools/exam-countdown/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/grade-calculator/</loc>
+    <loc>https://toolzary.netlify.app/tools/grade-calculator/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/pdf-merger/</loc>
+    <loc>https://toolzary.netlify.app/tools/pdf-merger/</loc>
   </url>
   <url>
-    <loc>https://toolzary.com/tools/unit-converter/</loc>
+    <loc>https://toolzary.netlify.app/tools/unit-converter/</loc>
   </url>
 </urlset>

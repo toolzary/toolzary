@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     const app = document.getElementById("tool-app");
 
@@ -536,7 +536,7 @@ function downloadResults() {
 
  ═══════════════════════════════════════════════════════════════
  Report Generated: ${new Date().toLocaleString()}
- Toolzary Character Counter - https://toolzary.com/character-counter
+ Toolzary Character Counter - https://toolzary.netlify.app/character-counter
  ═══════════════════════════════════════════════════════════════`;
 
   try {
