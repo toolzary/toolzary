@@ -393,31 +393,31 @@ function renderCategoryCards(
 
 function isNewTool(tool) {
 
-    if (!tool.publishDate)
-        return false;
-
-    const publishDate =
-        new Date(tool.publishDate);
-
-    if (isNaN(publishDate.getTime()))
-        return false;
-
     const now = new Date();
 
-    // Tool must already be published
-    if (publishDate > now)
-        return false;
+    const newestTools = tools
+        .filter(tool => tool.publishDate)
+        .filter(tool => {
+            const publishDate = new Date(tool.publishDate);
 
-    // NEW for 30 days after publishing
-    const newUntil =
-        new Date(publishDate);
+            return (
+                !isNaN(publishDate.getTime()) &&
+                publishDate <= now
+            );
+        })
+        .sort((a, b) => {
+            return (
+                new Date(b.publishDate) -
+                new Date(a.publishDate)
+            );
+        })
+        .slice(0, 6);
 
-    newUntil.setDate(
-        newUntil.getDate() + 7
+    return newestTools.some(
+        newTool => newTool.id === tool.id
     );
-
-    return now <= newUntil;
 }
+
 
 
 /* =====================================
