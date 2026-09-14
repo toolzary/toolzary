@@ -9,7 +9,7 @@
    "orientation": "any",
   "icons": [
     {
-      "src": "/assets/icons/favicons/favicon-192.png",
+      "src": "/assets/favicons/favicon-512x512.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
